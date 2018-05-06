@@ -187,6 +187,6 @@ public class KategoriController implements Initializable {
             ex.printStackTrace();
         }
     }
-    
+     
     
 }
