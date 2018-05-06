@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="-14.0" layoutY="-21.0" prefHeight="751.0" prefWidth="745.0" style="-fx-background-color: #1C1C1C;">
+         <children>
+            <Pane layoutX="352.0" layoutY="-3.0" prefHeight="757.0" prefWidth="396.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <Pane layoutX="-297.0" layoutY="131.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Pane layoutX="366.0" layoutY="110.0" prefHeight="118.0" prefWidth="180.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="M A T C H A  L A T T E" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="256.0" text="A morning latte with Gotcha Matcha will wake you up and set you up right for a magical day.You can enjoy lattes hot or cold and use any kind of milk you like – we like almond milk the best." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../food/ic_access_time_black_24dp/web/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="15 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="118.0" fitWidth="180.0" layoutX="410.0" layoutY="142.0">
+                           <image>
+                              <Image url="@../../../../../makanan/Beverages/Matcha%20Latte.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="330.0" layoutY="25.0">
+                     <image>
+                        <Image url="@../../food/ic_cancel_black_24dp/web/ic_cancel_black_24dp_2x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <ImageView layoutX="24.0" layoutY="21.0">
+         <image>
+            <Image url="@../../../ic_chevron_left_white_24dp_2x.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

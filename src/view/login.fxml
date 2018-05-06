@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Pane>
+         <children>
+            <ImageView fitHeight="233.0" fitWidth="238.0" layoutX="138.0">
+               <image>
+                  <Image url="@../img/damaiwhite.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtUser" layoutX="167.0" layoutY="224.0" prefHeight="25.0" prefWidth="182.0" promptText="username" />
+            <PasswordField fx:id="txtPassword" layoutX="166.0" layoutY="259.0" prefHeight="25.0" prefWidth="184.0" promptText="password" />
+            <Button blendMode="DIFFERENCE" layoutX="211.0" layoutY="307.0" mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="104.0" text="LOGIN">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label fx:id="lblCloseLogin" layoutX="474.0" layoutY="14.0" onMouseClicked="#closeButtonAction" prefHeight="17.0" prefWidth="24.0" text="X">
+         <font>
+            <Font name="Lucida Console" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="statustext" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="176.0" layoutY="341.0" prefHeight="17.0" prefWidth="180.0" textFill="#1e1b1b" />
+   </children>
+</AnchorPane>

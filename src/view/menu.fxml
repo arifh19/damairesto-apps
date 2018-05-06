@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+   <children>
+      <Pane layoutY="-30.0" prefHeight="750.0" prefWidth="737.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="337.0" fitWidth="364.0" layoutX="194.0" layoutY="-56.0">
+               <image>
+                  <Image url="@../img/damai%20without%20restaurant.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgBreakfast" fitHeight="108.0" fitWidth="376.0" layoutY="200.0" onMousePressed="#ViewKategori">
+               <image>
+                  <Image url="@../img/soup%20fancy%202.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgAppetizer" fitHeight="108.0" fitWidth="364.0" layoutX="364.0" layoutY="308.0" onMousePressed="#ViewKategori">
+               <image>
+                  <Image url="@../img/breakfast%20fancy.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgMaincourse" fitHeight="108.0" fitWidth="376.0" layoutY="416.0" onMousePressed="#ViewKategori">
+               <image>
+                  <Image url="@../img/pizza.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgDessert" fitHeight="108.0" fitWidth="364.0" layoutX="376.0" layoutY="524.0" onMousePressed="#ViewKategori">
+               <image>
+                  <Image url="@../img/dessertsS.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgBeverages" fitHeight="108.0" fitWidth="370.0" layoutX="6.0" layoutY="642.0" onMousePressed="#ViewKategori">
+               <image>
+                  <Image url="@../img/beverages%20fancyY.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="btnBreakfast" alignment="CENTER" layoutX="371.0" layoutY="200.0" onMousePressed="#ViewKategori" prefHeight="108.0" prefWidth="364.0" text="BREAKFAST" textAlignment="CENTER" textFill="#fff7e7" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="btnAppetizer" alignment="CENTER" layoutX="6.0" layoutY="308.0" onMousePressed="#ViewKategori" prefHeight="108.0" prefWidth="364.0" text="APPETIZER" textAlignment="CENTER" textFill="#fff7e7" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="btnMaincourse" alignment="CENTER" layoutX="371.0" layoutY="416.0" onMousePressed="#ViewKategori" prefHeight="108.0" prefWidth="364.0" text="MAIN COURSE" textAlignment="CENTER" textFill="#fff7e7" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="btnDessert" alignment="CENTER" layoutX="9.0" layoutY="524.0" onMousePressed="#ViewKategori" prefHeight="108.0" prefWidth="364.0" text="DESSERTS" textAlignment="CENTER" textFill="#fff7e7" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="btnBeverages" alignment="CENTER" layoutX="376.0" layoutY="632.0" onMousePressed="#ViewKategori" prefHeight="108.0" prefWidth="364.0" text="BEVERAGES" textAlignment="CENTER" textFill="#fff7e7" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

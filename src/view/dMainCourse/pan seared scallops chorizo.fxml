@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="-14.0" layoutY="-21.0" prefHeight="751.0" prefWidth="745.0" style="-fx-background-color: #1C1C1C;">
+         <children>
+            <Pane layoutX="352.0" layoutY="-3.0" prefHeight="757.0" prefWidth="396.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <Pane layoutX="-297.0" layoutY="131.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="205.0" prefWidth="155.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="P A N  S E A R E D   S C A L L O P S&#10;C H O R I Z O" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="303.0" text="Scallops, man. They’re just the best. (Eating a lot of them recently has rendered me inarticulate — that’s how good they are.) Seared scallops take virtually no time to make. And yet they seem so special. The flavor and texture contrasts with the seared scallops are just perfect. And I recommend serving it all over a bed of basmati rice pilaf, another best-in-class version of a simple, killer recipe. " textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../food/ic_access_time_black_24dp/web/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="12 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="205.0" fitWidth="155.0" layoutX="405.0" layoutY="154.0">
+                           <image>
+                              <Image url="@../../pan%20seared%20scallops%20chorizo.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="330.0" layoutY="25.0">
+                     <image>
+                        <Image url="@../../food/ic_cancel_black_24dp/web/ic_cancel_black_24dp_2x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <ImageView layoutX="24.0" layoutY="21.0">
+         <image>
+            <Image url="@../../../ic_chevron_left_white_24dp_2x.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

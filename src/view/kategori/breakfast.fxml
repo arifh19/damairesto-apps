@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="v_breakfast" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="-2.0" prefHeight="724.0" prefWidth="723.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label layoutX="75.0" layoutY="185.0" text="Break·fast">
+               <font>
+                  <Font name="System Bold Italic" size="42.0" />
+               </font>
+            </Label>
+            <Label layoutX="133.0" layoutY="245.0" text="/ˈbrekfəst/">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="67.0" layoutY="403.0" prefHeight="142.0" prefWidth="269.0" style="-fx-background-color: #D9D7D3;">
+               <children>
+                  <Label layoutX="13.0" layoutY="6.0" prefHeight="116.0" prefWidth="300.0" text="Breakfast is the first meal of a day,&#10;most often eaten in the early morning &#10;before undertaking the day's work.&#10;">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutY="543.0" prefHeight="124.0" prefWidth="337.0" style="-fx-background-color: #3D3D3C;">
+               <children>
+                  <Label layoutX="20.0" layoutY="49.0" text="HOTEL DAMAI - RESTAURANT" textFill="#737373">
+                     <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="69.0" text="YOGYAKARTA" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ScrollPane hbarPolicy="NEVER" layoutX="334.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="388.0" style="-fx-background-color: #FFFFFF;" vbarPolicy="ALWAYS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="768.0" prefWidth="387.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <VBox layoutX="-4.0" layoutY="-8.0" prefHeight="771.0" prefWidth="380.0">
+                           <children>
+                              <HBox prefHeight="269.0" prefWidth="380.0">
+                                 <children>
+                                    <VBox prefHeight="269.0" prefWidth="210.0">
+                                       <children>
+                                          <ImageView fitHeight="177.0" fitWidth="114.0">
+                                             <image>
+                                                <Image url="@../img/bubur%20bandung.jpg" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="32.0" top="25.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Pane prefHeight="118.0" prefWidth="155.0">
+                                             <children>
+                                                <ChoiceBox layoutX="25.0" layoutY="58.0" prefHeight="25.0" prefWidth="45.0" />
+                                                <Button layoutX="28.0" layoutY="58.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Bubur Bandung" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton layoutX="105.0" layoutY="58.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label layoutX="60.0" layoutY="29.0" text="Rp 15.000" textFill="#7f5959">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="269.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="117.0">
+                                             <image>
+                                                <Image url="@../img/Mie%20goreng.jpg" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="25.0" top="42.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Pane prefHeight="108.0" prefWidth="185.0">
+                                             <children>
+                                                <ChoiceBox layoutX="25.0" layoutY="68.0" prefHeight="25.0" prefWidth="45.0" />
+                                                <Button layoutX="28.0" layoutY="68.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="15.0" prefHeight="20.0" prefWidth="182.0" text="Mie Goreng" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton layoutX="93.0" layoutY="68.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label layoutX="65.0" layoutY="38.0" text="Rp 23.500" textFill="#7f5959">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="2.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="286.0" prefWidth="380.0">
+                                 <children>
+                                    <VBox prefHeight="269.0" prefWidth="210.0">
+                                       <children>
+                                          <ImageView fitHeight="200.0" fitWidth="142.0">
+                                             <image>
+                                                <Image url="@../img/healthy%20food%20.jpg" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="29.0" top="58.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Pane prefHeight="118.0" prefWidth="155.0">
+                                             <children>
+                                                <ChoiceBox layoutX="25.0" layoutY="52.0" prefHeight="25.0" prefWidth="45.0" />
+                                                <Button layoutX="28.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Healthy Mix Bowl" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton layoutX="105.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label layoutX="70.0" layoutY="26.0" text="Rp 32.500" textFill="#7f5959">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="269.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="124.0" fitWidth="166.0">
+                                             <image>
+                                                <Image url="@../img/nasi%20goreng.jpg" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets top="122.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Pane prefHeight="115.0" prefWidth="185.0">
+                                             <children>
+                                                <ChoiceBox layoutX="22.0" layoutY="63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0" />
+                                                <Button layoutX="25.0" layoutY="63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="14.0" prefHeight="22.0" prefWidth="144.0" text="Nasi Goreng" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="2.0" />
+                                                   </padding>
+                                                </Label>
+                                                <JFXButton layoutX="93.0" layoutY="63.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label layoutX="65.0" layoutY="35.0" text="Rp 23.500" textFill="#7f5959">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets top="2.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="142.0" prefWidth="380.0">
+                                 <children>
+                                    <JFXButton onAction="#checkOut" prefHeight="30.0" prefWidth="255.0" style="-fx-background-color: #207245;" text="Check Out" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="58.0" top="65.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets top="69.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KategoriController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Pane prefHeight="724.0" prefWidth="723.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Pane prefHeight="55.0" prefWidth="723.0" style="-fx-background-color: #1C1C1C;">
+                     <children>
+                        <JFXButton layoutX="6.0" prefHeight="44.0" prefWidth="71.0" text=" " />
+                        <Pane layoutX="256.0" layoutY="-7.0" prefHeight="43.0" prefWidth="490.0">
+                           <children>
+                              <JFXButton fx:id="l_breakfast" layoutY="20.0" onAction="#breakfast" text="Breakfast" textFill="#b07e6a">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="l_appetizer" layoutX="88.0" layoutY="20.0" onAction="#appetizer" text="Appetizer" textFill="#b07e6a">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="l_maincourse" layoutX="181.0" layoutY="20.0" onAction="#handleButtonAction" text="Main Course" textFill="#b07e6a">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="l_dessert" layoutX="298.0" layoutY="20.0" onAction="#handleButtonAction" text="Dessert" textFill="#b07e6a">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="l_beverages" layoutX="382.0" layoutY="20.0" onAction="#handleButtonAction" text="Beverages" textFill="#b07e6a">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </Pane>
+                        <ImageView fx:id="btnBack" fitHeight="55.0" fitWidth="56.0" layoutX="6.0" onMousePressed="#backButtonAction">
+                           <image>
+                              <Image url="@../img/ic_chevron_left_white_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <StackPane fx:id="holderPane" layoutY="55.0" prefHeight="669.0" prefWidth="723.0" />
+   </children>
+</AnchorPane>
