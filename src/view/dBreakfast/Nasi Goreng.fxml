@@ -47,7 +47,7 @@
                   </Pane>
                   <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="330.0" layoutY="25.0">
                      <image>
-                        <Image url="@../../food/ic_cancel_black_24dp/web/ic_cancel_black_24dp_2x.png" />
+                        <Image url="@../../img/ic_cancel_black_24dp_2x.png" />
                      </image>
                   </ImageView>
                </children>
