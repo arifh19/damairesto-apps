@@ -129,7 +129,7 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="lemonadebtn" layoutX="105.0" layoutY="52.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -166,7 +166,7 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="46.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="specialitybtn" layoutX="93.0" layoutY="46.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -210,7 +210,7 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="peachbtn" layoutX="105.0" layoutY="52.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -250,7 +250,7 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="50.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="cocktailbtn" layoutX="93.0" layoutY="50.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -294,7 +294,7 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="machiantobtn" layoutX="105.0" layoutY="52.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -334,7 +334,7 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="matchabtn" layoutX="93.0" layoutY="52.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>

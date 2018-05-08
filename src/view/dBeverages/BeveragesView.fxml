@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BeveragesViewController">
    <children>
       <Pane layoutX="-14.0" layoutY="-21.0" prefHeight="751.0" prefWidth="745.0" style="-fx-background-color: #1C1C1C;">
          <children>
@@ -224,7 +224,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="330.0" layoutY="25.0">
+                  <ImageView fx:id="closebtn" fitHeight="36.0" fitWidth="36.0" layoutX="330.0" layoutY="25.0" onMousePressed="#closeButtonAction">
                      <image>
                         <Image url="@../../img/ic_cancel_black_24dp_2x.png" />
                      </image>
@@ -233,7 +233,7 @@
             </Pane>
          </children>
       </Pane>
-      <ImageView layoutX="24.0" layoutY="21.0">
+      <ImageView layoutX="24.0" layoutY="21.0" onMousePressed="#backButtonAction">
          <image>
             <Image url="@../../img/ic_chevron_left_white_24dp_2x.png" />
          </image>

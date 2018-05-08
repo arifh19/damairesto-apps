@@ -46,6 +46,18 @@ public class KategoriController implements Initializable {
     private AnchorPane v_appetizer, v_maincourse, v_dessert, v_beverages;
     @FXML
     private JFXButton l_breakfast, l_appetizer, l_maincourse, l_dessert,l_beverages;
+    @FXML
+    private JFXButton lemonadebtn;
+    @FXML
+    private JFXButton specialitybtn;
+    @FXML
+    private JFXButton peachbtn;
+    @FXML
+    private JFXButton cocktailbtn;
+    @FXML
+    private JFXButton machiantobtn;
+    @FXML
+    private JFXButton matchabtn;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -188,5 +200,40 @@ public class KategoriController implements Initializable {
         }
     }
      
-    
+   @FXML
+   private void deskripsiBeveragesView(ActionEvent event){
+       try{
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/dBeverages/BeveragesView.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage1 = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(new Scene(root1));  
+            stage.show();
+            BeveragesViewController controller = fxmlLoader.getController();
+            getViewBeverages(event, controller);
+            stage1.hide();  
+       }catch(IOException ex){
+           ex.printStackTrace();
+       }
+   }
+   
+   private void getViewBeverages(ActionEvent event,BeveragesViewController controller){
+        if (event.getTarget() == lemonadebtn) {
+            controller.setView(1);
+        }else if (event.getTarget() == specialitybtn){
+            controller.setView(6);
+        }else if (event.getTarget() == peachbtn){
+            controller.setView(2);
+        }else if (event.getTarget() == cocktailbtn){
+            controller.setView(3);
+        }else if (event.getTarget() == machiantobtn){
+            controller.setView(4);
+        }else if (event.getTarget() == matchabtn){
+            controller.setView(5);
+        }else{
+            
+        }
+   }
+ 
 }
