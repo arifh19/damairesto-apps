@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppetizerViewController">
+   <children>
+      <Pane layoutX="-14.0" layoutY="-21.0" prefHeight="751.0" prefWidth="745.0" style="-fx-background-color: #1C1C1C;">
+         <children>
+            <Pane layoutX="352.0" layoutY="-3.0" prefHeight="757.0" prefWidth="396.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <Pane fx:id="buffaloView" layoutX="-297.0" layoutY="131.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="189.0" prefWidth="193.0" style="-fx-background-color: #E8E8E8;">
+                           <children>
+                              <ImageView fitHeight="196.0" fitWidth="191.0" layoutX="33.0" layoutY="31.0">
+                                 <image>
+                                    <Image url="@../../img/Buffalo%20Chicken%20Crescent%20Ring.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="532.0" text="B U F F A L O  C H I C K E N  R I N G" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="305.0" text="For an easy, crowd-pleasing appetizer or a quick  weeknight dinner, this Buffalo Chicken Dip Crescent Ring is always a winner! Buttery crescents are baked around a savory, spicy, creamy filling no one can resist. (Tastes great with a side of ranch for dipping.)" textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="279.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="283.0" text="17 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="cajunView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="212.0" prefWidth="163.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="C A J U N  F I S H  T A C O S" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="308.0" text="Cajun Fish Tacos for you. Delicious and smoky cajun rub on beautifully seared juicy fish topped with rich creamy avocado cilantro sauce and spicy tangy pico de gallo all wrap in warm tortilla. So light, so fresh, they’re to die for. Dare I say the best fish tacos ever? Of course that is before I make the next best fish tacos." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="279.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="283.0" text="25 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="191.0" fitWidth="163.0" layoutX="405.0" layoutY="154.0">
+                           <image>
+                              <Image url="@../../img/cajun-fish-tacos.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mushroomView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="212.0" prefWidth="163.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="F R I E D  O Y S T E R  &#10;M U S H R O O M  T A C O S" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="305.0" text="Fried Oyster Mushroom Tacos like fish tacos, but, you know, sans fish. Assemble the tacos by heating up the corn tortillas on a cast iron skillet, shredding some red cabbage and cutting up some limes and avocado. Place cabbage and avocado first, then a big piece of fried oyster mushroom followed by a dollop of sour cream, a few sprigs of cilantro, a drizzle of hot sauce and a squeeze of lime. &#10;" textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="279.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="283.0" text="25 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="191.0" fitWidth="163.0" layoutX="405.0" layoutY="154.0">
+                           <image>
+                              <Image url="@../../img/Fried%20Oyster%20mushroom%20tacos.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="potatoesView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="142.0" prefWidth="218.0" style="-fx-background-color: #E8E8E8;">
+                           <children>
+                              <ImageView fitHeight="143.0" fitWidth="204.0" layoutX="33.0" layoutY="31.0">
+                                 <image>
+                                    <Image url="@../../img/Hasselback%20potatoes.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="532.0" text="H A S S E L B A C K  P O T A T O E S" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="306.0" text="The Hasselback potato is clearly the most impressive spud to ever call itself a side dish. It's also like having all of your potato dreams come true at once: these potatoes have the crispy edges of your favorite french fries, but with middles as creamy as mashed potatoes — plus the added bonus of being, essentially, wholesome baked potatoes in clever disguise." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="279.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="283.0" text="17 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="jackView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="163.0" prefWidth="209.0" style="-fx-background-color: #E8E8E8;">
+                           <children>
+                              <ImageView fitHeight="174.0" fitWidth="205.0" layoutX="33.0" layoutY="31.0">
+                                 <image>
+                                    <Image url="@../../img/shredded%20jackfruit%20burrito.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="532.0" text="S H R E D E D  J A C K  F R U I T &#10;B U R I T T O" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="297.0" text="I suspect the most notable aspect of this burrito is the use of jackfruit. My guess is it might be an ingredient you're either completely onboard with, or not at all. it has a flavor that is quite mild and neutral, making it a lot of fun to play with on the culinary front - blank slate and all of spices and flavor. " textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="279.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="283.0" text="23 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="roastedView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="205.0" prefWidth="185.0" style="-fx-background-color: #E8E8E8;">
+                           <children>
+                              <ImageView fitHeight="205.0" fitWidth="171.0" layoutX="33.0" layoutY="31.0">
+                                 <image>
+                                    <Image url="@../../img/sumac-roasted-potatoes-with-tahini-dipping-sauce-9-1-768x1118.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="532.0" text="R O A S T E D  P O T A T O " textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="300.0" text="This genius steam-then-roast method produces  perfect potatoes every time. Starting with medium- small Yukon Golds (about 2&quot; long) means you’ll have  the ideal proportion of browned, crispy outside to creamy interior." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="279.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="283.0" text="17 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="closebtn" fitHeight="36.0" fitWidth="36.0" layoutX="317.0" layoutY="53.0" onMousePressed="#closeButtonAction">
+                     <image>
+                        <Image url="@../../img/ic_cancel_black_24dp_2x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="25.0" onMousePressed="#backButtonAction" prefHeight="100.0" prefWidth="99.0">
+               <children>
+                  <ImageView layoutX="18.0" layoutY="15.0">
+                     <image>
+                        <Image url="@../../img/ic_chevron_left_white_24dp_2x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

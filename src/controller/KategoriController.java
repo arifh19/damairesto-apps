@@ -41,9 +41,13 @@ public class KategoriController implements Initializable {
     private MenuController MainApp;
     @FXML
     private AnchorPane v_breakfast;
+    @FXML
+    private AnchorPane v_appetizer;
+    @FXML
+    private AnchorPane v_maincourse;
     
     @FXML
-    private AnchorPane v_appetizer, v_maincourse, v_dessert, v_beverages;
+    private AnchorPane v_dessert, v_beverages;
     @FXML
     private JFXButton l_breakfast, l_appetizer, l_maincourse, l_dessert,l_beverages;
     @FXML
@@ -58,6 +62,21 @@ public class KategoriController implements Initializable {
     private JFXButton machiantobtn;
     @FXML
     private JFXButton matchabtn;
+    @FXML
+    private JFXButton cajunbtn;
+    @FXML
+    private JFXButton friedbtn;
+    @FXML
+    private JFXButton jackbtn;
+    @FXML
+    private JFXButton roastedbtn;
+    @FXML
+    private JFXButton potatoesbtn;
+    @FXML
+    private JFXButton buffalobtn;
+   
+  
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -199,8 +218,45 @@ public class KategoriController implements Initializable {
             ex.printStackTrace();
         }
     }
-     
+   
    @FXML
+   private void deskripsiAppetizerView(ActionEvent event){
+       try{
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/dAppetizer/AppetizerView.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage1 = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(new Scene(root1)); 
+            stage1.close();
+            stage.show();
+            AppetizerViewController controller = fxmlLoader.getController();
+            getViewAppetizer(event, controller);    
+       }catch(IOException ex){
+           ex.printStackTrace();
+       }
+   }
+   
+   
+   private void getViewAppetizer(ActionEvent event,AppetizerViewController controller){
+        if (event.getTarget() == buffalobtn) {
+            controller.setView(1);
+        }else if (event.getTarget() == cajunbtn){
+            controller.setView(2);
+        }else if (event.getTarget() == friedbtn){
+            controller.setView(3);
+        }else if (event.getTarget() == potatoesbtn){
+            controller.setView(4);
+        }else if (event.getTarget() == jackbtn){
+            controller.setView(5);
+        }else if (event.getTarget() == roastedbtn){
+            controller.setView(6);
+        }else{
+            
+        }
+   }
+   
+    @FXML
    private void deskripsiBeveragesView(ActionEvent event){
        try{
            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/dBeverages/BeveragesView.fxml"));
@@ -208,21 +264,20 @@ public class KategoriController implements Initializable {
             Stage stage1 = (Stage) ((Node) (event.getSource())).getScene().getWindow();
             Stage stage = new Stage();
             stage.initStyle(StageStyle.UNDECORATED);
-            stage.setScene(new Scene(root1));  
+            stage.setScene(new Scene(root1)); 
+            stage1.close();
             stage.show();
             BeveragesViewController controller = fxmlLoader.getController();
-            getViewBeverages(event, controller);
-            stage1.hide();  
+            getViewBeverages(event, controller);    
        }catch(IOException ex){
            ex.printStackTrace();
        }
    }
    
+   
    private void getViewBeverages(ActionEvent event,BeveragesViewController controller){
         if (event.getTarget() == lemonadebtn) {
             controller.setView(1);
-        }else if (event.getTarget() == specialitybtn){
-            controller.setView(6);
         }else if (event.getTarget() == peachbtn){
             controller.setView(2);
         }else if (event.getTarget() == cocktailbtn){
@@ -231,9 +286,10 @@ public class KategoriController implements Initializable {
             controller.setView(4);
         }else if (event.getTarget() == matchabtn){
             controller.setView(5);
+        }else if (event.getTarget() == specialitybtn){
+            controller.setView(6);
         }else{
             
         }
    }
- 
 }

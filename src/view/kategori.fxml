@@ -1257,7 +1257,7 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="68.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="cajunbtn" layoutX="105.0" layoutY="68.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1294,7 +1294,7 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="68.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="friedbtn" layoutX="93.0" layoutY="68.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1343,7 +1343,7 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="jackbtn" layoutX="105.0" layoutY="52.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1383,7 +1383,7 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="51.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="roastedbtn" layoutX="93.0" layoutY="51.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1427,7 +1427,7 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="83.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="potatoesbtn" layoutX="105.0" layoutY="83.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1467,7 +1467,7 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="68.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="buffalobtn" layoutX="93.0" layoutY="68.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>

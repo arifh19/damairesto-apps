@@ -17,7 +17,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -26,24 +25,22 @@ import javafx.stage.StageStyle;
  *
  * @author Yuuki
  */
-public class BeveragesViewController implements Initializable {
+public class AppetizerViewController implements Initializable {
 
     @FXML
-    private Pane LemonadeView;
+    private Pane buffaloView;
     @FXML
-    private Pane peachView;
+    private Pane cajunView;
     @FXML
-    private Pane cockTailView;
+    private Pane mushroomView;
     @FXML
-    private Pane MacchiatoView;
+    private Pane potatoesView;
     @FXML
-    private Pane MatchalatteView;
-    @FXML
-    private Pane SpecialityTeaView;
-    
-    private MenuController MainApp;
+    private Pane jackView;
     @FXML
     private ImageView closebtn;
+    @FXML
+    private Pane roastedView;
 
     /**
      * Initializes the controller class.
@@ -53,24 +50,19 @@ public class BeveragesViewController implements Initializable {
         // TODO
     }    
     
-    public void setMainApp(MenuController mainApp) {
-        this.MainApp = mainApp;
-        // Add obserVievable list data to the table
-    }
-    
     public void setView(int event){
         if(event ==1){
-            LemonadeView.setVisible(true);
+            buffaloView.setVisible(true);
         }else if(event ==2){
-            peachView.setVisible(true);
+            cajunView.setVisible(true);
         }else if(event ==3){
-            cockTailView.setVisible(true);
+            mushroomView.setVisible(true);
         }else if(event ==4){
-            MacchiatoView.setVisible(true);
+            potatoesView.setVisible(true);
         }else if(event ==5){
-            MatchalatteView.setVisible(true);
-        }else{
-            SpecialityTeaView.setVisible(true);
+            jackView.setVisible(true);
+        }else if(event ==6){
+            roastedView.setVisible(true);
         }
     }
     
