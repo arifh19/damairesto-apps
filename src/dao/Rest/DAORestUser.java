@@ -48,7 +48,7 @@ import org.jsoup.select.Elements;
 public class DAORestUser implements implementUser {
     
     private List<User> listUser;
-    public static String alamat = "http://localhost/damairesto/index.php/users";
+    public static String alamat = "http://localhost:8000/api/v1/users";
 
     public DAORestUser() {
         populateUser();
@@ -100,10 +100,9 @@ public class DAORestUser implements implementUser {
             conn.setDoOutput(true);
             conn.setRequestMethod("POST");
 
-            String urlParameters  = "username="+b.getUsername()+
-                    "&first_name="+b.getFirst_name()+
+            String urlParameters  = "name="+b.getName()+
+                    "&username="+b.getUsername()+
                     "&password="+b.getPassword()+
-                    "&last_name="+b.getLast_name()+
                     "&status="+b.getStatus();
             byte[] postData       = urlParameters.getBytes( StandardCharsets.UTF_8 );
             int    postDataLength = postData.length;   
@@ -178,11 +177,10 @@ public class DAORestUser implements implementUser {
                 
                 JSONObject jo = (JSONObject) jp.parse(json.get(i).toString());
                // System.out.println(jo.get("username").toString());
-                listUser.add(new User(Integer.valueOf(jo.get("user_id").toString()), 
-                        jo.get("username").toString(),
-                        jo.get("first_name").toString(), 
-                        jo.get("last_name").toString(), 
-                        jo.get("password").toString(),
+                listUser.add(new User(Integer.valueOf(jo.get("id").toString()), 
+                        jo.get("name").toString(),
+                        jo.get("username").toString(), 
+                        jo.get("password").toString(), 
                         jo.get("status").toString()));
             }
             conn.disconnect();
@@ -196,11 +194,11 @@ public class DAORestUser implements implementUser {
     }
 
     @Override
-    public User getUser(String user_id) {
+    public User getUser(String id) {
         populateUser();
         User user = null;
         for (User _user : listUser) {
-            if (String.valueOf(_user.getUser_id()).equals(user_id)) {
+            if (String.valueOf(_user.getId()).equals(id)) {
                 user = _user;
             }
         }
@@ -210,7 +208,7 @@ public class DAORestUser implements implementUser {
     @Override
     public void update(User b) {
         try {
-            URL url = new URL(alamat+"?id="+b.getUser_id());
+            URL url = new URL(alamat+"?id="+b.getId());
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
             conn.setRequestMethod("PUT");
@@ -218,10 +216,10 @@ public class DAORestUser implements implementUser {
             conn.setRequestProperty("Accept", "application/json");
             //conn.addRequestProperty("Authorization", LoginDAOREST.user);
             String input = "{"
-                    + "\"username\":\"" + b.getUsername()
-                    + "\",\"first_name\":\"" + b.getFirst_name()
-                    + "\",\"last_name\":\"" + b.getLast_name()
-                    + "\",\"password\":\"" + b.getStatus()
+                    + "\"name\":\"" + b.getName()
+                    + "\",\"username\":\"" + b.getUsername()
+                    + "\",\"password\":\"" + b.getPassword()
+                    + "\",\"status\":\"" + b.getStatus()
                     + "\"}";
             OutputStream os = conn.getOutputStream();
             os.write(input.getBytes());

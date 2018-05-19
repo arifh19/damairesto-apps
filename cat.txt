@@ -1,0 +1,54 @@
+Bubur Bandung : B001
+Mie Goreng : B002
+Healthly Mix Bowl : B003
+Nasi Goreng : B004
+
+minBtnBreakfast
+plusBtnBreakfast
+txtb001
+
+if(txtb002==0){
+plusb002.setDisable
+
+else if(txtb002<max)
+minb002.enable
+plusb002.enable
+
+else if(txtb002>=max){
+plusb002.setDisable
+minb002.enable
+
+
+Cajun Fish Tacos : A001
+Fried Oyster Mushroom : A002
+Shreded Jackfruit : A003
+Roasted Potato : A004
+Hasselback Potatoes : A005
+Buffalo Chicken Ring : A006
+
+plusa001
+mina001
+
+plusBtnAppetizer
+minBtnAppetizer
+
+
+Sphagetti Carbonara : M001
+Vegan Greek Pizza : M002
+Chicory Soup : M003
+Salmon w/Brocoli Steak : M004
+Pan Seared Scallops : M005
+Kimchi Fried Rice : M006
+Wagyu Blue Cheese Steak : M007
+Lime and Blackpepper Salmon : M008
+Roasted Delicated Galette : M009
+Kimchi Sushi : M010 
+
+
+
+plusm001
+minm001
+
+plusBtnMaincourse
+minBtnMaincourse
+

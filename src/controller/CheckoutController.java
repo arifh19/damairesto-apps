@@ -6,6 +6,7 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -41,8 +42,6 @@ public class CheckoutController implements Initializable {
     private JFXButton btnStep2;
     @FXML
     private JFXButton btnStep1;
-  @FXML
-    private ImageView btnBack;
     @FXML
     private ImageView checkStep1;
     @FXML
@@ -55,6 +54,18 @@ public class CheckoutController implements Initializable {
     private JFXButton btnPrev2;
     @FXML
     private JFXButton btnPrev1;
+    @FXML
+    private JFXTextField txtFirstName;
+    @FXML
+    private JFXTextField txtLastName;
+    @FXML
+    private JFXTextField txtTableNumber;
+    @FXML
+    private JFXTextField txtSetFirstName;
+    @FXML
+    private JFXTextField txtSetLastName;
+    @FXML
+    private JFXTextField txtSetTableNumber;
     
     /**
      * Initializes the controller class.
@@ -64,6 +75,7 @@ public class CheckoutController implements Initializable {
         // TODO
     }    
     
+    @FXML
     public void backButtonAction(ActionEvent event) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/kategori.fxml"));
@@ -83,6 +95,9 @@ public class CheckoutController implements Initializable {
     
     @FXML
     private void nextButton(ActionEvent event){
+        String firstName = txtSetFirstName.getText();
+        String lastName = txtSetLastName.getText();
+        String tableNumber = txtSetTableNumber.getText();
          if (event.getTarget() == btnStep1) {
             pertama_checkout.setVisible(false);
             kedua_checkout.setVisible(true);
@@ -93,6 +108,9 @@ public class CheckoutController implements Initializable {
             kedua_checkout.setVisible(false);
             ketiga_checkout.setVisible(true);
             checkStep3.setVisible(true);
+            txtFirstName.setText(firstName);
+            txtLastName.setText(lastName);
+            txtTableNumber.setText(tableNumber);
         } else if (event.getTarget() == btnStep3) {
             pertama_checkout.setVisible(false);
             kedua_checkout.setVisible(false);
@@ -134,5 +152,9 @@ public class CheckoutController implements Initializable {
         }catch(IOException ex){
             ex.printStackTrace();
         }
+    }
+
+    @FXML
+    private void backButtonAction(MouseEvent event) {
     }
 }

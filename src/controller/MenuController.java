@@ -52,6 +52,8 @@ public class MenuController implements Initializable {
     private ImageView imgBreakfast;
     @FXML
     private Label btnBreakfast;
+    @FXML
+    private JFXButton logout_bttn;
 
     /**
      * Initializes the controller class.

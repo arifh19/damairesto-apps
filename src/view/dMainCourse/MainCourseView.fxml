@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainCourseViewController">
+   <children>
+      <Pane layoutX="-14.0" layoutY="-21.0" prefHeight="751.0" prefWidth="745.0" style="-fx-background-color: #1C1C1C;">
+         <children>
+            <Pane layoutX="352.0" layoutY="-3.0" prefHeight="757.0" prefWidth="396.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <Pane fx:id="chicoryView" layoutX="-297.0" layoutY="131.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="131.0" prefWidth="174.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="C H I C O R Y  S O U P" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="294.0" text="It's a brothy, restorative barley soup with chicories punctuated with flecks of preserved lemon, a bit of chile confetti, and a silky dollop of creme fraiche. I could eat it everyday with no complaints. Russ sources and likes to cook with Anson Mill's whole farro piccolo, and did a version with that for the dinner. The flavor was so nice and pronounced. It's like soba-yu whether you use barley or farro, this soup has some of that spirit woven in." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="15 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="131.0" fitWidth="174.0" layoutX="405.0" layoutY="154.0">
+                           <image>
+                              <Image url="@../../img/chicory-soup.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="kimchifriedView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="366.0" layoutY="110.0" prefHeight="124.0" prefWidth="208.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="K I M C H I  F R I E D  R I C E " textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="291.0" text="Like with a good kimchi jjigae the secret to a good kimchi fried rice is to use mature kimchi along with its juices. Kimchi matures as lactic acid fermentation converts the sugars in the cabbage into lactic acid. This not only makes the kimchi taste sour, it increases both the amount of glutamic acids (the compounds that create the taste of umami) and the depth of flavor in the kimchi.&#10;" textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="25 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="135.0" fitWidth="198.0" layoutX="410.0" layoutY="142.0">
+                           <image>
+                              <Image url="@../../img/Kimchi%20Fried%20Rice.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="kimchisushiView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="366.0" layoutY="104.0" prefHeight="215.0" prefWidth="150.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="538.0" text="K I M C H I  S U S H I" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="241.0" text="This Korean classic is a sure-fire hit at parties or at  the dinner table. This is simply the best Kimchi Sushi Roll you’ll ever try." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="25min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="215.0" fitWidth="150.0" layoutX="387.0" layoutY="142.0">
+                           <image>
+                              <Image url="@../../img/Kimchi%20Sushi.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="limeView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="366.0" layoutY="104.0" prefHeight="174.0" prefWidth="173.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="538.0" text="L I M E  A N D  B L A C K P E P P E R&#10;S A L M O N" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="243.0" text="This lime and black pepper salmon had a perfectly crispy skin and all the flavour in very little time! Delicious and easy.&#10;" textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="35min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="174.0" fitWidth="173.0" layoutX="387.0" layoutY="142.0">
+                           <image>
+                              <Image url="@../../img/Lime%20and%20blackpepper%20salmon.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="salmonView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="205.0" prefWidth="155.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="S A L M O N  W / B R O C O L I  &#10;S T E A K" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="283.0" text="A head of broccoli sliced lengthwise is transformed into gorgeous green “steaks” with which the salmon is roasted—all together in one pan for easy cleanup. As you are slicing the broccoli, save any florets that fall away for a stir-fry or salad—or imply eat them as a snack dipped in a little Dump Ranch dressing." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="45 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="205.0" fitWidth="155.0" layoutX="405.0" layoutY="154.0">
+                           <image>
+                              <Image url="@../../img/Salmon%20with%20brocoli%20steak.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="galleteView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="366.0" layoutY="104.0" prefHeight="215.0" prefWidth="150.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="538.0" text="R O A S T E D  D E L I C A T E D &#10;G A L E T T E" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="282.0" text="Delicata squash has subtle, rich flavors and a creamy texture without all the sweetness of many of the other winter squashes. But better than that, it’s so much easier to prepare than the acorn or the butternut — the skin in thinner and entirely edible. Easy and delicious is always a win." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="25min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="205.0" fitWidth="150.0" layoutX="387.0" layoutY="142.0">
+                           <image>
+                              <Image url="@../../img/Roasted%20delicata%20gallete.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="sphagettiView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="212.0" prefWidth="163.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="S P H A G E T T I  C A R B O N A R A" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="276.0" text="“Just a handful of ingredients makes a fantastic carbonara and, done properly, it’s a thing of beauty. ” Carbonara  is an Italian pasta dish from Rome made with egg, hard cheese, guanciale (or pancetta), and pepper. " textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="279.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="283.0" text="28 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="212.0" fitWidth="163.0" layoutX="405.0" layoutY="154.0">
+                           <image>
+                              <Image url="@../../img/sphagetti%20carbonara.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="veganView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="212.0" prefWidth="163.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="V E G A N  G R E E K  P I Z Z A" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="298.0" text="The most notable thing about this traditional Greek pizza pie recipe is the relatively large amount olive oil (indeed that’s where it gets its name, ladi being the Greek word for oil). It’s not an unexpected ingredient, but it gives this pizza a pleasantly sturdy crust, country-style comfort flavor, and leaves you feeling full from just a couple of slices – even though the toppings are both few and vegan.&#10;" textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="279.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="283.0" text="30 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="212.0" fitWidth="163.0" layoutX="405.0" layoutY="154.0">
+                           <image>
+                              <Image url="@../../img/vegan%20greek%20pizza.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="panView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="205.0" prefWidth="155.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="P A N  S E A R E D   S C A L L O P S&#10;C H O R I Z O" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="303.0" text="Scallops, man. They’re just the best. (Eating a lot of them recently has rendered me inarticulate — that’s how good they are.) Seared scallops take virtually no time to make. And yet they seem so special. The flavor and texture contrasts with the seared scallops are just perfect. And I recommend serving it all over a bed of basmati rice pilaf, another best-in-class version of a simple, killer recipe. " textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="12 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="205.0" fitWidth="155.0" layoutX="405.0" layoutY="154.0">
+                           <image>
+                              <Image url="@../../img/pan%20seared%20scallops%20chorizo.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="wagyuView" layoutX="-287.0" layoutY="141.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                     <children>
+                        <Pane layoutX="366.0" layoutY="110.0" prefHeight="193.0" prefWidth="150.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="538.0" text="W A G Y U  B L U E  C H E E S E  S T E A K" textFill="#3d2c25">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="287.0" text="The usual formula for cooking an amazing slab of steak is as simple as they come: salt plus pepper plus a short stint over a hot fire. Some good crumbled blue cheese sprinkled on the hot steak so it melts over the top does just that, especially when you spike it with hot sauce and butter." textAlignment="JUSTIFY" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
+                        <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="292.0">
+                           <image>
+                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="296.0" text="45 min">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="193.0" fitWidth="150.0" layoutX="410.0" layoutY="142.0">
+                           <image>
+                              <Image url="@../../img/Wagyu%20Blue%20Cheese%20Steak.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="closebtn" fitHeight="36.0" fitWidth="36.0" layoutX="317.0" layoutY="42.0" onMouseClicked="#closeButtonAction">
+                     <image>
+                        <Image url="@../../img/ic_cancel_black_24dp_2x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="14.0" onMousePressed="#backButtonAction" prefHeight="87.0" prefWidth="94.0">
+               <children>
+                  <ImageView layoutX="23.0" layoutY="20.0">
+                     <image>
+                        <Image url="@../../img/ic_chevron_left_white_24dp_2x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+End Point
+
+Operator
+Food Management :http://localhost:8000/api/v1/hidangan
+
+Rest Management : http://localhost:8000/api/v1/pesanan
+
+Cashier : GetPesanan() =  show
+
+
+Admin
+User mng : http://localhost:8000/api/v1/users
+
+food mng : http://localhost:8000/api/v1/hidangan
+
+rest mng : http://localhost:8000/api/v1/pesanan
+
+Pelanggan

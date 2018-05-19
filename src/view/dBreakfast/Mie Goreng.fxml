@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -16,42 +15,39 @@
                <children>
                   <Pane layoutX="-297.0" layoutY="131.0" prefHeight="455.0" prefWidth="622.0" style="-fx-background-color: #FFFFFF;">
                      <children>
-                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="212.0" prefWidth="163.0" style="-fx-background-color: #E8E8E8;" />
-                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="511.0" text="S P H A G E T T I  C A R B O N A R A" textFill="#3d2c25">
+                        <Pane layoutX="379.0" layoutY="110.0" prefHeight="205.0" prefWidth="163.0" style="-fx-background-color: #E8E8E8;" />
+                        <Label layoutX="51.0" layoutY="41.0" prefHeight="71.0" prefWidth="396.0" text="M I E  G O R E N G " textFill="#3d2c25">
                            <font>
                               <Font name="System Bold Italic" size="28.0" />
                            </font>
                         </Label>
-                        <Label layoutX="51.0" layoutY="89.0" prefHeight="205.0" prefWidth="276.0" text="“Just a handful of ingredients makes a fantastic carbonara and, done properly, it’s a thing of beauty. ” Carbonara  is an Italian pasta dish from Rome made with egg, hard cheese, guanciale (or pancetta), and pepper. " textAlignment="JUSTIFY" wrapText="true">
+                        <Label layoutX="51.0" layoutY="86.0" prefHeight="205.0" prefWidth="303.0" text="Mie goreng is a flavourful and often spicy fried noodle dish common in Indonesia. It is made with thin yellow noodles fried in cooking oil with garlic, onion or shallots, fried prawn, chicken, beef, or sliced bakso (meatballs), chili, Chinese cabbage, cabbages, tomatoes, egg, and other vegetables" textAlignment="JUSTIFY" wrapText="true">
                            <font>
                               <Font size="13.0" />
                            </font>
-                           <padding>
-                              <Insets top="15.0" />
-                           </padding>
                         </Label>
                         <ChoiceBox blendMode="DIFFERENCE" layoutX="51.0" layoutY="341.0" prefHeight="25.0" prefWidth="65.0" />
                         <Button blendMode="DIFFERENCE" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" text="OK" />
                         <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="279.0">
                            <image>
-                              <Image url="@../../img/ic_access_time_black_24dp_2x.png" />
+                              <Image url="@../../food/ic_access_time_black_24dp/web/ic_access_time_black_24dp_2x.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="84.0" layoutY="283.0" text="28 min">
+                        <Label layoutX="84.0" layoutY="283.0" text="15 min">
                            <font>
                               <Font name="System Italic" size="12.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="212.0" fitWidth="163.0" layoutX="405.0" layoutY="154.0">
+                        <ImageView fitHeight="205.0" fitWidth="163.0" layoutX="393.0" layoutY="166.0">
                            <image>
-                              <Image url="@../../img/sphagetti%20carbonara.jpg" />
+                              <Image url="@../../../INI%20FOLDER/ini%20folder/kerja%20bengkel/food/Mie%20goreng%20....jpg" />
                            </image>
                         </ImageView>
                      </children>
                   </Pane>
                   <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="330.0" layoutY="25.0">
                      <image>
-                        <Image url="@../../img/ic_cancel_black_24dp_2x.png" />
+                        <Image url="@../../food/ic_cancel_black_24dp/web/ic_cancel_black_24dp_2x.png" />
                      </image>
                   </ImageView>
                </children>
@@ -60,7 +56,7 @@
       </Pane>
       <ImageView layoutX="24.0" layoutY="21.0">
          <image>
-            <Image url="@../../img/ic_chevron_left_white_24dp_2x.png" />
+            <Image url="@../../../ic_chevron_left_white_24dp_2x.png" />
          </image>
       </ImageView>
    </children>

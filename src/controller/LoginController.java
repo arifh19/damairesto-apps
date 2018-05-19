@@ -43,9 +43,10 @@ public class LoginController implements Initializable {
     
     UserModel userModel = new UserModel();
      
+    @FXML
     public void Login(ActionEvent event) throws IOException {
       // 
-       statustext.setText("akun atau sandi salah");
+       /*statustext.setText("akun atau sandi salah");
        int loggedIn_user_id = userModel.getValidLogin(txtUser.getText(), txtPassword.getText());
        User loggedIn_user = userModel.getUser(Integer.toString(loggedIn_user_id));
        if (loggedIn_user_id != 0 && !loggedIn_user.getStatus().equals("pelanggan")) {
@@ -55,7 +56,7 @@ public class LoginController implements Initializable {
 
             //memanggil jendela menu admins
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/view/menu.fxml"));
+            loader.setLocation(getClass().getResource("/view/admin.fxml"));
             loader.load();
             //MenuController aController = loader.getController();
            // aController.setUserName(loggedIn_user);
@@ -71,7 +72,7 @@ public class LoginController implements Initializable {
             statustext.setText("akun atau sandi salah");
 //        } else {
             statustext.setText("akun atau sandi salah");
-        }
+        }*/
     }
     
     @Override

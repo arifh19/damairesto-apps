@@ -5,6 +5,7 @@
  */
 package controller;
 
+import com.jfoenix.controls.JFXTextArea;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -25,6 +26,9 @@ import javafx.stage.StageStyle;
  * @author Yuuki
  */
 public class WaitinglistController implements Initializable {
+
+    @FXML
+    private JFXTextArea txtWaktu;
 
     /**
      * Initializes the controller class.

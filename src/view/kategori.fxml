@@ -46,7 +46,7 @@
                               </JFXButton>
                            </children>
                         </Pane>
-                        <Pane onMousePressed="#backButtonAction" prefHeight="55.0" prefWidth="70.0">
+                        <Pane layoutX="-8.0" onMousePressed="#backButtonAction" prefHeight="55.0" prefWidth="70.0">
                            <children>
                               <ImageView fitHeight="55.0" fitWidth="56.0">
                                  <image>
@@ -118,20 +118,14 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="52.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="52.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="137.0" text="Lemonade" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton fx:id="lemonadebtn" layoutX="105.0" layoutY="52.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="lemonadebtn" layoutX="105.0" layoutY="55.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="52.0" layoutY="28.0" text="Rp 23.000" textFill="#7f5959">
@@ -139,6 +133,17 @@
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <Button layoutX="77.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField editable="false" layoutX="44.0" layoutY="46.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button layoutX="22.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -150,28 +155,22 @@
                                                       <Image url="@../img/Speciality%20Tea.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="32.0" top="28.0" />
+                                                      <Insets left="52.0" top="28.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="108.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="46.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="46.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="3.0" prefHeight="20.0" prefWidth="138.0" text="Speciality Tea" textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="3.0" prefHeight="20.0" prefWidth="138.0" text="Speciality Tea" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton fx:id="specialitybtn" layoutX="93.0" layoutY="46.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="specialitybtn" layoutX="108.0" layoutY="48.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="49.0" layoutY="24.0" text="Rp 19.000" textFill="#7f5959">
+                                                      <Label layoutX="75.0" layoutY="24.0" text="Rp 19.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -179,6 +178,17 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Button layoutX="79.0" layoutY="45.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="25.0" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField editable="false" layoutX="46.0" layoutY="38.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button layoutX="23.0" layoutY="45.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -199,20 +209,14 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="52.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Peach Smoothie" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton fx:id="peachbtn" layoutX="105.0" layoutY="52.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="peachbtn" layoutX="110.0" layoutY="55.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="70.0" layoutY="26.0" text="Rp 30.000" textFill="#7f5959">
@@ -220,6 +224,17 @@
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <Button layoutX="81.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField editable="false" layoutX="49.0" layoutY="47.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button layoutX="27.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -236,12 +251,6 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="22.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="25.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutY="3.0" prefHeight="22.0" prefWidth="158.0" text="Cocktail Whiskey" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
@@ -250,9 +259,9 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
-                                                      <JFXButton fx:id="cocktailbtn" layoutX="93.0" layoutY="50.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="cocktailbtn" layoutX="108.0" layoutY="53.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="54.0" layoutY="25.0" text="Rp 41.000" textFill="#7f5959">
@@ -263,6 +272,17 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Button layoutX="79.0" layoutY="51.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField editable="false" layoutX="46.0" layoutY="43.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button layoutX="24.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -283,20 +303,14 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="52.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="52.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="5.0" prefHeight="20.0" prefWidth="182.0" text="Macchiato" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton fx:id="machiantobtn" layoutX="105.0" layoutY="52.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="machiantobtn" layoutX="124.0" layoutY="60.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="70.0" layoutY="32.0" text="Rp 31.000" textFill="#7f5959">
@@ -304,6 +318,17 @@
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <Button layoutX="93.0" layoutY="58.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="25.0" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField editable="false" layoutX="60.0" layoutY="51.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button layoutX="37.0" layoutY="58.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -320,12 +345,6 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="20.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="23.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="5.0" prefHeight="20.0" prefWidth="182.0" text="Matcha Latte" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
@@ -334,9 +353,9 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
-                                                      <JFXButton fx:id="matchabtn" layoutX="93.0" layoutY="52.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="matchabtn" layoutX="112.0" layoutY="62.0" onAction="#deskripsiBeveragesView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="65.0" layoutY="32.0" text="Rp 32.000" textFill="#7f5959">
@@ -347,26 +366,22 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Button layoutX="81.0" layoutY="60.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="25.0" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField editable="false" layoutX="48.0" layoutY="53.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button layoutX="25.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
                                           </VBox>
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="154.0" prefWidth="380.0">
-                                       <children>
-                                          <JFXButton onAction="#checkOut" prefHeight="30.0" prefWidth="255.0" style="-fx-background-color: #207245;" text="Check Out" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="66.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                       </children>
-                                       <padding>
-                                          <Insets top="69.0" />
-                                       </padding>
                                     </HBox>
                                  </children>
                               </VBox>
@@ -378,7 +393,7 @@
             </Pane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="v_dessert" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" visible="false">
+      <AnchorPane fx:id="v_dessert" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0">
          <children>
             <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="724.0" prefWidth="723.0" style="-fx-background-color: #FFFFFF;">
                <children>
@@ -435,20 +450,14 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="52.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Boston Cream Cheesecake" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="bostonbtn" layoutX="112.0" layoutY="54.0" onAction="#deskripsiDessertView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="70.0" layoutY="26.0" text="Rp 53.000" textFill="#7f5959">
@@ -456,6 +465,17 @@
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <Button fx:id="plusd001" layoutX="82.0" layoutY="52.0" mnemonicParsing="false" onAction="#plusBtnDessert" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtd001" editable="false" layoutX="50.0" layoutY="43.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button fx:id="mind001" disable="true" layoutX="28.0" layoutY="53.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnDessert" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -472,12 +492,6 @@
                                                 </ImageView>
                                                 <Pane prefHeight="108.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="58.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="59.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="3.0" prefHeight="20.0" prefWidth="182.0" text="Cherry Pie" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
@@ -486,9 +500,9 @@
                                                             <Insets top="6.0" />
                                                          </padding>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="59.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="cherrybtn" layoutX="106.0" layoutY="62.0" onAction="#deskripsiDessertView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="70.0" layoutY="29.0" text="Rp 32.000" textFill="#7f5959">
@@ -499,6 +513,17 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Button fx:id="plusd002" layoutX="77.0" layoutY="60.0" mnemonicParsing="false" onAction="#plusBtnDessert" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtd002" editable="false" layoutX="45.0" layoutY="53.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button fx:id="mind002" disable="true" layoutX="23.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnDessert" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -519,20 +544,14 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="52.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Bananas Foster" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="bananabtn" layoutX="115.0" layoutY="52.0" onAction="#deskripsiDessertView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="70.0" layoutY="26.0" text="Rp 34.000" textFill="#7f5959">
@@ -540,6 +559,17 @@
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <Button fx:id="plusd003" layoutX="86.0" layoutY="50.0" mnemonicParsing="false" onAction="#plusBtnDessert" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtd003" editable="false" layoutX="54.0" layoutY="42.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button fx:id="mind003" disable="true" layoutX="32.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnDessert" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -556,12 +586,6 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="22.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="25.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="3.0" prefHeight="20.0" prefWidth="182.0" text="Fried Chocolate Ice Cream" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
@@ -570,9 +594,9 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="50.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="icecreambtn" layoutX="108.0" layoutY="50.0" onAction="#deskripsiDessertView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="70.0" layoutY="25.0" text="Rp 29.000" textFill="#7f5959">
@@ -583,6 +607,17 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Button fx:id="plusd004" layoutX="78.0" layoutY="48.0" mnemonicParsing="false" onAction="#plusBtnDessert" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtd004" editable="false" layoutX="45.0" layoutY="42.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button fx:id="mind004" disable="true" layoutX="23.0" layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnDessert" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -603,20 +638,14 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="52.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Arumanis" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="arumanisbtn" layoutX="115.0" layoutY="56.0" onAction="#deskripsiDessertView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="70.0" layoutY="26.0" text="Rp 31.000" textFill="#7f5959">
@@ -624,6 +653,17 @@
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <Button fx:id="plusd005" layoutX="84.0" layoutY="54.0" mnemonicParsing="false" onAction="#plusBtnDessert" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtd005" editable="false" layoutX="51.0" layoutY="47.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button fx:id="mind005" disable="true" layoutX="28.0" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnDessert" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -640,12 +680,6 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="20.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="23.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="18.0" prefHeight="20.0" prefWidth="182.0" text="Baked Fudge" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
@@ -654,9 +688,9 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="68.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="bakedbtn" layoutX="110.0" layoutY="72.0" onAction="#deskripsiDessertView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="65.0" layoutY="40.0" text="Rp 32.000" textFill="#7f5959">
@@ -667,26 +701,22 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Button fx:id="plusd006" layoutX="77.0" layoutY="69.0" mnemonicParsing="false" onAction="#plusBtnDessert" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtd006" editable="false" layoutX="44.0" layoutY="60.0" prefHeight="39.0" prefWidth="31.0" />
+                                                      <Button fx:id="mind006" disable="true" layoutX="21.0" layoutY="69.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnDessert" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
                                           </VBox>
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="154.0" prefWidth="380.0">
-                                       <children>
-                                          <JFXButton onAction="#checkOut" prefHeight="30.0" prefWidth="255.0" style="-fx-background-color: #207245;" text="Check Out" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="66.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                       </children>
-                                       <padding>
-                                          <Insets top="69.0" />
-                                       </padding>
                                     </HBox>
                                  </children>
                               </VBox>
@@ -741,41 +771,46 @@
                            <children>
                               <VBox layoutX="-4.0" layoutY="-8.0" prefHeight="1723.0" prefWidth="380.0" style="-fx-background-color: #FFFFFF;">
                                  <children>
-                                    <HBox layoutX="-4.0" layoutY="-8.0" prefHeight="310.0" prefWidth="380.0">
+                                    <HBox layoutX="-4.0" layoutY="-8.0" prefHeight="320.0" prefWidth="380.0">
                                        <children>
-                                          <VBox prefHeight="190.0" prefWidth="172.0">
+                                          <VBox prefHeight="251.0" prefWidth="173.0">
                                              <children>
                                                 <ImageView fitHeight="168.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
                                                    <image>
                                                       <Image url="@../img/sphagetti%20carbonara.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="22.0" />
+                                                      <Insets left="32.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="52.0" layoutY="23.0" prefHeight="24.0" prefWidth="73.0" text="Rp 53.000" textFill="#7f5959">
+                                                      <Label layoutX="55.0" layoutY="23.0" prefHeight="24.0" prefWidth="73.0" text="Rp 53.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="16.0" layoutY="3.0" text="Sphagetti Carbonara">
+                                                      <Label layoutX="18.0" layoutY="3.0" prefHeight="20.0" prefWidth="133.0" text="Sphagetti Carbonara">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <ChoiceBox layoutX="19.0" layoutY="53.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="19.0" layoutY="53.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="sphagettibtn" layoutX="91.0" layoutY="53.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="10.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <Button fx:id="plusm001" layoutX="62.0" layoutY="51.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
-                                                      <JFXButton layoutX="89.0" layoutY="53.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      </Button>
+                                                      <TextField fx:id="txtm001" alignment="CENTER" editable="false" layoutX="29.0" layoutY="43.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="minm001" disable="true" layoutX="6.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -787,32 +822,37 @@
                                                       <Image url="@../img/vegan%20greek%20pizza.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="38.0" top="18.0" />
+                                                      <Insets left="65.0" top="18.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="55.0" layoutY="22.0" prefHeight="24.0" prefWidth="73.0" text="Rp 43.000" textFill="#7f5959">
+                                                      <Label layoutX="86.0" layoutY="22.0" prefHeight="24.0" prefWidth="73.0" text="Rp 43.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="35.0" layoutY="3.0" text="Vegan Greek Pizza">
+                                                      <Label layoutX="58.0" layoutY="3.0" text="Vegan Greek Pizza">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <ChoiceBox layoutX="21.0" layoutY="53.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="23.0" layoutY="53.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="veganbtn" layoutX="118.0" layoutY="53.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="10.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <Button fx:id="plusm002" layoutX="89.0" layoutY="51.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
-                                                      <JFXButton layoutX="81.0" layoutY="53.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      </Button>
+                                                      <TextField fx:id="txtm002" alignment="CENTER" editable="false" layoutX="56.0" layoutY="44.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="minm002" disable="true" layoutX="33.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -822,7 +862,7 @@
                                           <Insets top="69.0" />
                                        </padding>
                                     </HBox>
-                                    <HBox prefHeight="310.0" prefWidth="380.0">
+                                    <HBox prefHeight="318.0" prefWidth="380.0">
                                        <children>
                                           <VBox prefHeight="190.0" prefWidth="172.0">
                                              <children>
@@ -849,17 +889,22 @@
                                                             <Insets top="17.0" />
                                                          </padding>
                                                       </Label>
-                                                      <ChoiceBox layoutX="17.0" layoutY="75.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="19.0" layoutY="75.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="chicorybtn" layoutX="98.0" layoutY="75.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="10.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <Button fx:id="plusm003" layoutX="69.0" layoutY="74.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
-                                                      <JFXButton layoutX="98.0" layoutY="75.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      </Button>
+                                                      <TextField fx:id="txtm003" alignment="CENTER" editable="false" layoutX="36.0" layoutY="67.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="minm003" disable="true" layoutX="13.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -871,32 +916,37 @@
                                                       <Image url="@../img/Salmon%20with%20brocoli%20steak.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="25.0" />
+                                                      <Insets left="45.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="44.0" layoutY="21.0" prefHeight="24.0" prefWidth="73.0" text="Rp 56.000" textFill="#7f5959">
+                                                      <Label layoutX="65.0" layoutY="21.0" prefHeight="24.0" prefWidth="73.0" text="Rp 56.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="2.0" layoutY="7.0" text="Salmon w/ Brocoli Steak">
+                                                      <Label layoutX="21.0" layoutY="7.0" text="Salmon w/ Brocoli Steak">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <ChoiceBox layoutX="2.0" layoutY="53.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="4.0" layoutY="53.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="salmonbtn" layoutX="89.0" layoutY="53.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="10.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <Button fx:id="plusm004" layoutX="61.0" layoutY="51.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
-                                                      <JFXButton layoutX="73.0" layoutY="53.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      </Button>
+                                                      <TextField fx:id="txtm004" alignment="CENTER" editable="false" layoutX="28.0" layoutY="44.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="minm004" disable="true" layoutX="5.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -906,9 +956,9 @@
                                           <Insets top="69.0" />
                                        </padding>
                                     </HBox>
-                                    <HBox prefHeight="310.0" prefWidth="380.0">
+                                    <HBox prefHeight="318.0" prefWidth="380.0">
                                        <children>
-                                          <VBox prefHeight="190.0" prefWidth="172.0">
+                                          <VBox prefHeight="258.0" prefWidth="172.0">
                                              <children>
                                                 <ImageView fitHeight="157.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
                                                    <image>
@@ -930,15 +980,9 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <ChoiceBox layoutX="17.0" layoutY="75.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="19.0" layoutY="75.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="panbtn" layoutX="93.0" layoutY="75.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </JFXButton>
-                                                      <JFXButton layoutX="78.0" layoutY="75.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="35.0" layoutY="24.0" text="Scallops Chorizo">
@@ -946,6 +990,17 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
+                                                      <Button fx:id="minm005" disable="true" layoutX="6.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="plusm005" layoutX="64.0" layoutY="74.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtm005" alignment="CENTER" editable="false" layoutX="30.0" layoutY="67.0" prefHeight="39.0" prefWidth="31.0" text="0" />
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -972,17 +1027,22 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <ChoiceBox layoutX="12.0" layoutY="78.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="12.0" layoutY="78.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="kimchifriedbtn" layoutX="113.0" layoutY="78.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="10.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <Button fx:id="plusm006" layoutX="83.0" layoutY="76.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
-                                                      <JFXButton layoutX="73.0" layoutY="78.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      </Button>
+                                                      <TextField fx:id="txtm006" alignment="CENTER" editable="false" layoutX="49.0" layoutY="69.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="minm006" disable="true" layoutX="25.0" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -992,41 +1052,46 @@
                                           <Insets top="69.0" />
                                        </padding>
                                     </HBox>
-                                    <HBox prefHeight="310.0" prefWidth="380.0">
+                                    <HBox prefHeight="318.0" prefWidth="380.0">
                                        <children>
-                                          <VBox prefHeight="190.0" prefWidth="172.0">
+                                          <VBox prefHeight="190.0" prefWidth="200.0">
                                              <children>
                                                 <ImageView fitHeight="157.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
                                                    <image>
                                                       <Image url="@../img/Wagyu%20Blue%20Cheese%20Steak.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="25.0" />
+                                                      <Insets left="11.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="50.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 235.500" textFill="#7f5959">
+                                                      <Label layoutX="31.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 235.500" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="7.0" layoutY="4.0" text="Wagyu Blue Cheese Steak">
+                                                      <Label layoutX="-15.0" layoutY="4.0" text="Wagyu Blue Cheese Steak">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <ChoiceBox layoutX="17.0" layoutY="75.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="19.0" layoutY="75.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="wagyubtn" layoutX="92.0" layoutY="75.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="10.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <TextField fx:id="txtm007" alignment="CENTER" editable="false" layoutX="29.0" layoutY="66.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="minm007" disable="true" layoutX="6.0" layoutY="73.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
-                                                      <JFXButton layoutX="78.0" layoutY="75.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      </Button>
+                                                      <Button fx:id="plusm007" layoutX="62.0" layoutY="72.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -1053,22 +1118,27 @@
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <ChoiceBox layoutX="12.0" layoutY="78.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="12.0" layoutY="78.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="limebtn" layoutX="102.0" layoutY="78.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <JFXButton layoutX="73.0" layoutY="78.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </JFXButton>
-                                                      <Label layoutX="62.0" layoutY="24.0" text="Salmon">
+                                                      <Label layoutX="72.0" layoutY="24.0" text="Salmon">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
+                                                      <Button fx:id="plusm008" layoutX="72.0" layoutY="76.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtm008" alignment="CENTER" editable="false" layoutX="38.0" layoutY="71.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="minm008" disable="true" layoutX="15.0" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -1087,37 +1157,42 @@
                                                       <Image url="@../img/Roasted%20delicata%20gallete.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="25.0" />
+                                                      <Insets left="45.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="50.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 107.500" textFill="#7f5959">
+                                                      <Label layoutX="58.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 107.500" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="19.0" layoutY="4.0" text="Roasted Delicated">
+                                                      <Label layoutX="40.0" layoutY="4.0" text="Roasted Delicated">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <ChoiceBox layoutX="17.0" layoutY="75.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="19.0" layoutY="75.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="galletebtn" layoutX="104.0" layoutY="75.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <JFXButton layoutX="78.0" layoutY="75.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </JFXButton>
-                                                      <Label layoutX="47.0" layoutY="24.0" text="Galette">
+                                                      <Label layoutX="72.0" layoutY="24.0" text="Galette">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
+                                                      <Button fx:id="minm009" disable="true" layoutX="16.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="plusm009" layoutX="74.0" layoutY="74.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtm009" alignment="CENTER" editable="false" layoutX="38.0" layoutY="67.0" prefHeight="39.0" prefWidth="31.0" text="0" />
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -1129,51 +1204,41 @@
                                                       <Image url="@../img/Kimchi%20Sushi.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="32.0" />
+                                                      <Insets left="92.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="49.0" layoutY="44.0" prefHeight="24.0" prefWidth="73.0" text="RP 38.000" textFill="#7f5959">
+                                                      <Label layoutX="95.0" layoutY="44.0" prefHeight="24.0" prefWidth="73.0" text="RP 38.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="42.0" layoutY="7.0" text="Kimchi Sushi">
+                                                      <Label layoutX="84.0" layoutY="7.0" text="Kimchi Sushi">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <ChoiceBox layoutX="12.0" layoutY="78.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <JFXButton layoutX="12.0" layoutY="78.0" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
+                                                      <JFXButton fx:id="kimchisushibtn" layoutX="126.0" layoutY="78.0" onAction="#deskripsiMainCourseView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="10.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <Button fx:id="plusm010" layoutX="96.0" layoutY="77.0" mnemonicParsing="false" onAction="#plusBtnMaincourse" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
-                                                      <JFXButton layoutX="73.0" layoutY="78.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      </Button>
+                                                      <TextField fx:id="txtm010" alignment="CENTER" editable="false" layoutX="62.0" layoutY="69.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="minm010" disable="true" layoutX="38.0" layoutY="77.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnMaincourse" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
-                                                      </JFXButton>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
                                           </VBox>
-                                       </children>
-                                       <padding>
-                                          <Insets top="69.0" />
-                                       </padding>
-                                    </HBox>
-                                    <HBox prefHeight="142.0" prefWidth="380.0">
-                                       <children>
-                                          <JFXButton onAction="#checkOut" prefHeight="30.0" prefWidth="255.0" style="-fx-background-color: #207245;" text="Check Out" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="58.0" top="25.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
                                        </children>
                                        <padding>
                                           <Insets top="69.0" />
@@ -1232,7 +1297,7 @@
                            <children>
                               <VBox layoutX="-4.0" layoutY="-8.0" prefHeight="1003.0" prefWidth="380.0">
                                  <children>
-                                    <HBox prefHeight="269.0" prefWidth="380.0">
+                                    <HBox prefHeight="290.0" prefWidth="380.0">
                                        <children>
                                           <VBox prefHeight="269.0" prefWidth="210.0">
                                              <children>
@@ -1246,20 +1311,14 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="68.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="68.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Cajun Fish Tacos" textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Cajun Fish Tacos" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton fx:id="cajunbtn" layoutX="105.0" layoutY="68.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="cajunbtn" layoutX="103.0" layoutY="68.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="67.0" layoutY="42.0" text="Rp 23.000" textFill="#7f5959">
@@ -1267,6 +1326,17 @@
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <TextField fx:id="txta001" alignment="CENTER" editable="false" layoutX="41.0" layoutY="63.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="plusa001" layoutX="74.0" layoutY="65.0" mnemonicParsing="false" onAction="#plusBtnAppetizer" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="mina001" disable="true" layoutX="18.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnAppetizer" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -1278,28 +1348,22 @@
                                                       <Image url="@../img/Fried%20Oyster%20mushroom%20tacos.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="32.0" top="28.0" />
+                                                      <Insets left="25.0" top="28.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="108.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="68.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="68.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="3.0" prefHeight="20.0" prefWidth="182.0" text="Fried Oyster " textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="3.0" prefHeight="20.0" prefWidth="182.0" text="Fried Oyster " textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
                                                       <JFXButton fx:id="friedbtn" layoutX="93.0" layoutY="68.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="68.0" layoutY="38.0" text="Rp 29.000" textFill="#7f5959">
+                                                      <Label layoutX="57.0" layoutY="38.0" text="Rp 29.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -1307,18 +1371,29 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="19.0" prefHeight="20.0" prefWidth="182.0" text="Mushroom Tacos" textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="19.0" prefHeight="20.0" prefWidth="182.0" text="Mushroom Tacos" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
+                                                      <TextField fx:id="txta002" alignment="CENTER" editable="false" layoutX="32.0" layoutY="63.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="plusa002" layoutX="65.0" layoutY="65.0" mnemonicParsing="false" onAction="#plusBtnAppetizer" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="mina002" disable="true" layoutX="9.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnAppetizer" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
                                           </VBox>
                                        </children>
                                     </HBox>
-                                    <HBox prefHeight="286.0" prefWidth="380.0">
+                                    <HBox prefHeight="275.0" prefWidth="380.0">
                                        <children>
                                           <VBox prefHeight="269.0" prefWidth="210.0">
                                              <children>
@@ -1332,20 +1407,14 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="52.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Shreded Jackfruit Burrito" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton fx:id="jackbtn" layoutX="105.0" layoutY="52.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="jackbtn" layoutX="103.0" layoutY="52.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="70.0" layoutY="26.0" text="Rp 32.000" textFill="#7f5959">
@@ -1353,6 +1422,17 @@
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <TextField fx:id="txta003" alignment="CENTER" editable="false" layoutX="39.0" layoutY="45.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="plusa003" layoutX="72.0" layoutY="50.0" mnemonicParsing="false" onAction="#plusBtnAppetizer" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="mina003" disable="true" layoutX="16.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnAppetizer" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -1369,12 +1449,6 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="22.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="25.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
                                                       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="20.0" prefWidth="182.0" text="Roasted Potato " textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
@@ -1385,7 +1459,7 @@
                                                       </Label>
                                                       <JFXButton fx:id="roastedbtn" layoutX="93.0" layoutY="51.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
                                                       <Label layoutX="70.0" layoutY="25.0" text="Rp 28.000" textFill="#7f5959">
@@ -1396,13 +1470,24 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Button fx:id="plusa004" layoutX="62.0" layoutY="50.0" mnemonicParsing="false" onAction="#plusBtnAppetizer" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txta004" alignment="CENTER" editable="false" layoutX="29.0" layoutY="41.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="mina004" disable="true" layoutX="6.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnAppetizer" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
                                           </VBox>
                                        </children>
                                     </HBox>
-                                    <HBox prefHeight="286.0" prefWidth="380.0">
+                                    <HBox prefHeight="293.0" prefWidth="380.0">
                                        <children>
                                           <VBox prefHeight="269.0" prefWidth="210.0">
                                              <children>
@@ -1416,27 +1501,32 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="83.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="83.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="35.0" prefHeight="20.0" prefWidth="182.0" text="Hasselback Potatoes" textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="30.0" prefHeight="20.0" prefWidth="182.0" text="Hasselback Potatoes" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
                                                       <JFXButton fx:id="potatoesbtn" layoutX="105.0" layoutY="83.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="70.0" layoutY="54.0" text="Rp 31.000" textFill="#7f5959">
+                                                      <Label layoutX="68.0" layoutY="50.0" text="Rp 31.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <TextField fx:id="txta005" alignment="CENTER" editable="false" layoutX="39.0" layoutY="75.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="plusa005" layoutX="73.0" layoutY="81.0" mnemonicParsing="false" onAction="#plusBtnAppetizer" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="mina005" disable="true" layoutX="15.0" layoutY="81.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnAppetizer" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -1453,13 +1543,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="20.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="23.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="19.0" prefHeight="20.0" prefWidth="182.0" text="Buffalo Chicken Ring" textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="16.0" prefHeight="20.0" prefWidth="182.0" text="Buffalo Chicken Ring" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -1469,10 +1553,10 @@
                                                       </Label>
                                                       <JFXButton fx:id="buffalobtn" layoutX="93.0" layoutY="68.0" onAction="#deskripsiAppetizerView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="65.0" layoutY="40.0" text="Rp 32.000" textFill="#7f5959">
+                                                      <Label layoutX="62.0" layoutY="37.0" text="Rp 32.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -1480,26 +1564,22 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Button fx:id="plusa006" layoutX="62.0" layoutY="67.0" mnemonicParsing="false" onAction="#plusBtnAppetizer" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txta006" alignment="CENTER" editable="false" layoutX="28.0" layoutY="65.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="mina006" disable="true" layoutX="4.0" layoutY="67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnAppetizer" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
                                           </VBox>
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="142.0" prefWidth="380.0">
-                                       <children>
-                                          <JFXButton onAction="#checkOut" prefHeight="30.0" prefWidth="255.0" style="-fx-background-color: #207245;" text="Check Out" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="68.0" top="29.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                       </children>
-                                       <padding>
-                                          <Insets top="69.0" />
-                                       </padding>
                                     </HBox>
                                  </children>
                               </VBox>
@@ -1513,7 +1593,7 @@
       </AnchorPane>
       <AnchorPane fx:id="v_breakfast" layoutY="55.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="720.0" visible="false">
          <children>
-            <Pane layoutY="-2.0" prefHeight="724.0" prefWidth="723.0" style="-fx-background-color: #FFFFFF;">
+            <Pane layoutY="-2.0" prefHeight="669.0" prefWidth="723.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <Label layoutX="75.0" layoutY="185.0" text="Break·fast">
                      <font>
@@ -1552,43 +1632,48 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="768.0" prefWidth="387.0" style="-fx-background-color: #FFFFFF;">
                            <children>
-                              <VBox layoutX="-4.0" layoutY="-8.0" prefHeight="771.0" prefWidth="380.0">
+                              <VBox layoutX="14.0" layoutY="-3.0" prefHeight="771.0" prefWidth="380.0">
                                  <children>
-                                    <HBox prefHeight="269.0" prefWidth="380.0">
+                                    <HBox prefHeight="289.0" prefWidth="380.0">
                                        <children>
-                                          <VBox prefHeight="269.0" prefWidth="210.0">
+                                          <VBox fillWidth="false" prefHeight="269.0" prefWidth="178.0">
                                              <children>
-                                                <ImageView fitHeight="177.0" fitWidth="114.0">
+                                                <ImageView fitHeight="177.0" fitWidth="114.0" layoutX="-15.0">
                                                    <image>
                                                       <Image url="@../img/bubur%20bandung.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="32.0" top="25.0" />
+                                                      <Insets left="10.0" top="25.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="58.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="58.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Bubur Bandung" textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-25.0" layoutY="-1.0" prefHeight="20.0" prefWidth="182.0" text="Bubur Bandung" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="58.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="buburbtn" layoutX="91.0" layoutY="52.0" onAction="#deskripsiBreakfastView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="60.0" layoutY="29.0" text="Rp 15.000" textFill="#7f5959">
+                                                      <Label layoutX="45.0" layoutY="19.0" text="Rp 15.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <TextField fx:id="txtb001" alignment="CENTER" editable="false" layoutX="30.0" layoutY="44.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="plusb001" layoutX="62.0" layoutY="49.0" mnemonicParsing="false" onAction="#plusBtnBreakfast" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="minb001" disable="true" layoutX="8.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnBreakfast" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
@@ -1605,23 +1690,17 @@
                                                 </ImageView>
                                                 <Pane prefHeight="108.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="68.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="68.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="15.0" prefHeight="20.0" prefWidth="182.0" text="Mie Goreng" textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Mie Goreng" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="68.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="miegorengbtn" layoutX="93.0" layoutY="60.0" onAction="#deskripsiBreakfastView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="65.0" layoutY="38.0" text="Rp 23.500" textFill="#7f5959">
+                                                      <Label layoutX="56.0" layoutY="24.0" text="Rp 23.500" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -1629,83 +1708,90 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Button fx:id="plusb002" layoutX="65.0" layoutY="59.0" mnemonicParsing="false" onAction="#plusBtnBreakfast" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <TextField fx:id="txtb002" alignment="CENTER" editable="false" layoutX="32.0" layoutY="56.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="minb002" disable="true" layoutX="9.0" layoutY="58.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnBreakfast" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
                                           </VBox>
                                        </children>
                                     </HBox>
-                                    <HBox prefHeight="286.0" prefWidth="380.0">
+                                    <HBox prefHeight="278.0" prefWidth="380.0">
                                        <children>
-                                          <VBox prefHeight="269.0" prefWidth="210.0">
+                                          <VBox prefHeight="259.0" prefWidth="180.0">
                                              <children>
-                                                <ImageView fitHeight="200.0" fitWidth="142.0">
+                                                <ImageView fitHeight="200.0" fitWidth="128.0">
                                                    <image>
                                                       <Image url="@../img/healthy%20food%20.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets left="29.0" top="58.0" />
+                                                      <Insets left="29.0" top="50.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="25.0" layoutY="52.0" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="28.0" layoutY="53.0" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Healthy Mix Bowl" textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Healthy Mix Bowl" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <JFXButton layoutX="105.0" layoutY="52.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="bowlbtn" layoutX="103.0" layoutY="52.0" onAction="#deskripsiBreakfastView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="70.0" layoutY="26.0" text="Rp 32.500" textFill="#7f5959">
+                                                      <Label layoutX="60.0" layoutY="26.0" text="Rp 32.500" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
+                                                      <TextField fx:id="txtb003" alignment="CENTER" editable="false" layoutX="41.0" layoutY="44.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="plusb003" layoutX="74.0" layoutY="49.0" mnemonicParsing="false" onAction="#plusBtnBreakfast" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="minb003" disable="true" layoutX="18.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnBreakfast" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
                                           </VBox>
-                                          <VBox prefHeight="269.0" prefWidth="200.0">
+                                          <VBox prefHeight="264.0" prefWidth="158.0">
                                              <children>
-                                                <ImageView fitHeight="124.0" fitWidth="166.0">
+                                                <ImageView fitHeight="124.0" fitWidth="157.0">
                                                    <image>
                                                       <Image url="@../img/nasi%20goreng.jpg" />
                                                    </image>
                                                    <VBox.margin>
-                                                      <Insets top="122.0" />
+                                                      <Insets top="123.0" />
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <ChoiceBox layoutX="22.0" layoutY="63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="45.0" />
-                                                      <Button layoutX="25.0" layoutY="63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: #207245;" text="Add" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="14.0" prefHeight="22.0" prefWidth="144.0" text="Nasi Goreng" textAlignment="CENTER">
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="6.0" prefHeight="22.0" prefWidth="144.0" text="Nasi Goreng" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
-                                                         <padding>
-                                                            <Insets top="2.0" />
-                                                         </padding>
                                                       </Label>
-                                                      <JFXButton layoutX="93.0" layoutY="63.0" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
+                                                      <JFXButton fx:id="nasigorengbtn" layoutX="93.0" layoutY="54.0" onAction="#deskripsiBreakfastView" style="-fx-background-color: #8FB299;" text="Description" textFill="WHITE">
                                                          <font>
-                                                            <Font name="System Bold" size="12.0" />
+                                                            <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="65.0" layoutY="35.0" text="Rp 23.500" textFill="#7f5959">
+                                                      <Label layoutX="51.0" layoutY="28.0" text="Rp 23.500" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -1713,26 +1799,22 @@
                                                             <Insets top="2.0" />
                                                          </padding>
                                                       </Label>
+                                                      <TextField fx:id="txtb004" alignment="CENTER" editable="false" layoutX="32.0" layoutY="48.0" prefHeight="39.0" prefWidth="31.0" text="0" />
+                                                      <Button fx:id="plusb004" layoutX="65.0" layoutY="51.0" mnemonicParsing="false" onAction="#plusBtnBreakfast" style="-fx-background-color: #207245;" text="+" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="minb004" disable="true" layoutX="10.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minBtnBreakfast" style="-fx-background-color: #207245;" text="-" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </Pane>
                                              </children>
                                           </VBox>
                                        </children>
-                                    </HBox>
-                                    <HBox prefHeight="142.0" prefWidth="380.0">
-                                       <children>
-                                          <JFXButton onAction="#checkOut" prefHeight="30.0" prefWidth="255.0" style="-fx-background-color: #207245;" text="Check Out" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets left="58.0" top="65.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                       </children>
-                                       <padding>
-                                          <Insets top="69.0" />
-                                       </padding>
                                     </HBox>
                                  </children>
                               </VBox>
@@ -1744,5 +1826,10 @@
             </Pane>
          </children>
       </AnchorPane>
+      <JFXButton layoutX="433.0" layoutY="680.0" onAction="#checkOut" prefHeight="30.0" prefWidth="204.0" style="-fx-background-color: #207245;" text="Check Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

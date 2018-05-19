@@ -224,14 +224,14 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <ImageView fx:id="closebtn" fitHeight="36.0" fitWidth="36.0" layoutX="317.0" layoutY="48.0" onMousePressed="#closeButtonAction">
+                  <ImageView fx:id="closebtn" fitHeight="36.0" fitWidth="36.0" layoutX="317.0" layoutY="48.0" onMouseClicked="#closeButtonAction">
                      <image>
                         <Image url="@../../img/ic_cancel_black_24dp_2x.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutX="20.0" layoutY="26.0" onMousePressed="#backButtonAction" prefHeight="100.0" prefWidth="108.0">
+            <Pane layoutX="20.0" layoutY="26.0" onMouseClicked="#backButtonAction" prefHeight="100.0" prefWidth="108.0">
                <children>
                   <ImageView layoutX="18.0" layoutY="15.0">
                      <image>
