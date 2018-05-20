@@ -52,3 +52,35 @@ minm001
 plusBtnMaincourse
 minBtnMaincourse
 
+Dessert
+
+Boston Cream Cheesecake : D001
+Cherry Pie: D002
+Bananas Foster : D003
+Fried Chocolate Ice Cream : D004
+
+plusd001
+mind001
+
+txtd001
+
+plusBtnDessert
+minBtnDessert
+
+Beverages
+Lemonade : BE01
+Speciality Tea : BE02
+Peach Smoothie : BE03
+Cocktail Whiskey : BE04
+Macchiato : BE05
+Matcha Latte : BE06 
+
+txtbe01
+plusbe01
+minbe01
+
+plusBtnBeverages
+minBtnBeverages
+
+lbl
+price

@@ -9,7 +9,10 @@ import com.jfoenix.controls.JFXButton;
 import damairesto.DamaiResto;
 import java.io.IOException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,6 +33,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import object.Orders;
+import object.Users;
 
 /**
  * FXML Controller class
@@ -41,6 +46,10 @@ public class KategoriController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    private ObservableList<Orders> orderData = FXCollections.observableArrayList();
+    
+    private double subtotal=0;
+    private int no = 0;
     private MenuController MainApp;
     @FXML
     private AnchorPane v_breakfast;
@@ -319,8 +328,106 @@ public class KategoriController implements Initializable {
     private TextField txtd006;
     @FXML
     private Button mind006;
-  
+    
+    private int max_stokd001 =5;
+    private int max_stokd002 =5;
+    private int max_stokd003 =5;
+    private int max_stokd004 =5;
+    private int max_stokd005 =5;
+    private int max_stokd006 =5;
+    
+    private int min_stokd001 =0;
+    private int min_stokd002 =0;
+    private int min_stokd003 =0;
+    private int min_stokd004 =0;
+    private int min_stokd005 =0;
+    private int min_stokd006 =0;
+    @FXML
+    private Button plusbe01;
+    @FXML
+    private Button minbe01;
+    @FXML
+    private Button plusbe02;
+    @FXML
+    private Button minbe02;
+    @FXML
+    private Button plusbe03;
+    @FXML
+    private Button minbe03;
+    @FXML
+    private Button plusbe04;
+    @FXML
+    private Button minbe04;
+    @FXML
+    private Button plusbe05;
+    @FXML
+    private Button minbe05;
+    @FXML
+    private Button plusbe06;
+    @FXML
+    private Button minbe06;
 
+    private int max_stokbe01 =5;
+    private int max_stokbe02 =5;
+    private int max_stokbe03 =5;
+    private int max_stokbe04 =5;
+    private int max_stokbe05 =5;
+    private int max_stokbe06 =5;
+    
+    private int min_stokbe01 =0;
+    private int min_stokbe02 =0;
+    private int min_stokbe03 =0;
+    private int min_stokbe04 =0;
+    private int min_stokbe05 =0;
+    private int min_stokbe06 =0;
+    @FXML
+    private TextField txtbe01;
+    @FXML
+    private TextField txtbe02;
+    @FXML
+    private TextField txtbe03;
+    @FXML
+    private TextField txtbe04;
+    @FXML
+    private TextField txtbe05;
+    @FXML
+    private TextField txtbe06;
+    @FXML
+    private Label lblb001;
+    @FXML
+    private Label priceb001;
+    @FXML
+    private Label lblb002;
+    @FXML
+    private Label priceb002;
+    @FXML
+    private Label lblb003;
+    @FXML
+    private Label priceb003;
+    @FXML
+    private Label lblb004;
+    @FXML
+    private Label priceb004;
+    @FXML
+    private Label lbla001;
+    @FXML
+    private Label pricea001;
+    @FXML
+    private Label lbla002;
+    @FXML
+    private Label pricea002;
+    @FXML
+    private Label lbla003;
+    @FXML
+    private Label pricea003;
+    @FXML
+    private Label lbla004;
+    @FXML
+    private Label pricea004;
+    @FXML
+    private Label lbla005;
+    @FXML
+    private Label pricea005;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -463,8 +570,111 @@ public class KategoriController implements Initializable {
             stage.setScene(new Scene(root1));  
             stage.show();
             stage1.hide();
+            CheckoutController controller = fxmlLoader.getController();
+	    controller.setMainApp(this);
+            getOrderBreakfast();
+            getOrderAppetizer();
+            controller.getSubtotal(this.subtotal);
         }catch(IOException e){
             e.printStackTrace();
+        }
+    }
+    
+    public ObservableList<Orders> getPersonData() {
+        return orderData;
+    }
+    
+    public void getOrderBreakfast(){
+        
+        if(!txtb001.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priceb001.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtb001.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "B001",lblb001.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtb002.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priceb002.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtb002.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "B002",lblb002.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtb003.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priceb003.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtb003.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "B003",lblb003.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtb004.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priceb004.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtb004.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "B004",lblb004.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+    }
+    
+    public void getOrderAppetizer(){
+        
+        if(!txta001.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricea001.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txta001.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "A001",lbla001.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txta002.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricea002.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txta002.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "A002",lbla002.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txta003.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricea003.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txta003.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "A003",lbla003.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txta004.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricea004.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txta004.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "A004",lbla004.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
         }
     }
 
@@ -1185,10 +1395,310 @@ public class KategoriController implements Initializable {
 
     @FXML
     private void plusBtnDessert(ActionEvent event) {
+        if (event.getTarget() == plusd001) {
+            min_stokd001 = min_stokd001+1;
+            txtd001.setText(Integer.toString(min_stokd001));
+            if(txtd001.getText().equals("0")){
+                mind001.setDisable(true);
+            }else if(txtd001.getText().equals(Integer.toString(max_stokd001))){
+                plusd001.setDisable(true);
+                mind001.setDisable(false);
+            }else{
+                plusd001.setDisable(false);
+                mind001.setDisable(false);
+            }
+        }else if (event.getTarget() == plusd002) {
+            min_stokd002 = min_stokd002+1;
+            txtd002.setText(Integer.toString(min_stokd002));
+            if(txtd002.getText().equals("0")){
+                mind002.setDisable(true);
+            }else if(txtd002.getText().equals(Integer.toString(max_stokd002))){
+                plusd002.setDisable(true);
+                mind002.setDisable(false);
+            }else{
+                plusd002.setDisable(false);
+                mind002.setDisable(false);
+            }
+        }else if (event.getTarget() == plusd003) {
+            min_stokd003 = min_stokd003+1;
+            txtd003.setText(Integer.toString(min_stokd003));
+            if(txtd003.getText().equals("0")){
+                mind003.setDisable(true);
+            }else if(txtd003.getText().equals(Integer.toString(max_stokd003))){
+                plusd003.setDisable(true);
+                mind003.setDisable(false);
+            }else{
+                plusd003.setDisable(false);
+                mind003.setDisable(false);
+            }
+        }else if (event.getTarget() == plusd004) {
+            min_stokd004 = min_stokd004+1;
+            txtd004.setText(Integer.toString(min_stokd004));
+            if(txtd004.getText().equals("0")){
+                mind004.setDisable(true);
+            }else if(txtd004.getText().equals(Integer.toString(max_stokd004))){
+                plusd004.setDisable(true);
+                mind004.setDisable(false);
+            }else{
+                plusd004.setDisable(false);
+                mind004.setDisable(false);
+            }
+        }else if (event.getTarget() == plusd005) {
+            min_stokd005 = min_stokd005+1;
+            txtd005.setText(Integer.toString(min_stokd005));
+            if(txtd005.getText().equals("0")){
+                mind005.setDisable(true);
+            }else if(txtd005.getText().equals(Integer.toString(max_stokd005))){
+                plusd005.setDisable(true);
+                mind005.setDisable(false);
+            }else{
+                plusd005.setDisable(false);
+                mind005.setDisable(false);
+            }
+        }else if (event.getTarget() == plusd006) {
+            min_stokd006 = min_stokd006+1;
+            txtd006.setText(Integer.toString(min_stokd006));
+            if(txtd006.getText().equals("0")){
+                mind006.setDisable(true);
+            }else if(txtd006.getText().equals(Integer.toString(max_stokd006))){
+                plusd006.setDisable(true);
+                mind006.setDisable(false);
+            }else{
+                plusd006.setDisable(false);
+                mind006.setDisable(false);
+            }
+        }
     }
 
     @FXML
     private void minBtnDessert(ActionEvent event) {
+        if (event.getTarget() == mind001) {
+            min_stokd001 = min_stokd001-1;
+            txtd001.setText(Integer.toString(min_stokd001));
+            if(txtd001.getText().equals("0")){
+                mind001.setDisable(true);
+            }else if(txtd001.getText().equals(Integer.toString(max_stokd001))){
+                plusd001.setDisable(true);
+                mind001.setDisable(false);
+            }else{
+                plusd001.setDisable(false);
+                mind001.setDisable(false);
+            }
+        }else if (event.getTarget() == mind002) {
+            min_stokd002 = min_stokd002-1;
+            txtd002.setText(Integer.toString(min_stokd002));
+            if(txtd002.getText().equals("0")){
+                mind002.setDisable(true);
+            }else if(txtd002.getText().equals(Integer.toString(max_stokd002))){
+                plusd002.setDisable(true);
+                mind002.setDisable(false);
+            }else{
+                plusd002.setDisable(false);
+                mind002.setDisable(false);
+            }
+        }else if (event.getTarget() == mind003) {
+            min_stokd003 = min_stokd003-1;
+            txtd003.setText(Integer.toString(min_stokd003));
+            if(txtd003.getText().equals("0")){
+                mind003.setDisable(true);
+            }else if(txtd003.getText().equals(Integer.toString(max_stokd003))){
+                plusd003.setDisable(true);
+                mind003.setDisable(false);
+            }else{
+                plusd003.setDisable(false);
+                mind003.setDisable(false);
+            }
+        }else if (event.getTarget() == mind004) {
+            min_stokd004 = min_stokd004-1;
+            txtd004.setText(Integer.toString(min_stokd004));
+            if(txtd004.getText().equals("0")){
+                mind004.setDisable(true);
+            }else if(txtd004.getText().equals(Integer.toString(max_stokd004))){
+                plusd004.setDisable(true);
+                mind004.setDisable(false);
+            }else{
+                plusd004.setDisable(false);
+                mind004.setDisable(false);
+            }
+        }else if (event.getTarget() == mind005) {
+            min_stokd005 = min_stokd005-1;
+            txtd005.setText(Integer.toString(min_stokd005));
+            if(txtd005.getText().equals("0")){
+                mind005.setDisable(true);
+            }else if(txtd005.getText().equals(Integer.toString(max_stokd005))){
+                plusd005.setDisable(true);
+                mind005.setDisable(false);
+            }else{
+                plusd005.setDisable(false);
+                mind005.setDisable(false);
+            }
+        }else if (event.getTarget() == mind006) {
+            min_stokd006 = min_stokd006-1;
+            txtd006.setText(Integer.toString(min_stokd006));
+            if(txtd006.getText().equals("0")){
+                mind006.setDisable(true);
+            }else if(txtd006.getText().equals(Integer.toString(max_stokd006))){
+                plusd006.setDisable(true);
+                mind006.setDisable(false);
+            }else{
+                plusd006.setDisable(false);
+                mind006.setDisable(false);
+            }
+        }
+    }
+
+    @FXML
+    private void plusBtnBeverages(ActionEvent event) {
+        if (event.getTarget() == plusbe01) {
+            min_stokbe01 = min_stokbe01+1;
+            txtbe01.setText(Integer.toString(min_stokbe01));
+            if(txtbe01.getText().equals("0")){
+                minbe01.setDisable(true);
+            }else if(txtbe01.getText().equals(Integer.toString(max_stokbe01))){
+                plusbe01.setDisable(true);
+                minbe01.setDisable(false);
+            }else{
+                plusbe01.setDisable(false);
+                minbe01.setDisable(false);
+            }
+        }else if (event.getTarget() == plusbe02) {
+            min_stokbe02 = min_stokbe02+1;
+            txtbe02.setText(Integer.toString(min_stokbe02));
+            if(txtbe02.getText().equals("0")){
+                minbe02.setDisable(true);
+            }else if(txtbe02.getText().equals(Integer.toString(max_stokbe02))){
+                plusbe02.setDisable(true);
+                minbe02.setDisable(false);
+            }else{
+                plusbe02.setDisable(false);
+                minbe02.setDisable(false);
+            }
+        }else if (event.getTarget() == plusbe03) {
+            min_stokbe03 = min_stokbe03+1;
+            txtbe03.setText(Integer.toString(min_stokbe03));
+            if(txtbe03.getText().equals("0")){
+                minbe03.setDisable(true);
+            }else if(txtbe03.getText().equals(Integer.toString(max_stokbe03))){
+                plusbe03.setDisable(true);
+                minbe03.setDisable(false);
+            }else{
+                plusbe03.setDisable(false);
+                minbe03.setDisable(false);
+            }
+        }else if (event.getTarget() == plusbe04) {
+            min_stokbe04 = min_stokbe04+1;
+            txtbe04.setText(Integer.toString(min_stokbe04));
+            if(txtbe04.getText().equals("0")){
+                minbe04.setDisable(true);
+            }else if(txtbe04.getText().equals(Integer.toString(max_stokbe04))){
+                plusbe04.setDisable(true);
+                minbe04.setDisable(false);
+            }else{
+                plusbe04.setDisable(false);
+                minbe04.setDisable(false);
+            }
+        }else if (event.getTarget() == plusbe05) {
+            min_stokbe05 = min_stokbe05+1;
+            txtbe05.setText(Integer.toString(min_stokbe05));
+            if(txtbe05.getText().equals("0")){
+                minbe05.setDisable(true);
+            }else if(txtbe05.getText().equals(Integer.toString(max_stokbe05))){
+                plusbe05.setDisable(true);
+                minbe05.setDisable(false);
+            }else{
+                plusbe05.setDisable(false);
+                minbe05.setDisable(false);
+            }
+        }else if (event.getTarget() == plusbe06) {
+            min_stokbe06 = min_stokbe06+1;
+            txtbe06.setText(Integer.toString(min_stokbe06));
+            if(txtbe06.getText().equals("0")){
+                minbe06.setDisable(true);
+            }else if(txtbe06.getText().equals(Integer.toString(max_stokbe06))){
+                plusbe06.setDisable(true);
+                minbe06.setDisable(false);
+            }else{
+                plusbe06.setDisable(false);
+                minbe06.setDisable(false);
+            }
+        }
+    }
+
+    @FXML
+    private void minBtnBeverages(ActionEvent event) {
+        if (event.getTarget() == minbe01) {
+            min_stokbe01 = min_stokbe01-1;
+            txtbe01.setText(Integer.toString(min_stokbe01));
+            if(txtbe01.getText().equals("0")){
+                minbe01.setDisable(true);
+            }else if(txtbe01.getText().equals(Integer.toString(max_stokbe01))){
+                plusbe01.setDisable(true);
+                minbe01.setDisable(false);
+            }else{
+                plusbe01.setDisable(false);
+                minbe01.setDisable(false);
+            }
+        }else if (event.getTarget() == minbe02) {
+            min_stokbe02 = min_stokbe02-1;
+            txtbe02.setText(Integer.toString(min_stokbe02));
+            if(txtbe02.getText().equals("0")){
+                minbe02.setDisable(true);
+            }else if(txtbe02.getText().equals(Integer.toString(max_stokbe02))){
+                plusbe02.setDisable(true);
+                minbe02.setDisable(false);
+            }else{
+                plusbe02.setDisable(false);
+                minbe02.setDisable(false);
+            }
+        }else if (event.getTarget() == minbe03) {
+            min_stokbe03 = min_stokbe03-1;
+            txtbe03.setText(Integer.toString(min_stokbe03));
+            if(txtbe03.getText().equals("0")){
+                minbe03.setDisable(true);
+            }else if(txtbe03.getText().equals(Integer.toString(max_stokbe03))){
+                plusbe03.setDisable(true);
+                minbe03.setDisable(false);
+            }else{
+                plusbe03.setDisable(false);
+                minbe03.setDisable(false);
+            }
+        }else if (event.getTarget() == minbe04) {
+            min_stokbe04 = min_stokbe04-1;
+            txtbe04.setText(Integer.toString(min_stokbe04));
+            if(txtbe04.getText().equals("0")){
+                minbe04.setDisable(true);
+            }else if(txtbe04.getText().equals(Integer.toString(max_stokbe04))){
+                plusbe04.setDisable(true);
+                minbe04.setDisable(false);
+            }else{
+                plusbe04.setDisable(false);
+                minbe04.setDisable(false);
+            }
+        }else if (event.getTarget() == minbe05) {
+            min_stokbe05 = min_stokbe05-1;
+            txtbe05.setText(Integer.toString(min_stokbe05));
+            if(txtbe05.getText().equals("0")){
+                minbe05.setDisable(true);
+            }else if(txtbe05.getText().equals(Integer.toString(max_stokbe05))){
+                plusbe05.setDisable(true);
+                minbe05.setDisable(false);
+            }else{
+                plusbe05.setDisable(false);
+                minbe05.setDisable(false);
+            }
+        }else if (event.getTarget() == minbe06) {
+            min_stokbe06 = min_stokbe06-1;
+            txtbe06.setText(Integer.toString(min_stokbe06));
+            if(txtbe06.getText().equals("0")){
+                minbe06.setDisable(true);
+            }else if(txtbe06.getText().equals(Integer.toString(max_stokbe06))){
+                plusbe06.setDisable(true);
+                minbe06.setDisable(false);
+            }else{
+                plusbe06.setDisable(false);
+                minbe06.setDisable(false);
+            }
+        }
     }
    
 }

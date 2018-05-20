@@ -110,5 +110,21 @@ public class MenuController implements Initializable {
             
         }
     }
+
+    @FXML
+    private void logout(ActionEvent event) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/login.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage1 = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(new Scene(root1));  
+            stage.show();
+            stage1.close();
+        }catch(IOException ex){
+            ex.printStackTrace();
+        }
+    }
 }
 

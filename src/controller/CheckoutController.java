@@ -9,6 +9,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,12 +18,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
+import object.Orders;
 /**
  * FXML Controller class
  *
@@ -66,15 +70,81 @@ public class CheckoutController implements Initializable {
     private JFXTextField txtSetLastName;
     @FXML
     private JFXTextField txtSetTableNumber;
+    @FXML
+    private TableView<Orders> table_order;
+    @FXML
+    private TableColumn<Orders, Integer> noColumn;
+    @FXML
+    private TableColumn<Orders, String> foodColumn;
+    @FXML
+    private TableColumn<Orders, Integer> quantityColumn;
+    @FXML
+    private TableColumn<Orders, Double> priceColumn;
+    
+    private KategoriController mainApp;
+    @FXML
+    public JFXTextField txtSubtotal;
+    @FXML
+    private TableView<Orders> table_checkout;
+    @FXML
+    private JFXTextField txtchecksubtotal;
+    @FXML
+    private TableColumn<Orders, Integer> ColumnNo;
+    @FXML
+    private TableColumn<Orders, String> ColumnFood;
+    @FXML
+    private TableColumn<Orders, Integer> ColumnQuantity;
+    @FXML
+    private TableColumn<Orders, Double> ColumnPrice;
     
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    
         // TODO
+        //TableColumn<Orders, Integer> noColumn = new TableColumn<>("No");
+        noColumn.setCellValueFactory(new PropertyValueFactory<>("no"));
+        noColumn.setMinWidth(10);
+        //TableColumn<Orders, String> foodColumn = new TableColumn<>("Food");
+        foodColumn.setCellValueFactory(new PropertyValueFactory<>("food"));
+        foodColumn.setMinWidth(25);
+        //TableColumn<Orders, Integer> quantityColumn = new TableColumn<>("Quantity");
+        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        quantityColumn.setMinWidth(15);
+        //TableColumn<Orders, Integer> noColumn = new TableColumn<>("No");
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        priceColumn.setMinWidth(15);
+        
+        //TableColumn<Orders, Integer> noColumn = new TableColumn<>("No");
+        ColumnNo.setCellValueFactory(new PropertyValueFactory<>("no"));
+        ColumnNo.setMinWidth(10);
+        //TableColumn<Orders, String> foodColumn = new TableColumn<>("Food");
+        ColumnFood.setCellValueFactory(new PropertyValueFactory<>("food"));
+        ColumnFood.setMinWidth(25);
+        //TableColumn<Orders, Integer> quantityColumn = new TableColumn<>("Quantity");
+        ColumnQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        ColumnQuantity.setMinWidth(15);
+        //TableColumn<Orders, Integer> noColumn = new TableColumn<>("No");
+        ColumnPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        ColumnPrice.setMinWidth(15);
     }    
     
+    public void getSubtotal(double value){
+        String mataUang = String.format("Rp.%,.0f", value).replaceAll(",", ".")+",00";
+        txtSubtotal.setText(mataUang);
+        txtchecksubtotal.setText(mataUang);
+    }
+    
+    public void setMainApp(KategoriController mainApp) {
+        this.mainApp = mainApp;
+        // Add observable list data to the table
+        table_order.setItems(mainApp.getPersonData());
+        table_checkout.setItems(mainApp.getPersonData());
+    }
     @FXML
     public void backButtonAction(ActionEvent event) {
         try{

@@ -77,6 +77,8 @@ public class AppetizerViewController implements Initializable {
             stage.setScene(new Scene(root1));  
             stage.show();
             stage1.close();
+            KategoriController controller = fxmlLoader.getController();
+            controller.setKategori(2);
         }catch(IOException ex){
             ex.printStackTrace();
         }

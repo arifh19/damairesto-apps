@@ -85,6 +85,8 @@ public class BeveragesViewController implements Initializable {
             stage.setScene(new Scene(root1));  
             stage.show();
             stage1.close();
+            KategoriController controller = fxmlLoader.getController();
+            controller.setKategori(5);
         }catch(IOException ex){
             ex.printStackTrace();
         }
