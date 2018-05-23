@@ -69,10 +69,10 @@
                <columns>
                   <TableColumn prefWidth="75.0" text="No" />
                   <TableColumn prefWidth="128.0" text="Table Number" />
-                  <TableColumn prefWidth="156.0" text="Orders" />
+                  <TableColumn prefWidth="156.0" text="Total Order" />
                   <TableColumn prefWidth="119.0" text="Date" />
                   <TableColumn prefWidth="154.0" text="Name" />
-                  <TableColumn prefWidth="145.0" text="Price" />
+                  <TableColumn prefWidth="145.0" text="Earnings" />
                </columns>
             </TableView>
             <Label layoutX="525.0" layoutY="450.0" text="T O T A L  E A R N I N G S :" textFill="#303030">
@@ -124,13 +124,13 @@
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font></JFXButton>
-                        <TableView layoutX="416.0" layoutY="54.0" prefHeight="391.0" prefWidth="542.0">
+                        <TableView fx:id="table_restomng" layoutX="416.0" layoutY="54.0" prefHeight="391.0" prefWidth="542.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="No" />
-                            <TableColumn prefWidth="141.0" text="Table Number" />
-                              <TableColumn prefWidth="116.0" text="Date" />
-                              <TableColumn prefWidth="92.0" text="Name" />
-                              <TableColumn prefWidth="119.0" text="Information" />
+                            <TableColumn fx:id="noRestColumn" prefWidth="75.0" text="No" />
+                            <TableColumn fx:id="tableRestColumn" prefWidth="141.0" text="Table Number" />
+                              <TableColumn fx:id="dateRestColumn" prefWidth="116.0" text="Date" />
+                              <TableColumn fx:id="nameRestColumn" prefWidth="92.0" text="Name" />
+                              <TableColumn fx:id="informasiRestColumn" prefWidth="119.0" text="Information" />
                           </columns>
                         </TableView>
                         <TableView layoutX="1153.0" layoutY="53.0" prefHeight="391.0" prefWidth="536.0">
@@ -154,7 +154,7 @@
             </ScrollPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="food_mng" layoutX="264.0" layoutY="173.0" prefHeight="543.0" prefWidth="978.0" style="-fx-background-color: #ffffff;" visible="false">
+      <AnchorPane fx:id="food_mng" layoutX="264.0" layoutY="173.0" prefHeight="543.0" prefWidth="978.0" style="-fx-background-color: #ffffff;">
          <children>
             <Label layoutX="195.0" layoutY="35.0" text="Keyword" textFill="#303030">
                <font>
@@ -171,24 +171,21 @@
                   <Font name="Open Sans Bold" size="15.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="#f89898" layoutX="306.0" layoutY="30.0" prefHeight="31.0" prefWidth="221.0" />
-            <JFXTextField focusColor="#f89898" layoutX="306.0" layoutY="80.0" prefHeight="31.0" prefWidth="303.0" />
-            <JFXTextField focusColor="#f89898" layoutX="306.0" layoutY="140.0" prefHeight="31.0" prefWidth="303.0" />
-            <JFXButton layoutX="553.0" layoutY="30.0" style="-fx-background-color: #edece8;" text="Search" textFill="#303030" />
-            <JFXButton layoutX="306.0" layoutY="225.0" style="-fx-background-color: #edece8;" text="Save" textFill="#303030" />
-            <JFXButton layoutX="435.0" layoutY="225.0" style="-fx-background-color: #edece8;" text="Edit" textFill="#303030" />
-            <JFXButton layoutX="550.0" layoutY="225.0" style="-fx-background-color: #edece8;" text="Delete" textFill="#303030" />
+            <JFXTextField fx:id="txtFoodCode" focusColor="#f89898" layoutX="306.0" layoutY="30.0" prefHeight="31.0" prefWidth="221.0" />
+            <JFXTextField fx:id="txtFoodPrice" focusColor="#f89898" layoutX="306.0" layoutY="80.0" prefHeight="31.0" prefWidth="303.0" />
+            <JFXTextField fx:id="txtFoodStock" focusColor="#f89898" layoutX="306.0" layoutY="140.0" prefHeight="31.0" prefWidth="303.0" />
+            <JFXButton layoutX="553.0" layoutY="30.0" onAction="#btnSearchFood" style="-fx-background-color: #edece8;" text="Search" textFill="#303030" />
+            <JFXButton layoutX="306.0" layoutY="225.0" style="-fx-background-color: #edece8;" text="Update" textFill="#303030" />
             <ScrollPane layoutX="643.0" layoutY="30.0" prefHeight="489.0" prefWidth="303.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="523.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="403.0">
                      <children>
-                        <TableView layoutX="-1.0" prefHeight="469.0" prefWidth="532.0">
+                        <TableView fx:id="table_foodmng" layoutX="-1.0" prefHeight="469.0" prefWidth="532.0">
                           <columns>
-                            <TableColumn prefWidth="137.6666717529297" text="Keyword" />
-                            <TableColumn prefWidth="90.0" text="Price" />
-                              <TableColumn prefWidth="53.66667175292969" text="Stock" />
-                              <TableColumn prefWidth="126.33331298828125" text="Description" />
-                              <TableColumn prefWidth="126.66668701171875" text="Status" />
+                            <TableColumn fx:id="keyFoodColumn" prefWidth="137.6666717529297" text="Keyword" />
+                              <TableColumn fx:id="FoodNameColumn" prefWidth="103.0" text="Food" />
+                            <TableColumn fx:id="priceFoodColumn" prefWidth="88.0" text="Price" />
+                              <TableColumn fx:id="stockFoodColumn" text="Stock" />
                           </columns>
                         </TableView>
                      </children>
@@ -268,6 +265,6 @@
             </AnchorPane>
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="logout_bttn" layoutX="1167.0" layoutY="14.0" text="LOG OUT" textFill="WHITE" />
+      <JFXButton fx:id="logout_bttn" layoutX="1161.0" layoutY="37.0" text="LOG OUT" textFill="WHITE" />
    </children>
 </AnchorPane>

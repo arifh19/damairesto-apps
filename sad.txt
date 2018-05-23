@@ -16,3 +16,8 @@ food mng : http://localhost:8000/api/v1/hidangan
 rest mng : http://localhost:8000/api/v1/pesanan
 
 Pelanggan
+
+Daily report : http://localhost:8000/api/v1/restmng
+
+
+rest mng pke tabel

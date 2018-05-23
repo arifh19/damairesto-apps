@@ -1,0 +1,14 @@
+mongo --host 10.33.109.17 -u admin -p Maha@siswa --authenticationDatabase admin
+
+db.customers.insertMany([{customerNumber:"400617", customerName:"Arif Hidayat",contactLastName:"Hidayat",contactFirstName:"Arif",phone:"081372047410",addressLine1:"Banyumas"},{customerNumber:"11130", customerName:"Ghanny Erlangga",contactLastName:"Erlangga",contactFirstName:"Ghanny",phone:"082546274812",addressLine1:"Solo"}]);
+
+db.customers.find({customerNumber:"400617"})
+
+db.customers.find({customerNumber:"11131"})
+
+db.customers.findOneAndUpdate( {"customerName" :"Arif Hidayat"}, {$set : {"phone" : "0274561111"}} )
+
+db.customers.aggregate(
+{"$group":{"_id":"$country","count":{"$sum":1}}},
+{"$sort":{"count":-1}},
+{"$limit":5})

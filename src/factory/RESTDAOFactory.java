@@ -5,16 +5,25 @@
  */
 package factory;
 
+import dao.DAOAntrian;
+import dao.DAOHidangan;
+import dao.DAOPesanan;
+import dao.DAOUser;
+import dao.Rest.DAORestAntrian;
+import dao.Rest.DAORestHidangan;
+import dao.Rest.DAORestPesanan;
 import dao.Rest.DAORestUser;
-import dao.implementUser;
 
 /**
  *
  * @author fachrul
  */
 public class RESTDAOFactory extends DAOFactory{
-    public implementUser getUser() {
+    public DAOUser getUser() {
         return new DAORestUser();
+    }
+    public DAOAntrian getAntrian() {
+        return new DAORestAntrian();
     }
     
    /* public implementIuran getIuran() {
@@ -52,8 +61,12 @@ public class RESTDAOFactory extends DAOFactory{
     public implementPengeluaranPerubahan getPengeluaranPerubahan(){
         return new DAORestPengeluaranPerubahan();
     }
+    */
+    public DAOPesanan getPesanan(){
+        return new DAORestPesanan();
+    }
     
-    public implementTransaksi getTransaksi(){
-        return new DAORestTransaksi();
-    }*/
+    public DAOHidangan getHidangan(){
+        return new DAORestHidangan();
+    }
 }

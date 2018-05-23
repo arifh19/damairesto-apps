@@ -176,7 +176,7 @@
                   </TableView>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="15.0" layoutY="78.0" prefHeight="454.0" prefWidth="757.0" style="-fx-background-color: #FFFFFF;">
+            <AnchorPane layoutX="15.0" layoutY="78.0" prefHeight="454.0" prefWidth="757.0" style="-fx-background-color: #FFFFFF;" visible="false">
                <children>
                   <Label layoutX="304.0" layoutY="177.0" text="financial monthly report" textFill="#37614a">
                      <font>
@@ -195,14 +195,14 @@
                      <columns>
                         <TableColumn minWidth="3.0" prefWidth="34.0" text="No" />
                         <TableColumn prefWidth="133.0" text="Date" />
-                        <TableColumn prefWidth="162.0" text="Time" />
+                        <TableColumn prefWidth="162.0" text="Total pelanggan" />
                         <TableColumn prefWidth="179.0" text="Earnings" />
                         <TableColumn prefWidth="177.0" text="Operator Name" />
                      </columns>
                   </TableView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="dailyreport" layoutX="17.0" layoutY="81.0" prefHeight="431.0" prefWidth="757.0" style="-fx-background-color: #FFFFFF;">
+            <AnchorPane fx:id="dailyreport" layoutX="17.0" layoutY="81.0" prefHeight="431.0" prefWidth="757.0" style="-fx-background-color: #FFFFFF;" visible="false">
                <children>
                   <Label layoutX="356.0" layoutY="397.0" text="daily report" textFill="#37614a">
                      <font>
@@ -230,25 +230,19 @@
                   <Font name="Open Sans Light" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="22.0" layoutY="528.0" text="Time required for each order  :  " />
-            <Label layoutX="246.0" layoutY="530.0" text="15 min(s)" textFill="#c9283e">
-               <font>
-                  <Font name="Open Sans Bold" size="13.0" />
-               </font>
-            </Label>
             <TableView fx:id="table_resto" layoutX="160.0" layoutY="100.0" prefHeight="364.0" prefWidth="838.0" style="-fx-background-color: #ffffff;">
                <columns>
-                  <TableColumn minWidth="3.0" prefWidth="34.0" text="No" />
-                  <TableColumn prefWidth="158.0" text="Date" />
-                  <TableColumn prefWidth="129.0" text="Table Number" />
-                  <TableColumn prefWidth="178.0" text="Name" />
-                  <TableColumn prefWidth="187.0" text="Price" />
-                  <TableColumn prefWidth="151.0" text="Operator's Name" />
+                  <TableColumn fx:id="noColumnResto" minWidth="3.0" prefWidth="34.0" text="No" />
+                  <TableColumn fx:id="dateColumnResto" prefWidth="158.0" text="Date" />
+                  <TableColumn fx:id="tableColumnResto" prefWidth="129.0" text="Table Number" />
+                  <TableColumn fx:id="nameColumnResto" prefWidth="178.0" text="Name" />
+                  <TableColumn fx:id="earningColumnResto" prefWidth="187.0" text="Earnings" />
+                  <TableColumn fx:id="operatorColumnResto" prefWidth="151.0" text="Operator's Name" />
                </columns>
             </TableView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="food_mng_adm" layoutX="136.0" layoutY="136.0" prefHeight="600.0" prefWidth="1099.0" style="-fx-background-color: #ffffff;">
+      <AnchorPane fx:id="food_mng_adm" layoutX="136.0" layoutY="136.0" prefHeight="600.0" prefWidth="1099.0" style="-fx-background-color: #ffffff;" visible="false">
          <children>
             <Label layoutX="456.0" layoutY="25.0" text="F o o d  M a n a g e m e n t ">
                <font>
@@ -260,8 +254,8 @@
                   <Font name="Open Sans Light" size="17.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="141.0" layoutY="86.0" prefHeight="25.0" prefWidth="225.0" />
-            <JFXButton layoutX="392.0" layoutY="84.0" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #d2b48c;" text="Search">
+            <JFXTextField fx:id="txtFoodKode" layoutX="141.0" layoutY="86.0" prefHeight="25.0" prefWidth="225.0" />
+            <JFXButton layoutX="392.0" layoutY="84.0" onAction="#btnSearchfood" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #d2b48c;" text="Search">
                <font>
                   <Font name="Open Sans Semibold" size="13.0" />
                </font>
@@ -276,24 +270,36 @@
                   <Font name="Open Sans Light" size="17.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="141.0" layoutY="165.0" prefHeight="25.0" prefWidth="304.0" />
-            <JFXTextField editable="false" layoutX="141.0" layoutY="246.0" prefHeight="25.0" prefWidth="304.0" />
+            <JFXTextField fx:id="txtFoodName" layoutX="141.0" layoutY="165.0" prefHeight="25.0" prefWidth="304.0" />
+            <JFXTextField fx:id="txtFoodPrice" editable="false" layoutX="141.0" layoutY="246.0" prefHeight="25.0" prefWidth="304.0" />
             <Label layoutX="30.0" layoutY="341.0" text="Stock">
                <font>
                   <Font name="Open Sans Light" size="17.0" />
                </font>
             </Label>
-            <JFXTextField editable="false" layoutX="141.0" layoutY="338.0" prefHeight="25.0" prefWidth="304.0" />
+            <JFXTextField fx:id="txtFoodStock" editable="false" layoutX="141.0" layoutY="338.0" prefHeight="25.0" prefWidth="304.0" />
+            <AnchorPane layoutX="609.0" layoutY="61.0" minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="403.0">
+               <children>
+                  <TableView fx:id="table_foodmng" layoutX="-1.0" prefHeight="469.0" prefWidth="406.0">
+                     <columns>
+                        <TableColumn fx:id="keyFoodColumn" prefWidth="137.6666717529297" text="Keyword" />
+                        <TableColumn fx:id="FoodNameColumn" prefWidth="103.0" text="Food" />
+                        <TableColumn fx:id="priceFoodColumn" prefWidth="88.0" text="Price" />
+                        <TableColumn fx:id="stockFoodColumn" text="Stock" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="user_mng_adm" layoutX="136.0" layoutY="136.0" prefHeight="600.0" prefWidth="1099.0" style="-fx-background-color: #ffffff;" visible="false">
+      <AnchorPane fx:id="user_mng_adm" layoutX="136.0" layoutY="136.0" prefHeight="600.0" prefWidth="1099.0" style="-fx-background-color: #ffffff;">
          <children>
             <Label layoutX="23.0" layoutY="90.0" text="Username">
                <font>
                   <Font name="Open Sans Light" size="12.0" />
                </font>
             </Label>
-            <JFXButton layoutX="382.0" layoutY="85.0" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #d2b48c;" text="Search">
+            <JFXButton layoutX="382.0" layoutY="85.0" onAction="#btnSearchUser" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #d2b48c;" text="Search">
                <font>
                   <Font name="Open Sans Semibold" size="13.0" />
                </font>
@@ -318,12 +324,12 @@
                   <Font name="Open Sans Semibold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="262.0" layoutY="285.0" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #d2b48c;" text="Edit">
+            <JFXButton layoutX="262.0" layoutY="285.0" onAction="#btnUpdateUser" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #d2b48c;" text="Update">
                <font>
                   <Font name="Open Sans Semibold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="382.0" layoutY="285.0" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #d2b48c;" text="Delete">
+            <JFXButton layoutX="382.0" layoutY="285.0" onAction="#btnDeleteUser" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #d2b48c;" text="Delete">
                <font>
                   <Font name="Open Sans Semibold" size="13.0" />
                </font>
@@ -341,9 +347,9 @@
                </font>
             </Label>
             <JFXTextField fx:id="TxtUsername" layoutX="142.0" layoutY="82.0" prefHeight="25.0" prefWidth="225.0" />
-            <JFXTextField fx:id="TxtPassword" layoutX="142.0" layoutY="130.0" prefHeight="25.0" prefWidth="304.0" />
             <JFXTextField fx:id="TxtName" layoutX="142.0" layoutY="176.0" prefHeight="25.0" prefWidth="304.0" />
             <JFXTextField fx:id="TxtStatus" layoutX="142.0" layoutY="222.0" prefHeight="25.0" prefWidth="304.0" />
+            <JFXPasswordField fx:id="TxtPassword" layoutX="139.0" layoutY="131.0" prefHeight="25.0" prefWidth="304.0" />
          </children>
       </AnchorPane>
    </children>

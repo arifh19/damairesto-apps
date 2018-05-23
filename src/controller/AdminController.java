@@ -6,10 +6,14 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import damairesto.DamaiResto;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,12 +29,19 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.MapValueFactory;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import object.Users;
+import model.HidanganModel;
+import model.PesananModel;
+import model.UserModel;
+import object.Hidangans;
+import object.Orders;
+import object.User;
 
 /**
  * FXML Controller class
@@ -44,21 +55,21 @@ public class AdminController implements Initializable {
     @FXML
     private AnchorPane user_mng_adm;
     @FXML
-    private TableView<Users> table_user;
+    private TableView<Map> table_user;
     @FXML
     private AnchorPane food_mng_adm;
     @FXML
     private AnchorPane resto_mng_adm;
     @FXML
-    private TableColumn<Users, String> firstUsernameColumn;
+    private TableColumn<Map, ?> firstUsernameColumn;
     @FXML
-    private TableColumn<Users, String> firstNameColumn;
+    private TableColumn<Map, ?> firstNameColumn;
     @FXML
-    private TableColumn<Users, String> firstStatusColumn;
+    private TableColumn<Map, ?> firstStatusColumn;
     @FXML
     private JFXTextField TxtUsername;
     @FXML
-    private JFXTextField TxtPassword;
+    private JFXPasswordField TxtPassword;
     @FXML
     private JFXTextField TxtName;
     @FXML
@@ -66,7 +77,6 @@ public class AdminController implements Initializable {
     
     
     // Reference to the main application.
-    private ObservableList<Users> userData = FXCollections.observableArrayList();
     @FXML
     private JFXButton bttn_usr_mng_adm;
     @FXML
@@ -101,29 +111,118 @@ public class AdminController implements Initializable {
     private TableView<?> table_resto;
     @FXML
     private JFXTextField lbl_user;
+    @FXML
+    private TableColumn<Map, ?> noColumnResto;
+    @FXML
+    private TableColumn<Map, ?> dateColumnResto;
+    @FXML
+    private TableColumn<Map, ?> tableColumnResto;
+    @FXML
+    private TableColumn<Map, ?> nameColumnResto;
+    @FXML
+    private TableColumn<Map, ?> earningColumnResto;
+    @FXML
+    private TableColumn<Map, ?> operatorColumnResto;
+    
+    List<Hidangans> listFoodCode;
+
+    List<User> listUser;
+    
+   
+    @FXML
+    private JFXTextField txtFoodKode;
+    @FXML
+    private JFXTextField txtFoodName;
+    @FXML
+    private JFXTextField txtFoodPrice;
+    @FXML
+    private JFXTextField txtFoodStock;
+    @FXML
+    private TableView<Map> table_foodmng;
+    @FXML
+    private TableColumn<Map, ?> keyFoodColumn;
+    @FXML
+    private TableColumn<Map, ?> FoodNameColumn;
+    @FXML
+    private TableColumn<Map, ?> priceFoodColumn;
+    @FXML
+    private TableColumn<Map, ?> stockFoodColumn;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        // Initialize the person table with the two columns.
-        firstUsernameColumn.setCellValueFactory(cellData -> cellData.getValue().UsernameProperty());
-        firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().NameProperty());
-        firstStatusColumn.setCellValueFactory(cellData -> cellData.getValue().statusProperty());
-
-     // Clear person details.
-        //showPersonDetails(null);
-
-     // Listen for selection changes and show the person details when changed.
-//        table_user.getSelectionModel().selectedItemProperty().addListener(
-//                (observable, oldValue, newValue) -> showPersonDetails(newValue));
+       fillTable();
     }    
+    private void fillTable(){
+        table_user.getItems().clear();
+        table_foodmng.getItems().clear();
+        
+        firstUsernameColumn.setCellValueFactory(new MapValueFactory("username"));
+        firstNameColumn.setCellValueFactory(new MapValueFactory("name"));
+        firstStatusColumn.setCellValueFactory(new MapValueFactory("status"));
+        
+        keyFoodColumn.setCellValueFactory(new MapValueFactory("keyfood"));
+        FoodNameColumn.setCellValueFactory(new MapValueFactory("foodname"));
+        priceFoodColumn.setCellValueFactory(new MapValueFactory("pricefood"));
+        stockFoodColumn.setCellValueFactory(new MapValueFactory("stockfood"));
+    
+    
+        table_user.setItems(generateDataUser());
+        table_user.setEditable(false);
+        table_foodmng.setItems(generateFood());
+        table_foodmng.setEditable(false);
+       // table_foodmng.getSelectionModel().setCellSelectionEnabled(true);
+
+    }
+    
+    private ObservableList<Map> generateDataUser() {
+        UserModel userModel = new UserModel();
+        listUser = userModel.getAll();
+        ObservableList<Map> allData = FXCollections.observableArrayList();
+        allData.removeAll(allData);
+        for (int i = 0; i < listUser.size(); i++) {
+            Map<String, String> dataRow = new HashMap<>();
+            String value0 = listUser.get(i).getUsername();
+            String value1 = listUser.get(i).getName();
+            String value2 = listUser.get(i).getStatus();
+            //String value4 = Double.toString(value3);
+            dataRow.put("username", value0);
+            dataRow.put("name", value1);
+            dataRow.put("status", value2);
+            allData.add(dataRow);
+        }
+        return allData;
+    }
+    
+    private ObservableList<Map> generateFood() {
+        HidanganModel hidanganModel = new HidanganModel();
+        listFoodCode = hidanganModel.getAll();
+        ObservableList<Map> allData = FXCollections.observableArrayList();
+        allData.removeAll(allData);
+        for (int i = 0; i < listFoodCode.size(); i++) {
+            Map<String, String> dataRow = new HashMap<>();
+            String value0 = listFoodCode.get(i).getKode_hidangan();
+            String value1 = listFoodCode.get(i).getNama_hidangan();
+            Double value2 = listFoodCode.get(i).getHarga();
+            int value3 = listFoodCode.get(i).getStok();
+            //String value4 = Double.toString(value3);
+            dataRow.put("keyfood", value0);
+            dataRow.put("foodname", value1);
+            dataRow.put("pricefood", Double.toString(value2));
+            dataRow.put("stockfood", Integer.toString(value3));
+            allData.add(dataRow);
+        }
+        return allData;
+    }
     
     @FXML
     public void Register(ActionEvent event) {
         // Add observable list data to the table
         // Add some sample data
+       
         String name = TxtName.getText();
         String username = TxtUsername.getText();
         String password = TxtPassword.getText();
@@ -134,9 +233,12 @@ public class AdminController implements Initializable {
 	    alert.setHeaderText("Lengkapi kembali formnya");
             alert.showAndWait();
         }else{
-       
-            userData.add(new Users(name, username,status));
-            table_user.setItems(userData);
+            UserModel userModel = new UserModel();
+            userModel.insert(new User(name,username, password ,status));
+            table_user.getItems().clear();
+            fillTable();
+            //userData.add(new Users(name, username,status));
+            //table_user.setItems(userData);
             TxtName.setText("");
             TxtUsername.setText("");
             TxtPassword.setText("");
@@ -160,6 +262,8 @@ public class AdminController implements Initializable {
             food_mng_adm.setVisible(false);
             resto_mng_adm.setVisible(false);
             statistic_adm.setVisible(false);
+            table_user.getItems().clear();
+            fillTable();
         } else if (event.getTarget() == bttn_food_mng_adm) {
             bttn_usr_mng_adm.setTextFill(Paint.valueOf("#b07e6a"));
             bttn_food_mng_adm.setTextFill(Paint.valueOf("#ffffff"));
@@ -169,6 +273,8 @@ public class AdminController implements Initializable {
             food_mng_adm.setVisible(true);
             resto_mng_adm.setVisible(false);
             statistic_adm.setVisible(false);
+            table_user.getItems().clear();
+            fillTable();
         }else if (event.getTarget() == bttn_resto_mng_adm) {
             bttn_usr_mng_adm.setTextFill(Paint.valueOf("#b07e6a"));
             bttn_food_mng_adm.setTextFill(Paint.valueOf("#b07e6a"));
@@ -178,6 +284,8 @@ public class AdminController implements Initializable {
             food_mng_adm.setVisible(false);
             resto_mng_adm.setVisible(true);
             statistic_adm.setVisible(false);
+            table_user.getItems().clear();
+            fillTable();
         }else if (event.getTarget() == bttn_stats_adm) {
             bttn_usr_mng_adm.setTextFill(Paint.valueOf("#b07e6a"));
             bttn_food_mng_adm.setTextFill(Paint.valueOf("#b07e6a"));
@@ -187,8 +295,11 @@ public class AdminController implements Initializable {
             food_mng_adm.setVisible(false);
             resto_mng_adm.setVisible(false);
             statistic_adm.setVisible(true);
+            table_user.getItems().clear();
+            fillTable();
         } else {
-            
+            table_user.getItems().clear();
+            fillTable();
         }
     }
     
@@ -207,5 +318,68 @@ public class AdminController implements Initializable {
             ex.printStackTrace();
         }
     }
+
+    @FXML
+    private void btnSearchfood(ActionEvent event) {
+        HidanganModel hidanganModel = new HidanganModel();
+        String key = txtFoodKode.getText();
+        Hidangans m = hidanganModel.get(key);
+       // String value0 = m.getKode_hidangan();
+            String value0 = m.getNama_hidangan();
+            double value1 = m.getHarga();
+            int value2 = m.getStok();
+            txtFoodName.setText(value0);
+            txtFoodPrice.setText(Double.toString(value1));
+            txtFoodStock.setText(Integer.toString(value2));
+       }
+
+    @FXML
+    private void btnSearchUser(ActionEvent event) {
+        UserModel userModel = new UserModel();
+        String key = TxtUsername.getText();
+        User u = userModel.get(key);
+       // String value0 = m.getKode_hidangan();
+            String value1 = u.getName();
+            String value2 = u.getUsername();
+            String value3 = u.getStatus();
+            String value4 = "xxxxxxxxx";
+            TxtName.setText(value1);
+            TxtUsername.setText(value2);
+            TxtPassword.setText(value4);
+            TxtStatus.setText(value3);
+            table_user.getItems().clear();
+            table_user.setItems(generateDataUser());
+            
+    }
+
+    @FXML
+    private void btnUpdateUser(ActionEvent event) {
+        UserModel userModel = new UserModel();
+        String name = TxtName.getText();
+        String username = TxtUsername.getText();
+        String password = TxtPassword.getText();
+        String status = TxtStatus.getText();
+        //UserModel userModel = new UserModel();
+        userModel.update(new User(name,username, password ,status));
+        table_user.getItems().clear();
+        table_user.setItems(generateDataUser());
+        TxtName.setText("");
+        TxtUsername.setText("");
+        TxtPassword.setText("");
+        TxtStatus.setText("");
+        
+        
+    }
+
+    @FXML
+    private void btnDeleteUser(ActionEvent event) {
+        UserModel userModel = new UserModel();
+        String username = TxtUsername.getText();
+        userModel.delete(username);
+        table_user.getItems().clear();
+        table_user.setItems(generateDataUser());
+    }
+            
+        
     
 }

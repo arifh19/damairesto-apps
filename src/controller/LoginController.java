@@ -22,7 +22,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import model.UserModel;
-import object.User;
 
 /**
  * FXML Controller class

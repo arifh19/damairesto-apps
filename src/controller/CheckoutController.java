@@ -10,6 +10,7 @@ import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.text.DecimalFormat;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -26,6 +28,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import model.AntrianModel;
+import model.PesananModel;
+import object.Antrian;
 import object.Orders;
 /**
  * FXML Controller class
@@ -33,7 +38,8 @@ import object.Orders;
  * @author Yuuki
  */
 public class CheckoutController implements Initializable {
-
+    
+    private int num;
       @FXML
     private AnchorPane kedua_checkout;
     @FXML
@@ -133,10 +139,11 @@ public class CheckoutController implements Initializable {
         ColumnPrice.setMinWidth(15);
     }    
     
-    public void getSubtotal(double value){
+    public void getSubtotal(double value, int num){
         String mataUang = String.format("Rp.%,.0f", value).replaceAll(",", ".")+",00";
         txtSubtotal.setText(mataUang);
         txtchecksubtotal.setText(mataUang);
+        this.num = num;
     }
     
     public void setMainApp(KategoriController mainApp) {
@@ -146,7 +153,7 @@ public class CheckoutController implements Initializable {
         table_checkout.setItems(mainApp.getPersonData());
     }
     @FXML
-    public void backButtonAction(ActionEvent event) {
+    private void backButtonAction(ActionEvent event) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/kategori.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -165,6 +172,7 @@ public class CheckoutController implements Initializable {
     
     @FXML
     private void nextButton(ActionEvent event){
+        
         String firstName = txtSetFirstName.getText();
         String lastName = txtSetLastName.getText();
         String tableNumber = txtSetTableNumber.getText();
@@ -174,19 +182,47 @@ public class CheckoutController implements Initializable {
             ketiga_checkout.setVisible(false);
             checkStep2.setVisible(true);
         } else if (event.getTarget() == btnStep2) {
-            pertama_checkout.setVisible(false);
-            kedua_checkout.setVisible(false);
-            ketiga_checkout.setVisible(true);
-            checkStep3.setVisible(true);
             txtFirstName.setText(firstName);
             txtLastName.setText(lastName);
             txtTableNumber.setText(tableNumber);
+            if(txtFirstName.getText().isEmpty()||txtLastName.getText().isEmpty()||txtTableNumber.getText().isEmpty()){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Data inputan belum lengkap");
+                alert.setHeaderText("Lengkapi kembali formnya");
+                alert.showAndWait();
+            }else{
+                pertama_checkout.setVisible(false);
+                kedua_checkout.setVisible(false);
+                ketiga_checkout.setVisible(true);
+                checkStep3.setVisible(true);
+            }
         } else if (event.getTarget() == btnStep3) {
             pertama_checkout.setVisible(false);
             kedua_checkout.setVisible(false);
             ketiga_checkout.setVisible(false);
             checkStep4.setVisible(true);   
             finalcheckOut(event);
+            String name = txtFirstName.getText()+" "+txtLastName.getText();
+             //System.out.println(name);
+             PesananModel pesananModel = new PesananModel();
+             
+             //Hitung jumlah antrian
+             List<Antrian> listAntrian;
+             AntrianModel antrianModel = new AntrianModel();
+             listAntrian = antrianModel.getAll();
+             int antrian=0;
+             
+             for (int i = 0; i < listAntrian.size(); i++){
+                antrian = listAntrian.get(i).getAntrian();
+             }
+             
+             //insert pesanan berdasarkan row
+            for(int i=0; i<this.num;i++){
+                Orders tableRow = table_order.getItems().get(i);
+                System.out.println(tableRow.getKode_hidangan());
+                pesananModel.insert(new Orders(tableRow.getKode_hidangan(),Integer.parseInt(txtTableNumber.getText()),name,tableRow.getQuantity(),antrian));
+            }
+            
         }else{
             
         }
@@ -222,9 +258,5 @@ public class CheckoutController implements Initializable {
         }catch(IOException ex){
             ex.printStackTrace();
         }
-    }
-
-    @FXML
-    private void backButtonAction(MouseEvent event) {
     }
 }

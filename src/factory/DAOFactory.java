@@ -8,7 +8,6 @@ package factory;
 //dimana nantinya dalam packages ini kita mengetahui cara memisahkan data
 
 import dao.*;
-import dao.implementUser;
 
 public abstract class DAOFactory {
     //class ini adalah abstract interface dari DAO dimana disini nantinya

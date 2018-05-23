@@ -5,66 +5,57 @@
  */
 package model;
 
-import object.User;
-import dao.implementUser;
+import dao.DAOHidangan;
+import dao.DAOPesanan;
+import dao.DAOUser;
 import factory.DAOFactory;
 import factory.RESTDAOFactory;
 import java.util.List;
+import object.Hidangans;
+import object.Orders;
+import object.User;
 
 /**
  *
  * @author Yuuki
  */
-public class UserModel implements implementUser{
-
+public class UserModel implements DAOUser {
     RESTDAOFactory restFactory;
-    implementUser DAOUser;
+    DAOUser Daouser;
     List<User> listUser;
-
+    
     public UserModel() {
-         restFactory = (RESTDAOFactory) DAOFactory.getFactory(DAOFactory.REST);
-         DAOUser = restFactory.getUser();
-         listUser = DAOUser.getAll(); 
+        restFactory = (RESTDAOFactory) DAOFactory.getFactory(DAOFactory.REST);
+        Daouser = restFactory.getUser();
+        listUser = Daouser.getAll();
     }
     
     @Override
-    public int insert(User b) {
-        return DAOUser.insert(b);
-    }
-
-    @Override
-    public User getUser(String user_id) {
-        return DAOUser.getUser(user_id);
-    }
-
-    @Override
-    public void update(User b) {
-        DAOUser.update(b);
-    }
-
-    @Override
-    public void delete(String user_id) {
-        DAOUser.delete(user_id);
+    public void insert(User b) {
+        Daouser.insert(b);
     }
 
     @Override
     public List<User> getAll() {
         return listUser;
     }
-
     @Override
-    public List<User> getCari(String displayname) {
-        return DAOUser.getCari(displayname);
+    public User get(String username) {
+        return Daouser.get(username);
     }
 
-    @Override
-    public int getCount() {
-        return DAOUser.getCount();
-    }
+//    @Override
+//    public void update(Hidangans b) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     @Override
-    public int getValidLogin(String username, String password) {
-        return DAOUser.getValidLogin(username, password);
+    public void delete(String user_id) {
+        Daouser.delete(user_id);
     }
     
+    @Override
+    public void update(User b) {
+        Daouser.update(b);
+    }
 }

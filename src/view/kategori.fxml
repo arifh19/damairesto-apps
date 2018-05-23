@@ -118,7 +118,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="137.0" text="Lemonade" textAlignment="CENTER">
+                                                      <Label fx:id="lblbe01" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="137.0" text="Lemonade" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -128,7 +128,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="52.0" layoutY="28.0" text="Rp 23.000" textFill="#7f5959">
+                                                      <Label fx:id="pricebe01" layoutX="52.0" layoutY="28.0" text="Rp 23.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -160,7 +160,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="108.0" prefWidth="185.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="3.0" prefHeight="20.0" prefWidth="138.0" text="Speciality Tea" textAlignment="CENTER">
+                                                      <Label fx:id="lblbe02" alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="3.0" prefHeight="20.0" prefWidth="138.0" text="Speciality Tea" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -170,7 +170,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="75.0" layoutY="24.0" text="Rp 19.000" textFill="#7f5959">
+                                                      <Label fx:id="pricebe02" layoutX="75.0" layoutY="24.0" text="Rp 19.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -209,7 +209,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Peach Smoothie" textAlignment="CENTER">
+                                                      <Label fx:id="lblbe03" alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Peach Smoothie" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -219,7 +219,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="70.0" layoutY="26.0" text="Rp 30.000" textFill="#7f5959">
+                                                      <Label fx:id="pricebe03" layoutX="70.0" layoutY="26.0" text="Rp 30.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -251,7 +251,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="3.0" prefHeight="22.0" prefWidth="158.0" text="Cocktail Whiskey" textAlignment="CENTER">
+                                                      <Label fx:id="lblbe04" alignment="CENTER" contentDisplay="CENTER" layoutY="3.0" prefHeight="22.0" prefWidth="158.0" text="Cocktail Whiskey" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -264,7 +264,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="54.0" layoutY="25.0" text="Rp 41.000" textFill="#7f5959">
+                                                      <Label fx:id="pricebe04" layoutX="54.0" layoutY="25.0" text="Rp 41.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -303,7 +303,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="5.0" prefHeight="20.0" prefWidth="182.0" text="Macchiato" textAlignment="CENTER">
+                                                      <Label fx:id="lblbe05" alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="5.0" prefHeight="20.0" prefWidth="182.0" text="Macchiato" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -313,7 +313,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="70.0" layoutY="32.0" text="Rp 31.000" textFill="#7f5959">
+                                                      <Label fx:id="pricebe05" layoutX="70.0" layoutY="32.0" text="Rp 31.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -345,7 +345,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="5.0" prefHeight="20.0" prefWidth="182.0" text="Matcha Latte" textAlignment="CENTER">
+                                                      <Label fx:id="lblbe06" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="5.0" prefHeight="20.0" prefWidth="182.0" text="Matcha Latte" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -358,7 +358,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="65.0" layoutY="32.0" text="Rp 32.000" textFill="#7f5959">
+                                                      <Label fx:id="pricebe06" layoutX="65.0" layoutY="32.0" text="Rp 32.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -450,7 +450,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Boston Cream Cheesecake" textAlignment="CENTER">
+                                                      <Label fx:id="lbld001" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Boston Cream Cheesecake" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -460,7 +460,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="70.0" layoutY="26.0" text="Rp 53.000" textFill="#7f5959">
+                                                      <Label fx:id="priced001" layoutX="70.0" layoutY="26.0" text="Rp 53.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -492,7 +492,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="108.0" prefWidth="185.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="3.0" prefHeight="20.0" prefWidth="182.0" text="Cherry Pie" textAlignment="CENTER">
+                                                      <Label fx:id="lbld002" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="3.0" prefHeight="20.0" prefWidth="182.0" text="Cherry Pie" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -505,7 +505,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="70.0" layoutY="29.0" text="Rp 32.000" textFill="#7f5959">
+                                                      <Label fx:id="priced002" layoutX="70.0" layoutY="29.0" text="Rp 32.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -544,7 +544,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Bananas Foster" textAlignment="CENTER">
+                                                      <Label fx:id="lbld003" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Bananas Foster" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -554,7 +554,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="70.0" layoutY="26.0" text="Rp 34.000" textFill="#7f5959">
+                                                      <Label fx:id="priced003" layoutX="70.0" layoutY="26.0" text="Rp 34.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -586,7 +586,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="3.0" prefHeight="20.0" prefWidth="182.0" text="Fried Chocolate Ice Cream" textAlignment="CENTER">
+                                                      <Label fx:id="lbld004" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="3.0" prefHeight="20.0" prefWidth="182.0" text="Fried Chocolate Ice Cream" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -599,7 +599,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="70.0" layoutY="25.0" text="Rp 29.000" textFill="#7f5959">
+                                                      <Label fx:id="priced004" layoutX="70.0" layoutY="25.0" text="Rp 29.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -638,7 +638,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="118.0" prefWidth="155.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Arumanis" textAlignment="CENTER">
+                                                      <Label fx:id="lbld005" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="182.0" text="Arumanis" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -648,7 +648,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="70.0" layoutY="26.0" text="Rp 31.000" textFill="#7f5959">
+                                                      <Label fx:id="priced005" layoutX="70.0" layoutY="26.0" text="Rp 31.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -680,7 +680,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="18.0" prefHeight="20.0" prefWidth="182.0" text="Baked Fudge" textAlignment="CENTER">
+                                                      <Label fx:id="lbld006" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="18.0" prefHeight="20.0" prefWidth="182.0" text="Baked Fudge" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -693,7 +693,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="65.0" layoutY="40.0" text="Rp 32.000" textFill="#7f5959">
+                                                      <Label fx:id="priced006" layoutX="65.0" layoutY="40.0" text="Rp 32.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
@@ -785,12 +785,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="55.0" layoutY="23.0" prefHeight="24.0" prefWidth="73.0" text="Rp 53.000" textFill="#7f5959">
+                                                      <Label fx:id="pricem001" layoutX="55.0" layoutY="23.0" prefHeight="24.0" prefWidth="73.0" text="Rp 53.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="18.0" layoutY="3.0" prefHeight="20.0" prefWidth="133.0" text="Sphagetti Carbonara">
+                                                      <Label fx:id="lblm001" layoutX="18.0" layoutY="3.0" prefHeight="20.0" prefWidth="133.0" text="Sphagetti Carbonara">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -827,12 +827,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="86.0" layoutY="22.0" prefHeight="24.0" prefWidth="73.0" text="Rp 43.000" textFill="#7f5959">
+                                                      <Label fx:id="pricem002" layoutX="86.0" layoutY="22.0" prefHeight="24.0" prefWidth="73.0" text="Rp 43.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="58.0" layoutY="3.0" text="Vegan Greek Pizza">
+                                                      <Label fx:id="lblm002" layoutX="58.0" layoutY="3.0" text="Vegan Greek Pizza">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -876,12 +876,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="65.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp. 37.500" textFill="#7f5959">
+                                                      <Label fx:id="pricem003" layoutX="65.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp. 37.500" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="56.0" layoutY="11.0" text="Chicory Soup">
+                                                      <Label fx:id="lblm003" layoutX="56.0" layoutY="11.0" text="Chicory Soup">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -921,12 +921,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="65.0" layoutY="21.0" prefHeight="24.0" prefWidth="73.0" text="Rp 56.000" textFill="#7f5959">
+                                                      <Label fx:id="pricem004" layoutX="65.0" layoutY="21.0" prefHeight="24.0" prefWidth="73.0" text="Rp 56.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="21.0" layoutY="7.0" text="Salmon w/ Brocoli Steak">
+                                                      <Label fx:id="lblm004" layoutX="21.0" layoutY="7.0" text="Salmon w/ Brocoli Steak">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -970,12 +970,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="50.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 107.500" textFill="#7f5959">
+                                                      <Label fx:id="pricem005" layoutX="50.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 107.500" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="43.0" layoutY="4.0" text="Pan Seared ">
+                                                      <Label fx:id="lblm005" layoutX="43.0" layoutY="4.0" text="Pan Seared ">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -1017,12 +1017,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="49.0" layoutY="44.0" prefHeight="24.0" prefWidth="73.0" text="RP 32.000" textFill="#7f5959">
+                                                      <Label fx:id="pricem006" layoutX="49.0" layoutY="44.0" prefHeight="24.0" prefWidth="73.0" text="RP 32.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="33.0" layoutY="7.0" text="Kimchi Fried Rice">
+                                                      <Label fx:id="lblm006" layoutX="33.0" layoutY="7.0" text="Kimchi Fried Rice">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -1066,12 +1066,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="31.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 235.500" textFill="#7f5959">
+                                                      <Label fx:id="pricem007" layoutX="31.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 235.500" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="-15.0" layoutY="4.0" text="Wagyu Blue Cheese Steak">
+                                                      <Label fx:id="lblm007" layoutX="-15.0" layoutY="4.0" text="Wagyu Blue Cheese Steak">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -1108,12 +1108,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="50.0" layoutY="44.0" prefHeight="24.0" prefWidth="73.0" text="RP 72.000" textFill="#7f5959">
+                                                      <Label fx:id="pricem008" layoutX="50.0" layoutY="44.0" prefHeight="24.0" prefWidth="73.0" text="RP 72.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="16.0" layoutY="7.0" text="Lime and Blackpepper ">
+                                                      <Label fx:id="lblm008" layoutX="16.0" layoutY="7.0" text="Lime and Blackpepper ">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -1162,12 +1162,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="58.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 107.500" textFill="#7f5959">
+                                                      <Label fx:id="pricem009" layoutX="58.0" layoutY="43.0" prefHeight="24.0" prefWidth="73.0" text="Rp 107.500" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="40.0" layoutY="4.0" text="Roasted Delicated">
+                                                      <Label fx:id="lblm009" layoutX="40.0" layoutY="4.0" text="Roasted Delicated">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -1209,12 +1209,12 @@
                                                 </ImageView>
                                                 <Pane prefHeight="109.0" prefWidth="205.0">
                                                    <children>
-                                                      <Label layoutX="95.0" layoutY="44.0" prefHeight="24.0" prefWidth="73.0" text="RP 38.000" textFill="#7f5959">
+                                                      <Label fx:id="pricem010" layoutX="95.0" layoutY="44.0" prefHeight="24.0" prefWidth="73.0" text="RP 38.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="84.0" layoutY="7.0" text="Kimchi Sushi">
+                                                      <Label fx:id="lblm010" layoutX="84.0" layoutY="7.0" text="Kimchi Sushi">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -1543,7 +1543,7 @@
                                                 </ImageView>
                                                 <Pane prefHeight="115.0" prefWidth="185.0">
                                                    <children>
-                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="16.0" prefHeight="20.0" prefWidth="182.0" text="Buffalo Chicken Ring" textAlignment="CENTER">
+                                                      <Label fx:id="lbla006" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="16.0" prefHeight="20.0" prefWidth="182.0" text="Buffalo Chicken Ring" textAlignment="CENTER">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -1556,7 +1556,7 @@
                                                             <Font name="System Bold" size="10.0" />
                                                          </font>
                                                       </JFXButton>
-                                                      <Label layoutX="62.0" layoutY="37.0" text="Rp 32.000" textFill="#7f5959">
+                                                      <Label fx:id="pricea006" layoutX="62.0" layoutY="37.0" text="Rp 32.000" textFill="#7f5959">
                                                          <font>
                                                             <Font name="System Bold Italic" size="12.0" />
                                                          </font>

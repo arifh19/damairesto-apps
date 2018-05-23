@@ -34,7 +34,6 @@ import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import object.Orders;
-import object.Users;
 
 /**
  * FXML Controller class
@@ -428,6 +427,98 @@ public class KategoriController implements Initializable {
     private Label lbla005;
     @FXML
     private Label pricea005;
+    @FXML
+    private Label lbla006;
+    @FXML
+    private Label pricea006;
+    @FXML
+    private Label pricem001;
+    @FXML
+    private Label lblm001;
+    @FXML
+    private Label pricem002;
+    @FXML
+    private Label lblm002;
+    @FXML
+    private Label pricem003;
+    @FXML
+    private Label lblm003;
+    @FXML
+    private Label pricem004;
+    @FXML
+    private Label lblm004;
+    @FXML
+    private Label pricem005;
+    @FXML
+    private Label lblm005;
+    @FXML
+    private Label pricem006;
+    @FXML
+    private Label lblm006;
+    @FXML
+    private Label pricem007;
+    @FXML
+    private Label lblm007;
+    @FXML
+    private Label pricem008;
+    @FXML
+    private Label lblm008;
+    @FXML
+    private Label pricem009;
+    @FXML
+    private Label lblm009;
+    @FXML
+    private Label pricem010;
+    @FXML
+    private Label lblm010;
+    @FXML
+    private Label lbld001;
+    @FXML
+    private Label priced001;
+    @FXML
+    private Label lbld002;
+    @FXML
+    private Label priced002;
+    @FXML
+    private Label lbld003;
+    @FXML
+    private Label priced003;
+    @FXML
+    private Label lbld004;
+    @FXML
+    private Label priced004;
+    @FXML
+    private Label lbld005;
+    @FXML
+    private Label priced005;
+    @FXML
+    private Label lbld006;
+    @FXML
+    private Label priced006;
+    @FXML
+    private Label lblbe01;
+    @FXML
+    private Label pricebe01;
+    @FXML
+    private Label lblbe02;
+    @FXML
+    private Label pricebe02;
+    @FXML
+    private Label lblbe03;
+    @FXML
+    private Label pricebe03;
+    @FXML
+    private Label lblbe04;
+    @FXML
+    private Label pricebe04;
+    @FXML
+    private Label lblbe05;
+    @FXML
+    private Label pricebe05;
+    @FXML
+    private Label lblbe06;
+    @FXML
+    private Label pricebe06;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -455,105 +546,6 @@ public class KategoriController implements Initializable {
         }
     }
     
-    public void setKategori(int event){
-        if(event ==1){
-            l_breakfast.setTextFill(Paint.valueOf("#ffffff"));
-            v_breakfast.setVisible(true);
-            v_appetizer.setVisible(false);
-            v_maincourse.setVisible(false);
-            v_dessert.setVisible(false);
-            v_beverages.setVisible(false);
-        }else if(event ==2){
-            l_appetizer.setTextFill(Paint.valueOf("#ffffff"));
-            v_breakfast.setVisible(false);
-            v_appetizer.setVisible(true);
-            v_maincourse.setVisible(false);
-            v_dessert.setVisible(false);
-            v_beverages.setVisible(false);
-        }else if(event ==3){
-            l_maincourse.setTextFill(Paint.valueOf("#ffffff"));
-            v_breakfast.setVisible(false);
-            v_appetizer.setVisible(false);
-            v_maincourse.setVisible(true);
-            v_dessert.setVisible(false);
-            v_beverages.setVisible(false);
-        }else if(event ==4){
-            l_dessert.setTextFill(Paint.valueOf("#ffffff"));
-            v_breakfast.setVisible(false);
-            v_appetizer.setVisible(false);
-            v_maincourse.setVisible(false);
-            v_dessert.setVisible(true);
-            v_beverages.setVisible(false);
-        }else{
-            l_beverages.setTextFill(Paint.valueOf("#ffffff"));
-            v_breakfast.setVisible(false);
-            v_appetizer.setVisible(false);
-            v_maincourse.setVisible(false);
-            v_dessert.setVisible(false);
-            v_beverages.setVisible(true);
-        }
-    }
-    
-    @FXML
-    public void handleButtonAction(ActionEvent event) {
-        if (event.getTarget() == l_breakfast) {
-            l_breakfast.setTextFill(Paint.valueOf("#ffffff"));
-            l_appetizer.setTextFill(Paint.valueOf("#b07e6a"));
-            l_maincourse.setTextFill(Paint.valueOf("#b07e6a"));
-            l_dessert.setTextFill(Paint.valueOf("#b07e6a"));
-            l_beverages.setTextFill(Paint.valueOf("#b07e6a"));
-            v_breakfast.setVisible(true);
-            v_appetizer.setVisible(false);
-            v_maincourse.setVisible(false);
-            v_dessert.setVisible(false);
-            v_beverages.setVisible(false);
-        } else if (event.getTarget() == l_appetizer) {
-            l_breakfast.setTextFill(Paint.valueOf("#b07e6a"));
-            l_appetizer.setTextFill(Paint.valueOf("#ffffff"));
-            l_maincourse.setTextFill(Paint.valueOf("#b07e6a"));
-            l_dessert.setTextFill(Paint.valueOf("#b07e6a"));
-            l_beverages.setTextFill(Paint.valueOf("#b07e6a"));
-            v_breakfast.setVisible(false);
-            v_appetizer.setVisible(true);
-            v_maincourse.setVisible(false);
-            v_dessert.setVisible(false);
-            v_beverages.setVisible(false);
-        } else if (event.getTarget() == l_maincourse) {
-            l_breakfast.setTextFill(Paint.valueOf("#b07e6a"));
-            l_appetizer.setTextFill(Paint.valueOf("#b07e6a"));
-            l_maincourse.setTextFill(Paint.valueOf("#ffffff"));
-            l_dessert.setTextFill(Paint.valueOf("#b07e6a"));
-            l_beverages.setTextFill(Paint.valueOf("#b07e6a"));
-            v_breakfast.setVisible(false);
-            v_appetizer.setVisible(false);
-            v_maincourse.setVisible(true);
-            v_dessert.setVisible(false);
-            v_beverages.setVisible(false);
-        } else if (event.getTarget() == l_dessert) {
-            l_breakfast.setTextFill(Paint.valueOf("#b07e6a"));
-            l_appetizer.setTextFill(Paint.valueOf("#b07e6a"));
-            l_maincourse.setTextFill(Paint.valueOf("#b07e6a"));
-            l_dessert.setTextFill(Paint.valueOf("#ffffff"));
-            l_beverages.setTextFill(Paint.valueOf("#b07e6a"));
-            v_breakfast.setVisible(false);
-            v_appetizer.setVisible(false);
-            v_maincourse.setVisible(false);
-            v_dessert.setVisible(true);
-            v_beverages.setVisible(false);
-        } else {
-            l_breakfast.setTextFill(Paint.valueOf("#b07e6a"));
-            l_appetizer.setTextFill(Paint.valueOf("#b07e6a"));
-            l_maincourse.setTextFill(Paint.valueOf("#b07e6a"));
-            l_dessert.setTextFill(Paint.valueOf("#b07e6a"));
-            l_beverages.setTextFill(Paint.valueOf("#ffffff"));
-            v_breakfast.setVisible(false);
-            v_appetizer.setVisible(false);
-            v_maincourse.setVisible(false);
-            v_dessert.setVisible(false);
-            v_beverages.setVisible(true);
-        }
-    }
-    
     public void setMainApp(MenuController mainApp) {
         this.MainApp = mainApp;
         // Add observable list data to the table
@@ -574,7 +566,10 @@ public class KategoriController implements Initializable {
 	    controller.setMainApp(this);
             getOrderBreakfast();
             getOrderAppetizer();
-            controller.getSubtotal(this.subtotal);
+            getOrderMainCourse();
+            getOrderDessert();
+            getOrderBeverages();
+            controller.getSubtotal(this.subtotal, this.no);
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -676,8 +671,277 @@ public class KategoriController implements Initializable {
             orderData.add(new Orders(no, "A004",lbla004.getText(), kuantitas, subharga));
             this.subtotal = this.subtotal+subharga;
         }
+        if(!txta005.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricea005.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txta005.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "A005",lbla005.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txta006.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricea006.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txta006.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "A006",lbla006.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+    }
+    
+    
+    public void getOrderMainCourse(){
+        
+        if(!txtm001.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem001.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtm001.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M001",lblm001.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtm002.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem002.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtm002.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M002",lblm002.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtm003.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem003.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtm003.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M003",lblm003.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtm004.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem004.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtm004.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M004",lblm004.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        if(!txtm005.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem005.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(3).toString());
+            int kuantitas =Integer.parseInt(txtm005.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M005",lblm005.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtm006.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem006.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtm006.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M006",lblm006.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtm007.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem007.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(3).toString());
+            int kuantitas =Integer.parseInt(txtm007.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M007",lblm007.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtm008.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem008.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtm008.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M008",lblm008.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtm009.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem009.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(3).toString());
+            int kuantitas =Integer.parseInt(txtm009.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M009",lblm009.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtm010.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricem010.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtm010.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "M010",lblm010.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+    }
+    
+    public void getOrderDessert(){
+        
+        if(!txtd001.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priced001.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtd001.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "D001",lbld001.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtd002.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priced002.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtd002.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "D002",lbld002.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtd003.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priced003.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtd003.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "D003",lbld003.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtd004.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priced004.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtd004.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "D004",lbld004.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        if(!txtd005.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priced005.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtd005.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "D005",lbld005.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtd006.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(priced006.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtd006.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "D006",lbld006.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
     }
 
+    public void getOrderBeverages(){
+        
+        if(!txtbe01.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricebe01.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtbe01.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "BE01",lblbe01.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtbe02.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricebe02.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtbe02.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "BE02",lblbe02.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtbe03.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricebe03.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtbe03.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "BE03",lblbe03.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtbe04.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricebe04.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtbe04.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "BE04",lblbe04.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        if(!txtbe05.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricebe05.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtbe05.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "BE05",lblbe05.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+        
+        if(!txtbe06.getText().equals("0")){
+            no++;
+            StringBuffer price;
+            price = new StringBuffer(pricebe06.getText().substring(3));
+            double harga = Double.parseDouble(price.deleteCharAt(2).toString());
+            int kuantitas =Integer.parseInt(txtbe06.getText());
+            Double subharga = harga*kuantitas;
+            orderData.add(new Orders(no, "BE06",lblbe06.getText(), kuantitas, subharga));
+            this.subtotal = this.subtotal+subharga;
+        }
+    }
     @FXML
     private void backButtonAction(MouseEvent event) {
         try{
@@ -693,7 +957,106 @@ public class KategoriController implements Initializable {
             ex.printStackTrace();
         }
     }
-   
+    
+    
+   public void setKategori(int event){
+        if(event ==1){
+            l_breakfast.setTextFill(Paint.valueOf("#ffffff"));
+            v_breakfast.setVisible(true);
+            v_appetizer.setVisible(false);
+            v_maincourse.setVisible(false);
+            v_dessert.setVisible(false);
+            v_beverages.setVisible(false);
+        }else if(event ==2){
+            l_appetizer.setTextFill(Paint.valueOf("#ffffff"));
+            v_breakfast.setVisible(false);
+            v_appetizer.setVisible(true);
+            v_maincourse.setVisible(false);
+            v_dessert.setVisible(false);
+            v_beverages.setVisible(false);
+        }else if(event ==3){
+            l_maincourse.setTextFill(Paint.valueOf("#ffffff"));
+            v_breakfast.setVisible(false);
+            v_appetizer.setVisible(false);
+            v_maincourse.setVisible(true);
+            v_dessert.setVisible(false);
+            v_beverages.setVisible(false);
+        }else if(event ==4){
+            l_dessert.setTextFill(Paint.valueOf("#ffffff"));
+            v_breakfast.setVisible(false);
+            v_appetizer.setVisible(false);
+            v_maincourse.setVisible(false);
+            v_dessert.setVisible(true);
+            v_beverages.setVisible(false);
+        }else{
+            l_beverages.setTextFill(Paint.valueOf("#ffffff"));
+            v_breakfast.setVisible(false);
+            v_appetizer.setVisible(false);
+            v_maincourse.setVisible(false);
+            v_dessert.setVisible(false);
+            v_beverages.setVisible(true);
+        }
+    }
+    
+    @FXML
+    public void handleButtonAction(ActionEvent event) {
+        if (event.getTarget() == l_breakfast) {
+            l_breakfast.setTextFill(Paint.valueOf("#ffffff"));
+            l_appetizer.setTextFill(Paint.valueOf("#b07e6a"));
+            l_maincourse.setTextFill(Paint.valueOf("#b07e6a"));
+            l_dessert.setTextFill(Paint.valueOf("#b07e6a"));
+            l_beverages.setTextFill(Paint.valueOf("#b07e6a"));
+            v_breakfast.setVisible(true);
+            v_appetizer.setVisible(false);
+            v_maincourse.setVisible(false);
+            v_dessert.setVisible(false);
+            v_beverages.setVisible(false);
+        } else if (event.getTarget() == l_appetizer) {
+            l_breakfast.setTextFill(Paint.valueOf("#b07e6a"));
+            l_appetizer.setTextFill(Paint.valueOf("#ffffff"));
+            l_maincourse.setTextFill(Paint.valueOf("#b07e6a"));
+            l_dessert.setTextFill(Paint.valueOf("#b07e6a"));
+            l_beverages.setTextFill(Paint.valueOf("#b07e6a"));
+            v_breakfast.setVisible(false);
+            v_appetizer.setVisible(true);
+            v_maincourse.setVisible(false);
+            v_dessert.setVisible(false);
+            v_beverages.setVisible(false);
+        } else if (event.getTarget() == l_maincourse) {
+            l_breakfast.setTextFill(Paint.valueOf("#b07e6a"));
+            l_appetizer.setTextFill(Paint.valueOf("#b07e6a"));
+            l_maincourse.setTextFill(Paint.valueOf("#ffffff"));
+            l_dessert.setTextFill(Paint.valueOf("#b07e6a"));
+            l_beverages.setTextFill(Paint.valueOf("#b07e6a"));
+            v_breakfast.setVisible(false);
+            v_appetizer.setVisible(false);
+            v_maincourse.setVisible(true);
+            v_dessert.setVisible(false);
+            v_beverages.setVisible(false);
+        } else if (event.getTarget() == l_dessert) {
+            l_breakfast.setTextFill(Paint.valueOf("#b07e6a"));
+            l_appetizer.setTextFill(Paint.valueOf("#b07e6a"));
+            l_maincourse.setTextFill(Paint.valueOf("#b07e6a"));
+            l_dessert.setTextFill(Paint.valueOf("#ffffff"));
+            l_beverages.setTextFill(Paint.valueOf("#b07e6a"));
+            v_breakfast.setVisible(false);
+            v_appetizer.setVisible(false);
+            v_maincourse.setVisible(false);
+            v_dessert.setVisible(true);
+            v_beverages.setVisible(false);
+        } else {
+            l_breakfast.setTextFill(Paint.valueOf("#b07e6a"));
+            l_appetizer.setTextFill(Paint.valueOf("#b07e6a"));
+            l_maincourse.setTextFill(Paint.valueOf("#b07e6a"));
+            l_dessert.setTextFill(Paint.valueOf("#b07e6a"));
+            l_beverages.setTextFill(Paint.valueOf("#ffffff"));
+            v_breakfast.setVisible(false);
+            v_appetizer.setVisible(false);
+            v_maincourse.setVisible(false);
+            v_dessert.setVisible(false);
+            v_beverages.setVisible(true);
+        }
+    }
    @FXML
    private void deskripsiAppetizerView(ActionEvent event){
        try{
