@@ -45,6 +45,11 @@ public class HidanganModel implements DAOHidangan {
 
     @Override
     public void update(Hidangans b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Daohidangan.update(b);
+    }
+    
+    @Override
+    public void delete(String kode_hidangan) {
+        Daohidangan.delete(kode_hidangan);
     }
 }

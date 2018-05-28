@@ -5,21 +5,11 @@
  */
 package damairesto;
 
-import dao.Rest.DAORestPesanan;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import model.AntrianModel;
 import model.HidanganModel;
 import model.PesananModel;
-import model.UserModel;
-import object.Antrian;
 import object.Hidangans;
-import object.Orders;
-import object.User;
+
 
 /**
  *
@@ -27,7 +17,8 @@ import object.User;
  */
 public class Test {
     HidanganModel hidanganModel = new HidanganModel();
-    List<Antrian> listAntrian;
+    PesananModel pesananModel = new PesananModel();
+    //List<Antrian> listAntrian;
     
     public static void main(String[] args) {
         Test a = new Test();
@@ -38,8 +29,8 @@ public class Test {
         }
     
     public void haha(){
-        //UserModel userModel = new UserModel();
-//        /Hidangans m = hidanganModel.get("A009");
+        //UserModel userModel = new UserModel()//        
+        
         //userModel.insert(new User("arifh19","Arif Hidayat", "default saja" ,"admin"));
             //Map<String, String> dataRow = new HashMap<>();
 //            String value0 = m.getKode_hidangan();
@@ -58,12 +49,17 @@ public class Test {
 //            dataRow.put(Column3MapKey, value3);
 //            dataRow.put(Column4MapKey, value4);
 //            allData.add(dataRow);
-                AntrianModel antrianModel = new AntrianModel();
-                listAntrian = antrianModel.getAll();
-                for (int i = 0; i < listAntrian.size(); i++) {
-                int value0 = listAntrian.get(i).getAntrian();
-            System.out.println(value0);
+//                AntrianModel antrianModel = new AntrianModel();
+//                listAntrian = antrianModel.getAll();
+//                for (int i = 0; i < listAntrian.size(); i++) {
+//                int value0 = listAntrian.get(i).getAntrian();
+//            String[] appetizer={"A001","A002","A003","A004","A006"};
+//            for(int i=0;i<4;i++){
+//                Hidangans m = hidanganModel.get(appetizer[i]);
+//                System.out.println(m.getStok());   
+//            }
+            int A = pesananModel.getHitung(12);
+            System.out.println(A);
         
         }
     }
-}

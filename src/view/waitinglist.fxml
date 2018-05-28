@@ -18,12 +18,16 @@
             <Font name="Open Sans Bold" size="16.0" />
          </font>
       </Label>
-      <JFXTextArea fx:id="txtWaktu" focusColor="#686868" layoutX="215.0" layoutY="131.0" prefHeight="74.0" prefWidth="111.0" unFocusColor="#686868" />
       <Label layoutX="14.0" layoutY="236.0" prefHeight="22.0" prefWidth="158.0" text="looking for other dishes?" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Open Sans" size="10.0" />
          </font>
       </Label>
       <JFXButton layoutX="14.0" layoutY="258.0" onAction="#orderAgain" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #207245;" text="Yes please! :)" textFill="WHITE" />
+      <Label fx:id="txtWaktu" layoutX="133.0" layoutY="150.0" prefHeight="32.0" prefWidth="282.0" textFill="#f5f5f5">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

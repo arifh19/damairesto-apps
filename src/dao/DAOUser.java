@@ -6,6 +6,7 @@
 package dao;
 
 import java.util.List;
+import javafx.event.ActionEvent;
 import object.Hidangans;
 import object.Orders;
 import object.User;
@@ -29,6 +30,7 @@ public interface DAOUser {
       
      public User get(String username);
      public void delete(String user_id);
+     public void getLogin(String username, String password, ActionEvent event);
 //        
 //    public List<Orders> getCari(String noMeja);
 //    

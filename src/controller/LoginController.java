@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -22,6 +23,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import model.UserModel;
+import object.User;
 
 /**
  * FXML Controller class
@@ -40,11 +42,24 @@ public class LoginController implements Initializable {
     private Label statustext;
    
     
-    UserModel userModel = new UserModel();
+   
      
     @FXML
     public void Login(ActionEvent event) throws IOException {
       // 
+      if(txtUser.getText().isEmpty()||txtPassword.getText().isEmpty()||txtPassword.getText().length()<8||txtUser.getText().length()<5){
+          Alert alert = new Alert(Alert.AlertType.WARNING);
+          alert.setTitle("Error");
+          alert.setHeaderText("Username atau password salah");
+          alert.showAndWait();
+      }
+      else{
+          UserModel usermodel = new UserModel();
+          usermodel.getLogin(txtUser.getText(), txtPassword.getText(), event);
+      }
+      
+      
+              
        /*statustext.setText("akun atau sandi salah");
        int loggedIn_user_id = userModel.getValidLogin(txtUser.getText(), txtPassword.getText());
        User loggedIn_user = userModel.getUser(Integer.toString(loggedIn_user_id));

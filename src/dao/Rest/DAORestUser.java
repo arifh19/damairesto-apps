@@ -5,6 +5,8 @@
  */
 package dao.Rest;
 
+import controller.AdminController;
+import controller.OperatorController;
 import dao.DAOHidangan;
 import dao.DAOUser;
 import static dao.Rest.DAORestPesanan.alamat;
@@ -20,6 +22,14 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import object.Hidangans;
 import object.Orders;
 import object.User;
@@ -148,15 +158,91 @@ public class DAORestUser implements DAOUser {
     @Override
     public User get(String username) {
         populateUser();
+        int i=0;
         User user = null;
         for (User _user : listUser) {
             if (String.valueOf(_user.getUsername()).equals(username)) {
                 user = _user;
+                i++;
             }else{
-                System.out.println("Error");
+
             }
         }
+        if(i==0){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setHeaderText("User tidak ditemukan");
+            alert.showAndWait();
+        }
         return user;
+    }
+    
+    @Override
+     public void getLogin(String username, String password, ActionEvent event)  {
+        populateUser();
+        int i=0;
+        User user = null;
+        for (User _user : listUser) {
+            if (String.valueOf(_user.getUsername()).equals(username)) {
+                user = _user;
+                i++;
+                if(String.valueOf(_user.getStatus()).equals("admin")){
+                    try{
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/admin.fxml"));
+                        Parent root1 = (Parent) fxmlLoader.load(); 
+                        Stage stage1 = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+                        Stage stage = new Stage();
+                        stage.initStyle(StageStyle.UNDECORATED);
+                        stage.setScene(new Scene(root1));  
+                        stage.show();
+                        stage1.hide();
+                        AdminController oc =  fxmlLoader.getController();
+                        oc.setUser(user.getName());
+                    }catch(IOException e){
+                        e.printStackTrace();
+                    }
+                    
+                }else if(String.valueOf(_user.getStatus()).equals("operator")){
+                    try{
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/operator.fxml"));
+                        Parent root1 = (Parent) fxmlLoader.load(); 
+                        Stage stage1 = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+                        Stage stage = new Stage();
+                        stage.initStyle(StageStyle.UNDECORATED);
+                        stage.setScene(new Scene(root1));  
+                        stage.show();
+                        stage1.hide();
+                        OperatorController oc =  fxmlLoader.getController();
+                        oc.setUsername(user.getName());
+                    }catch(IOException e){
+                        e.printStackTrace();
+                    }
+                }else if(String.valueOf(_user.getStatus()).equals("pelanggan")){
+                    try{
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/menu.fxml"));
+                        Parent root1 = (Parent) fxmlLoader.load(); 
+                        Stage stage1 = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+                        Stage stage = new Stage();
+                        stage.initStyle(StageStyle.UNDECORATED);
+                        stage.setScene(new Scene(root1));  
+                        stage.show();
+                        stage1.hide();
+                    }catch(IOException e){
+                        e.printStackTrace();
+                    }
+                }else{
+                    System.out.println("Tidak terautentikasi");
+                }
+            }
+        }
+        if(i==0){
+           Alert alert = new Alert(Alert.AlertType.WARNING);
+          alert.setTitle("Error");
+          alert.setHeaderText("Username atau password salah");
+          alert.showAndWait(); 
+        }
+          
+        //return user;
     }
 
     @Override

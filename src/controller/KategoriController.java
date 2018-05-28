@@ -33,6 +33,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import model.HidanganModel;
+import object.Hidangans;
 import object.Orders;
 
 /**
@@ -50,115 +52,50 @@ public class KategoriController implements Initializable {
     private double subtotal=0;
     private int no = 0;
     private MenuController MainApp;
-    @FXML
-    private AnchorPane v_breakfast;
-    @FXML
-    private AnchorPane v_appetizer;
-    @FXML
-    private AnchorPane v_maincourse;
     
+    //view
     @FXML
-    private AnchorPane v_dessert, v_beverages;
+    private AnchorPane v_breakfast,v_appetizer,v_maincourse,v_dessert,v_beverages;
+    
+    //btn utk pindah view
     @FXML
     private JFXButton l_breakfast, l_appetizer, l_maincourse, l_dessert,l_beverages;
-    @FXML
-    private JFXButton lemonadebtn;
-    @FXML
-    private JFXButton specialitybtn;
-    @FXML
-    private JFXButton peachbtn;
-    @FXML
-    private JFXButton cocktailbtn;
-    @FXML
-    private JFXButton machiantobtn;
-    @FXML
-    private JFXButton matchabtn;
-    @FXML
-    private JFXButton cajunbtn;
-    @FXML
-    private JFXButton friedbtn;
-    @FXML
-    private JFXButton jackbtn;
-    @FXML
-    private JFXButton roastedbtn;
-    @FXML
-    private JFXButton potatoesbtn;
-    @FXML
-    private JFXButton buffalobtn;
-    @FXML
-    private JFXButton buburbtn;
-    @FXML
-    private JFXButton miegorengbtn;
-    @FXML
-    private JFXButton bowlbtn;
-    @FXML
-    private JFXButton nasigorengbtn;
-    @FXML
-    private JFXButton sphagettibtn;
-    @FXML
-    private JFXButton veganbtn;
-    @FXML
-    private JFXButton chicorybtn;
-    @FXML
-    private JFXButton salmonbtn;
-    @FXML
-    private JFXButton panbtn;
-    @FXML
-    private JFXButton kimchifriedbtn;
-    @FXML
-    private JFXButton wagyubtn;
-    @FXML
-    private JFXButton limebtn;
-    @FXML
-    private JFXButton galletebtn;
-    @FXML
-    private JFXButton kimchisushibtn;
-    @FXML
-    private JFXButton bostonbtn;
-    @FXML
-    private JFXButton cherrybtn;
-    @FXML
-    private JFXButton bananabtn;
-    @FXML
-    private JFXButton icecreambtn;
-    @FXML
-    private JFXButton arumanisbtn;
-    @FXML
-    private JFXButton bakedbtn;
-    @FXML
-    private TextField txtb001;
-    @FXML
-    private Button plusb001;
-    @FXML
-    private Button minb001;
-    @FXML
-    private Button plusb002;
-    @FXML
-    private TextField txtb002;
-    @FXML
-    private Button minb002;
-    @FXML
-    private TextField txtb003;
-    @FXML
-    private Button plusb003;
-    @FXML
-    private Button minb003;
-    @FXML
-    private TextField txtb004;
-    @FXML
-    private Button plusb004;
-    @FXML
-    private Button minb004;
     
-    private int max_stokb001 =5;
-    private int max_stokb002 =5;
-    private int max_stokb003 =5;
-    private int max_stokb004 =5;
+    /**
+     * Tombol Deskripsi
+     */
     
-    private int min_stokb001 =0;
-    private int min_stokb002 =0;
-    private int min_stokb003 =0;
-    private int min_stokb004 =0;
+    //btn deskripsi beverages
+    @FXML
+    private JFXButton lemonadebtn,specialitybtn,peachbtn,cocktailbtn,machiantobtn,matchabtn;
+    
+    //btn deskripsi appetizer
+    @FXML
+    private JFXButton cajunbtn,friedbtn,jackbtn,roastedbtn,potatoesbtn,buffalobtn;
+    
+    //btn deskripsi breakfast
+    @FXML
+    private JFXButton buburbtn,miegorengbtn,bowlbtn,nasigorengbtn;
+    
+    //btn deskripsi main course
+    @FXML
+    private JFXButton sphagettibtn,veganbtn,chicorybtn,salmonbtn,panbtn,kimchifriedbtn,wagyubtn,limebtn,galletebtn,kimchisushibtn;
+    
+    //btn deskripsi dessert
+    @FXML
+    private JFXButton bostonbtn, cherrybtn, bananabtn, icecreambtn, arumanisbtn, bakedbtn;
+    
+    //label stock breakfast
+    @FXML
+    private TextField txtb001,txtb002, txtb003,txtb004;
+    
+    //btn plus stok breakfast
+    @FXML
+    private Button plusb001,plusb002, plusb003, plusb004;
+    
+    //btn min stok breakfast
+    @FXML
+    private Button minb001, minb002, minb003, minb004;
     @FXML
     private TextField txta001;
     @FXML
@@ -194,19 +131,7 @@ public class KategoriController implements Initializable {
     @FXML
     private Button mina006;
     
-    private int max_stoka001 =5;
-    private int max_stoka002 =5;
-    private int max_stoka003 =5;
-    private int max_stoka004 =5;
-    private int max_stoka005 =5;
-    private int max_stoka006 =5;
-    
-    private int min_stoka001 =0;
-    private int min_stoka002 =0;
-    private int min_stoka003 =0;
-    private int min_stoka004 =0;
-    private int min_stoka005 =0;
-    private int min_stoka006 =0;
+
     @FXML
     private TextField txta006;
     @FXML
@@ -267,28 +192,7 @@ public class KategoriController implements Initializable {
     private TextField txtm010;
     @FXML
     private Button minm010;
-    
-    private int max_stokm001 =5;
-    private int max_stokm002 =5;
-    private int max_stokm003 =5;
-    private int max_stokm004 =5;
-    private int max_stokm005 =5;
-    private int max_stokm006 =5;
-    private int max_stokm007 =5;
-    private int max_stokm008 =5;
-    private int max_stokm009 =5;
-    private int max_stokm010 =5;
-    
-    private int min_stokm001 =0;
-    private int min_stokm002 =0;
-    private int min_stokm003 =0;
-    private int min_stokm004 =0;
-    private int min_stokm005 =0;
-    private int min_stokm006 =0;
-    private int min_stokm007 =0;
-    private int min_stokm008 =0;
-    private int min_stokm009 =0;
-    private int min_stokm010 =0;
+   
     @FXML
     private Button plusm005;
     @FXML
@@ -328,19 +232,8 @@ public class KategoriController implements Initializable {
     @FXML
     private Button mind006;
     
-    private int max_stokd001 =5;
-    private int max_stokd002 =5;
-    private int max_stokd003 =5;
-    private int max_stokd004 =5;
-    private int max_stokd005 =5;
-    private int max_stokd006 =5;
     
-    private int min_stokd001 =0;
-    private int min_stokd002 =0;
-    private int min_stokd003 =0;
-    private int min_stokd004 =0;
-    private int min_stokd005 =0;
-    private int min_stokd006 =0;
+
     @FXML
     private Button plusbe01;
     @FXML
@@ -366,19 +259,6 @@ public class KategoriController implements Initializable {
     @FXML
     private Button minbe06;
 
-    private int max_stokbe01 =5;
-    private int max_stokbe02 =5;
-    private int max_stokbe03 =5;
-    private int max_stokbe04 =5;
-    private int max_stokbe05 =5;
-    private int max_stokbe06 =5;
-    
-    private int min_stokbe01 =0;
-    private int min_stokbe02 =0;
-    private int min_stokbe03 =0;
-    private int min_stokbe04 =0;
-    private int min_stokbe05 =0;
-    private int min_stokbe06 =0;
     @FXML
     private TextField txtbe01;
     @FXML
@@ -519,9 +399,93 @@ public class KategoriController implements Initializable {
     private Label lblbe06;
     @FXML
     private Label pricebe06;
-
+    
+    /**
+     * Variabel untuk menyimpan jumlah stock
+     * 
+     */
+    //Variabel max stock
+    //appetizer
+    private int max_stoka001 =0;
+    private int max_stoka002 =0;
+    private int max_stoka003 =0;
+    private int max_stoka004 =0;
+    private int max_stoka005 =0;
+    private int max_stoka006 =0;
+    //breakfast
+    private int max_stokb001 =0;
+    private int max_stokb002 =0;
+    private int max_stokb003 =0;
+    private int max_stokb004 =0;
+    //main course
+    private int max_stokm001 =0;
+    private int max_stokm002 =0;
+    private int max_stokm003 =0;
+    private int max_stokm004 =0;
+    private int max_stokm005 =0;
+    private int max_stokm006 =0;
+    private int max_stokm007 =0;
+    private int max_stokm008 =0;
+    private int max_stokm009 =0;
+    private int max_stokm010 =0;
+    //dessert
+    private int max_stokd001 =0;
+    private int max_stokd002 =0;
+    private int max_stokd003 =0;
+    private int max_stokd004 =0;
+    private int max_stokd005 =0;
+    private int max_stokd006 =0;
+    //beverages
+    private int max_stokbe01 =0;
+    private int max_stokbe02 =0;
+    private int max_stokbe03 =0;
+    private int max_stokbe04 =0;
+    private int max_stokbe05 =0;
+    private int max_stokbe06 =0;
+    
+    //variabel min stock
+   //appetizer
+    private int min_stoka001 =0;
+    private int min_stoka002 =0;
+    private int min_stoka003 =0;
+    private int min_stoka004 =0;
+    private int min_stoka005 =0;
+    private int min_stoka006 =0;
+    //breakfast
+    private int min_stokb001 =0;
+    private int min_stokb002 =0;
+    private int min_stokb003 =0;
+    private int min_stokb004 =0;
+    //maincourse 
+    private int min_stokm001 =0;
+    private int min_stokm002 =0;
+    private int min_stokm003 =0;
+    private int min_stokm004 =0;
+    private int min_stokm005 =0;
+    private int min_stokm006 =0;
+    private int min_stokm007 =0;
+    private int min_stokm008 =0;
+    private int min_stokm009 =0;
+    private int min_stokm010 =0;
+    //dessert
+    private int min_stokd001 =0;
+    private int min_stokd002 =0;
+    private int min_stokd003 =0;
+    private int min_stokd004 =0;
+    private int min_stokd005 =0;
+    private int min_stokd006 =0;
+    //beverages
+    private int min_stokbe01 =0;
+    private int min_stokbe02 =0;
+    private int min_stokbe03 =0;
+    private int min_stokbe04 =0;
+    private int min_stokbe05 =0;
+    private int min_stokbe06 =0;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        refreshStock();
+        
         // TODO
         if(max_stokb001==0){
             plusb001.setDisable(true);
@@ -544,6 +508,87 @@ public class KategoriController implements Initializable {
         }else if(max_stoka006==0){
             plusa006.setDisable(true);
         }
+    }
+    
+    public void refreshStock(){
+        HidanganModel hidanganModel = new HidanganModel();
+        Hidangans h;
+        String[] appetizer={"A001","A002","A003","A004","A005","A006"};
+        String[] breakfast={"B001","B002","B003","B004"};
+        String[] maincourse={"M001","M002","M003","M004","M005","M006","M007","M008","M009","M010"};
+        String[] dessert={"D001","D002","D003","D004","D005","D006"};
+        String[] beverages={"BE01","BE02","BE03","BE04","BE05","BE06"};
+        
+        
+        h = hidanganModel.get(appetizer[0]);
+        this.max_stoka001 = h.getStok();
+        h = hidanganModel.get(appetizer[1]);
+        this.max_stoka002 = h.getStok(); 
+        h = hidanganModel.get(appetizer[2]);
+        this.max_stoka003 = h.getStok();       
+        h = hidanganModel.get(appetizer[3]);
+        this.max_stoka004 = h.getStok();
+        h = hidanganModel.get(appetizer[4]);
+        this.max_stoka005 = h.getStok();
+        h = hidanganModel.get(appetizer[5]);
+        this.max_stoka006 = h.getStok();
+        
+        h = hidanganModel.get(breakfast[0]);
+        this.max_stokb001 = h.getStok();
+        h = hidanganModel.get(breakfast[1]);
+        this.max_stokb002 = h.getStok(); 
+        h = hidanganModel.get(breakfast[2]);
+        this.max_stokb003 = h.getStok();       
+        h = hidanganModel.get(breakfast[3]);
+        this.max_stokb004 = h.getStok();
+        
+        h = hidanganModel.get(maincourse[0]);
+        this.max_stokm001 = h.getStok();
+        h = hidanganModel.get(maincourse[1]);
+        this.max_stokm002 = h.getStok(); 
+        h = hidanganModel.get(maincourse[2]);
+        this.max_stokm003 = h.getStok();       
+        h = hidanganModel.get(maincourse[3]);
+        this.max_stokm004 = h.getStok();
+        h = hidanganModel.get(maincourse[4]);
+        this.max_stokm005 = h.getStok();
+        h = hidanganModel.get(maincourse[5]);
+        this.max_stokm006 = h.getStok();
+        h = hidanganModel.get(maincourse[6]);
+        this.max_stokm007 = h.getStok();
+        h = hidanganModel.get(maincourse[7]);
+        this.max_stokm008 = h.getStok(); 
+        h = hidanganModel.get(maincourse[8]);
+        this.max_stokm009 = h.getStok();       
+        h = hidanganModel.get(maincourse[9]);
+        this.max_stokm010 = h.getStok();
+        
+        h = hidanganModel.get(dessert[0]);
+        this.max_stokd001 = h.getStok();
+        h = hidanganModel.get(dessert[1]);
+        this.max_stokd002 = h.getStok(); 
+        h = hidanganModel.get(dessert[2]);
+        this.max_stokd003 = h.getStok();       
+        h = hidanganModel.get(dessert[3]);
+        this.max_stokd004 = h.getStok();
+        h = hidanganModel.get(dessert[4]);
+        this.max_stokd005 = h.getStok();
+        h = hidanganModel.get(dessert[5]);
+        this.max_stokd006 = h.getStok();
+        
+        h = hidanganModel.get(beverages[0]);
+        this.max_stokbe01 = h.getStok();
+        h = hidanganModel.get(beverages[1]);
+        this.max_stokbe02 = h.getStok(); 
+        h = hidanganModel.get(beverages[2]);
+        this.max_stokbe03 = h.getStok();       
+        h = hidanganModel.get(beverages[3]);
+        this.max_stokbe04 = h.getStok();
+        h = hidanganModel.get(beverages[4]);
+        this.max_stokbe05 = h.getStok();
+        h = hidanganModel.get(beverages[5]);
+        this.max_stokbe06 = h.getStok();
+        
     }
     
     public void setMainApp(MenuController mainApp) {
@@ -693,8 +738,7 @@ public class KategoriController implements Initializable {
             this.subtotal = this.subtotal+subharga;
         }
     }
-    
-    
+       
     public void getOrderMainCourse(){
         
         if(!txtm001.getText().equals("0")){

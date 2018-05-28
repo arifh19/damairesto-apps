@@ -21,9 +21,13 @@ public interface DAOPesanan {
 //
 //    public void update(Orders b);
 //
-//    public void delete(String depositId);
+      public void delete(int table_number);
 //
       public List<Orders> getAll();
+      public Orders get(int table_number);
+      public int getHitung(int table_number);
+      
+      public List<Orders> getAllPesanan();
 //        
 //    public List<Orders> getCari(String noMeja);
 //    

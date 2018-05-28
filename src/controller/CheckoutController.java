@@ -7,8 +7,10 @@ package controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -28,17 +30,24 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javax.swing.JOptionPane;
 import model.AntrianModel;
 import model.PesananModel;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 import object.Antrian;
 import object.Orders;
+import config.koneksi;
 /**
  * FXML Controller class
  *
  * @author Yuuki
  */
 public class CheckoutController implements Initializable {
-    
+    Connection kon;
     private int num;
       @FXML
     private AnchorPane kedua_checkout;
@@ -255,8 +264,25 @@ public class CheckoutController implements Initializable {
             stage.setScene(new Scene(root1));  
             stage.show();
             stage1.hide();
+            //LapPembelian();
         }catch(IOException ex){
             ex.printStackTrace();
         }
+    }
+    
+    public void LapPembelian(){
+        
+       try {
+            kon = new koneksi().connection();
+            String namafile = "src/reports/report1.jasper";
+            // End Parameter
+            File report = new File(namafile);
+            JasperReport jreprt = (JasperReport)JRLoader.loadObject(report.getPath());
+            // Untuk Print Report Tanpa Parameter
+             JasperPrint jprintt = JasperFillManager.fillReport(jreprt, null, kon);
+            JasperViewer.viewReport(jprintt,false);
+            } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(),"Cetak Laporan",JOptionPane.ERROR_MESSAGE);
+          }     
     }
 }

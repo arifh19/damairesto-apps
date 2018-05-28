@@ -11,6 +11,7 @@ import dao.DAOUser;
 import factory.DAOFactory;
 import factory.RESTDAOFactory;
 import java.util.List;
+import javafx.event.ActionEvent;
 import object.Hidangans;
 import object.Orders;
 import object.User;
@@ -42,6 +43,11 @@ public class UserModel implements DAOUser {
     @Override
     public User get(String username) {
         return Daouser.get(username);
+    }
+    
+    @Override
+    public void getLogin(String username, String password, ActionEvent event) {
+        Daouser.getLogin(username, password, event);
     }
 
 //    @Override

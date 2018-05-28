@@ -36,9 +36,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import model.FinanceModel;
 import model.HidanganModel;
 import model.PesananModel;
 import model.UserModel;
+import object.Finance;
 import object.Hidangans;
 import object.Orders;
 import object.User;
@@ -108,7 +110,7 @@ public class AdminController implements Initializable {
     @FXML
     private TableView<?> dailyreport_table;
     @FXML
-    private TableView<?> table_resto;
+    private TableView<Map> table_resto;
     @FXML
     private JFXTextField lbl_user;
     @FXML
@@ -118,11 +120,11 @@ public class AdminController implements Initializable {
     @FXML
     private TableColumn<Map, ?> tableColumnResto;
     @FXML
-    private TableColumn<Map, ?> nameColumnResto;
-    @FXML
     private TableColumn<Map, ?> earningColumnResto;
     @FXML
     private TableColumn<Map, ?> operatorColumnResto;
+    @FXML
+    private TableColumn<Map, ?> informationColumnResto;
     
     List<Hidangans> listFoodCode;
 
@@ -147,6 +149,7 @@ public class AdminController implements Initializable {
     private TableColumn<Map, ?> priceFoodColumn;
     @FXML
     private TableColumn<Map, ?> stockFoodColumn;
+    List<Finance> listFinance;
     
     /**
      * Initializes the controller class.
@@ -168,12 +171,20 @@ public class AdminController implements Initializable {
         FoodNameColumn.setCellValueFactory(new MapValueFactory("foodname"));
         priceFoodColumn.setCellValueFactory(new MapValueFactory("pricefood"));
         stockFoodColumn.setCellValueFactory(new MapValueFactory("stockfood"));
-    
-    
+        
+        noColumnResto.setCellValueFactory(new MapValueFactory("noearning"));
+        dateColumnResto.setCellValueFactory(new MapValueFactory("dateearning"));
+        tableColumnResto.setCellValueFactory(new MapValueFactory("tableearning"));
+        earningColumnResto.setCellValueFactory(new MapValueFactory("earnings"));
+        operatorColumnResto.setCellValueFactory(new MapValueFactory("nameearning"));
+        informationColumnResto.setCellValueFactory(new MapValueFactory("infoearnings"));
+
         table_user.setItems(generateDataUser());
         table_user.setEditable(false);
         table_foodmng.setItems(generateFood());
         table_foodmng.setEditable(false);
+        table_resto.setItems(generateDataEarning());
+        table_resto.setEditable(false);
        // table_foodmng.getSelectionModel().setCellSelectionEnabled(true);
 
     }
@@ -217,7 +228,32 @@ public class AdminController implements Initializable {
         }
         return allData;
     }
+    private ObservableList<Map> generateDataEarning() {
+        FinanceModel financeModel = new FinanceModel();
+        listFinance = financeModel.getAll();
+        ObservableList<Map> allData = FXCollections.observableArrayList();
+        allData.removeAll(allData);
+        for (int i = 0; i < listFinance.size(); i++) {
+            Map<String, String> dataRow = new HashMap<>();
+            int value0 = listFinance.get(i).getTable_number();
+            String value1 = listFinance.get(i).getDate();
+            String value2 = listFinance.get(i).getOperator_name();
+            double value3 = listFinance.get(i).getEarning();
+            String value4 = listFinance.get(i).getInformation();
+            dataRow.put("noearning", Integer.toString(i+1));
+            dataRow.put("tableearning", Integer.toString(value0));
+            dataRow.put("dateearning", value1);
+            dataRow.put("nameearning", value2);
+            dataRow.put("earnings", Double.toString(value3));
+            dataRow.put("infoearnings", value4);
+            allData.add(dataRow);
+        }
+        return allData;
+    }
     
+    public void setUser(String user){
+        this.lbl_user.setText(user);
+    }
     @FXML
     public void Register(ActionEvent event) {
         // Add observable list data to the table
@@ -227,7 +263,7 @@ public class AdminController implements Initializable {
         String username = TxtUsername.getText();
         String password = TxtPassword.getText();
         String status = TxtStatus.getText();
-        if(name.isEmpty()||name.isEmpty()||name.isEmpty()||name.isEmpty()){
+        if(name.isEmpty()||password.isEmpty()||status.isEmpty()||username.isEmpty()||password.length()<8||username.length()<5){
             Alert alert = new Alert(AlertType.WARNING);
 	    alert.setTitle("Data inputan belum lengkap");
 	    alert.setHeaderText("Lengkapi kembali formnya");
@@ -321,9 +357,15 @@ public class AdminController implements Initializable {
 
     @FXML
     private void btnSearchfood(ActionEvent event) {
-        HidanganModel hidanganModel = new HidanganModel();
         String key = txtFoodKode.getText();
-        Hidangans m = hidanganModel.get(key);
+        if(key.isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setHeaderText("Silahkan isi field kode makanan yang akan dicari");
+            alert.showAndWait();
+        }else{
+            HidanganModel hidanganModel = new HidanganModel();
+            Hidangans m = hidanganModel.get(key);
        // String value0 = m.getKode_hidangan();
             String value0 = m.getNama_hidangan();
             double value1 = m.getHarga();
@@ -331,13 +373,21 @@ public class AdminController implements Initializable {
             txtFoodName.setText(value0);
             txtFoodPrice.setText(Double.toString(value1));
             txtFoodStock.setText(Integer.toString(value2));
-       }
+        }
+        
+    }
 
     @FXML
     private void btnSearchUser(ActionEvent event) {
-        UserModel userModel = new UserModel();
-        String key = TxtUsername.getText();
-        User u = userModel.get(key);
+        if(TxtUsername.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setHeaderText("Silahkan isi field username yang dicari");
+            alert.showAndWait();
+        }else{
+            UserModel userModel = new UserModel();
+            String key = TxtUsername.getText();
+            User u = userModel.get(key);
        // String value0 = m.getKode_hidangan();
             String value1 = u.getName();
             String value2 = u.getUsername();
@@ -349,35 +399,51 @@ public class AdminController implements Initializable {
             TxtStatus.setText(value3);
             table_user.getItems().clear();
             table_user.setItems(generateDataUser());
-            
+        }  
     }
 
     @FXML
     private void btnUpdateUser(ActionEvent event) {
-        UserModel userModel = new UserModel();
         String name = TxtName.getText();
         String username = TxtUsername.getText();
         String password = TxtPassword.getText();
         String status = TxtStatus.getText();
+        if(name.isEmpty()||password.isEmpty()||status.isEmpty()||username.isEmpty()||password.length()<8||username.length()<5){
+            Alert alert = new Alert(AlertType.WARNING);
+	    alert.setTitle("Data inputan belum lengkap");
+	    alert.setHeaderText("Lengkapi kembali formnya");
+            alert.showAndWait();     
+        }else{
+            UserModel userModel = new UserModel();
         //UserModel userModel = new UserModel();
-        userModel.update(new User(name,username, password ,status));
-        table_user.getItems().clear();
-        table_user.setItems(generateDataUser());
-        TxtName.setText("");
-        TxtUsername.setText("");
-        TxtPassword.setText("");
-        TxtStatus.setText("");
-        
-        
+            userModel.update(new User(name,username, password ,status));
+            table_user.getItems().clear();
+            table_user.setItems(generateDataUser());
+            TxtName.setText("");
+            TxtUsername.setText("");
+            TxtPassword.setText("");
+            TxtStatus.setText("");
+        } 
     }
 
     @FXML
     private void btnDeleteUser(ActionEvent event) {
-        UserModel userModel = new UserModel();
-        String username = TxtUsername.getText();
-        userModel.delete(username);
-        table_user.getItems().clear();
-        table_user.setItems(generateDataUser());
+        if(TxtUsername.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setHeaderText("Silahkan isi field username yang akan dihapus");
+            alert.showAndWait();
+        }else{
+            UserModel userModel = new UserModel();
+            String username = TxtUsername.getText();
+            userModel.delete(username);
+            table_user.getItems().clear();
+            table_user.setItems(generateDataUser());
+            TxtName.setText("");
+            TxtUsername.setText("");
+            TxtPassword.setText("");
+            TxtStatus.setText("");
+        }
     }
             
         

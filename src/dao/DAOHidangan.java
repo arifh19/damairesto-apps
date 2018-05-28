@@ -14,22 +14,9 @@ import object.Orders;
  * @author Yuuki
  */
 public interface DAOHidangan {
-      public void insert(Hidangans b);
-    
-//    public Orders get(String Orders);
-//    
-     // public void getByKode(String b);
-//
-      public void update(Hidangans b);
-//
-//    public void delete(String depositId);
-//
-      public List<Hidangans> getAll();
-      
-     public Hidangans get(String kode_hidangan);
-//        
-//    public List<Orders> getCari(String noMeja);
-//    
-//    public User getUser(Orders b);
-    
+    public void insert(Hidangans b);
+    public void update(Hidangans b);
+    public List<Hidangans> getAll();
+    public Hidangans get(String kode_hidangan);
+    public void delete(String kode_hidangan);
 }

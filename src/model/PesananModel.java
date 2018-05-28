@@ -20,9 +20,11 @@ public class PesananModel implements DAOPesanan {
     RESTDAOFactory restFactory;
     DAOPesanan DaoPesanan;
     List<Orders> listPesanan;
+    List<Orders> listSeluruhPesanan;
     public PesananModel() {
         restFactory = (RESTDAOFactory) DAOFactory.getFactory(DAOFactory.REST);
         DaoPesanan = restFactory.getPesanan();
+        listSeluruhPesanan = DaoPesanan.getAllPesanan();
         listPesanan = DaoPesanan.getAll();
     }
     
@@ -41,4 +43,23 @@ public class PesananModel implements DAOPesanan {
         return listPesanan;
     }
     
+    @Override
+    public List<Orders> getAllPesanan() {
+        return listSeluruhPesanan;
+    }
+
+    @Override
+    public Orders get(int table_number) {
+        return DaoPesanan.get(table_number);
+    }
+    
+    @Override
+    public void delete(int table) {
+        DaoPesanan.delete(table);
+    }
+    
+    @Override
+    public int getHitung(int table_number) {
+        return DaoPesanan.getHitung(table_number);
+    }
 }

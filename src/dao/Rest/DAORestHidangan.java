@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -31,7 +32,7 @@ import org.json.simple.parser.ParseException;
  */
 public class DAORestHidangan implements DAOHidangan {
     private List<Hidangans> listHidangan;
-    private List<Hidangans> listFoodCode;
+
     public static String alamat = "http://10.33.109.15:5000/api/v1/hidangan";
     
     public DAORestHidangan() {
@@ -139,7 +140,41 @@ public class DAORestHidangan implements DAOHidangan {
 
     @Override
     public void update(Hidangans b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            URL url = new URL("http://10.33.109.15:5000/api/v1/hidangan/"+b.getKode_hidangan());
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setDoOutput(true);
+            conn.setRequestMethod("PUT");
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setRequestProperty("Accept", "application/json");
+            //conn.addRequestProperty("Authorization", LoginDAOREST.user);
+            String input = "{"
+                    + "\"kode_hidangan\":\"" + b.getKode_hidangan()
+                    + "\",\"nama_hidangan\":\"" + b.getNama_hidangan()
+                    + "\",\"deskripsi\":\"" + b.getDeskripsi()
+                    + "\",\"stok\":\"" + b.getStok()
+                    + "\",\"harga\":\"" + b.getHarga()
+                    + "\",\"waktu\":\"" + b.getWaktu()
+                    + "\"}";
+            OutputStream os = conn.getOutputStream();
+            os.write(input.getBytes());
+            os.flush();
+            if (conn.getResponseCode() != HttpURLConnection.HTTP_OK) {
+                throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+            }
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String output;
+            System.out.println("Output from Server .... \n");
+            while ((output = br.readLine()) != null) {
+                System.out.println(output);
+            }
+            conn.disconnect();
+            populateHidangan();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -156,9 +191,35 @@ public class DAORestHidangan implements DAOHidangan {
             if (String.valueOf(_hidangan.getKode_hidangan()).equals(kode_hidangan)) {
                 hidangan = _hidangan;
             }else{
-                System.out.println("Error cuk");
+                
             }
         }
         return hidangan;
+    }
+    @Override
+    public void delete(String kode_hidangan) {
+        try {
+            URL url = new URL("http://10.33.109.15:5000/api/v1/hidangan/"+kode_hidangan);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setDoOutput(true);
+            conn.setRequestMethod("DELETE");
+            conn.setRequestProperty("Content-Type", "application/json");
+
+            if (conn.getResponseCode() != HttpURLConnection.HTTP_OK) {
+                throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+            }
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String output;
+            System.out.println("Output from Server .... \n");
+            while ((output = br.readLine()) != null) {
+                System.out.println(output);
+            }
+            conn.disconnect();
+            populateHidangan();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

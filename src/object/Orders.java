@@ -21,6 +21,13 @@ public class Orders {
     private int informasi;
     private String date;
 
+    public Orders(int nomor_meja,String date, String name, double price ) {
+        this.price = price;
+        this.name = name;
+        this.nomor_meja = nomor_meja;
+        this.date = date;
+    }
+
     public String getDate() {
         return date;
     }
@@ -36,9 +43,7 @@ public class Orders {
         this.nomor_meja = nomor_meja;
         this.date=date;
     }
-
-
-
+    
     public int getInformasi() {
         return informasi;
     }

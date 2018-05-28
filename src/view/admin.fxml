@@ -44,7 +44,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="bttn_resto_mng_adm" layoutX="14.0" layoutY="273.0" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="114.0" text="Restaurant Management" textFill="TAN" wrapText="true">
+            <JFXButton fx:id="bttn_resto_mng_adm" layoutX="14.0" layoutY="273.0" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="114.0" text="Restaurant Management" textFill="TAN">
                <font>
                   <Font name="Open Sans Bold" size="9.0" />
                </font>
@@ -68,12 +68,12 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="bttn_stats_adm" layoutX="14.0" layoutY="341.0" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="114.0" text="Statistics" textFill="TAN" wrapText="true">
+            <JFXButton fx:id="bttn_stats_adm" layoutX="14.0" layoutY="341.0" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="114.0" text="Statistics" textFill="TAN" visible="false" wrapText="true">
                <font>
                   <Font name="Open Sans Bold" size="9.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="37.0" fitWidth="34.0">
+                  <ImageView fitHeight="37.0" fitWidth="34.0" visible="false">
                      <image>
                         <Image url="@../img/ic_show_chart_white_24dp_2x.png" />
                      </image>
@@ -87,8 +87,8 @@
             <Font name="Union-Regular" size="74.0" />
          </font>
       </Label>
-      <Label layoutX="996.0" layoutY="6.0" text="Username :" />
-      <JFXTextField fx:id="lbl_user" editable="false" layoutX="1094.0" prefHeight="0.0" prefWidth="143.0" />
+      <Label layoutX="988.0" layoutY="88.0" text="Username :" />
+      <JFXTextField fx:id="lbl_user" editable="false" layoutX="1064.0" layoutY="84.0" prefHeight="0.0" prefWidth="143.0" />
       <AnchorPane fx:id="statistic_adm" layoutX="136.0" layoutY="136.0" prefHeight="600.0" prefWidth="1099.0" style="-fx-background-color: #ffffff;" visible="false">
          <children>
             <Label layoutX="470.0" layoutY="14.0" prefHeight="48.0" prefWidth="114.0" text="S t a t i s t i c s">
@@ -235,9 +235,9 @@
                   <TableColumn fx:id="noColumnResto" minWidth="3.0" prefWidth="34.0" text="No" />
                   <TableColumn fx:id="dateColumnResto" prefWidth="158.0" text="Date" />
                   <TableColumn fx:id="tableColumnResto" prefWidth="129.0" text="Table Number" />
-                  <TableColumn fx:id="nameColumnResto" prefWidth="178.0" text="Name" />
-                  <TableColumn fx:id="earningColumnResto" prefWidth="187.0" text="Earnings" />
-                  <TableColumn fx:id="operatorColumnResto" prefWidth="151.0" text="Operator's Name" />
+                  <TableColumn fx:id="earningColumnResto" prefWidth="178.0" text="Earnings" />
+                  <TableColumn fx:id="operatorColumnResto" prefWidth="187.0" text="Operator's Name" />
+                  <TableColumn fx:id="informationColumnResto" prefWidth="151.0" text="Information" />
                </columns>
             </TableView>
          </children>

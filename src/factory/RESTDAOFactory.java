@@ -6,17 +6,19 @@
 package factory;
 
 import dao.DAOAntrian;
+import dao.DAOFinance;
 import dao.DAOHidangan;
 import dao.DAOPesanan;
 import dao.DAOUser;
 import dao.Rest.DAORestAntrian;
+import dao.Rest.DAORestFinance;
 import dao.Rest.DAORestHidangan;
 import dao.Rest.DAORestPesanan;
 import dao.Rest.DAORestUser;
 
 /**
  *
- * @author fachrul
+ * @author yuuki
  */
 public class RESTDAOFactory extends DAOFactory{
     public DAOUser getUser() {
@@ -26,47 +28,15 @@ public class RESTDAOFactory extends DAOFactory{
         return new DAORestAntrian();
     }
     
-   /* public implementIuran getIuran() {
-        return new DAORestIuran();
-    }
-    
-    public implementDeposit getDeposit() {
-        return new DAORestDeposit();
-    }
-    
-    public implementIuranUser getIuranUser() {
-        return new DAORestIuranUser();
-    }
-    
-    public implementJenisIuran getJenisIuran(){
-        return new DAORestJenisIuran();
-    }
-    
-    public implementKategoriIuran getKategoriIuran(){
-        return new DAORestKategoriIuran();
-    }
-    
-    public implementPengeluaran getPengeluaran(){
-        return new DAORestPengeluaran();
-    }
-    
-    public implementPengeluaranJenis getPengeluaranJenis(){
-        return new DAORestPengeluaranJenis();
-    }
-    
-    public implementPengeluaranKategori getPengeluaranKategori(){
-        return new DAORestPengeluaranKategori();
-    }
-    
-    public implementPengeluaranPerubahan getPengeluaranPerubahan(){
-        return new DAORestPengeluaranPerubahan();
-    }
-    */
     public DAOPesanan getPesanan(){
         return new DAORestPesanan();
     }
     
     public DAOHidangan getHidangan(){
         return new DAORestHidangan();
+    }
+    
+    public DAOFinance getFinance(){
+        return new DAORestFinance();
     }
 }

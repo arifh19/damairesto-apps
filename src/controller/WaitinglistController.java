@@ -8,6 +8,7 @@ package controller;
 import com.jfoenix.controls.JFXTextArea;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,9 +17,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import model.AntrianModel;
+import object.Antrian;
 
 /**
  * FXML Controller class
@@ -28,14 +32,20 @@ import javafx.stage.StageStyle;
 public class WaitinglistController implements Initializable {
 
     @FXML
-    private JFXTextArea txtWaktu;
-
+    private Label txtWaktu;
+    List<Antrian> listAntrian;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        AntrianModel antrianModel = new AntrianModel();
+                listAntrian = antrianModel.getAll();
+                for (int i = 0; i < listAntrian.size(); i++) {
+                int value0 = listAntrian.get(i).getAntrian();
+                txtWaktu.setText("Jumlah Antrian : " + Integer.toString(value0));
+           }
     }    
     
     @FXML
